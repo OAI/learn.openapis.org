@@ -4,7 +4,7 @@
 
 This guide is directed at **HTTP-based API** designers and writers wishing to benefit from having their API formalized in an **OpenAPI Description document**.
 
-API formal descriptions are ubiquitous nowadays and **OpenAPI** is **the most broadly adopted industry standard for describing new APIs**. It is therefore worth learning it and getting it right from the start.
+Machine-readable API descriptions are ubiquitous nowadays and **OpenAPI** is **the most broadly adopted industry standard for describing new APIs**. It is therefore worth learning it and getting it right from the start.
 
 - If you are unsure if this guide is for you, read the next section below.
 - If you do not know what "API", "HTTP" or "REST" mean start by reading the [Introduction](introduction.md) chapter.
