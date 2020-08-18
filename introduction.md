@@ -66,11 +66,13 @@ The OpenAPI Specification (**OAS**) is a **vendor neutral** description format f
 
 Currently, the OAS is maintained, evolved and promoted by the OpenAPI Initiative (**OAI**), a consortium of industry experts with an open governance structure under the Linux Foundation umbrella. This means all meetings and decisions are public and changes to the OAS can be proposed and discussed by anyone.
 
-This openness has encouraged the creation of a vast amount of tools (take a look at [OpenAPI.Tools](https://openapi.tools/), for example) which perfectly showcase the power of open, machine-readable API specifications.
+This openness has encouraged the creation of a vast amount of tools (take a look at [OpenAPI.Tools](https://openapi.tools/), for example) which perfectly showcase the power of open, machine-readable API descriptions (called **documents** in OpenAPI).
 
 It's probably because of the amount of tools available when working with OpenAPI that it has become **the most broadly adopted industry standard for describing modern APIs**.
 
-It is also worth mentioning that the OAS does not aim at being able to describe **every possible API**, since doing so would require a rather large and unwieldy specification. Instead, it tries to **describe efficiently the most common use cases**. Still, the benefits provided by OpenAPI are so numerous that it is usually worth it to design your API so it can be fully described with the OAS.
+It is also worth mentioning that the OAS does not aim at being able to describe **every possible API**, since doing so would require a rather large and unwieldy specification. Instead, it tries to **describe efficiently the most common use cases**. Still, the benefits provided by OpenAPI are so numerous that it is usually worth it to design your API so it can be fully defined using the OAS.
+
+If parts of your API cannot be described using the OAS, and they cannot be redesigned, they can still be left out of the OAS document: OpenAPI lists operations that you can do, but it does not assert anything regarding operations not in the OAS document.
 
 Finally, OpenAPI can describe APIs based on the HTTP protocol (like RESTful ones) but also APIs based on **HTTP-like protocols** like CoAP (Constrained Application Protocol) or WebSockets. This allows OpenAPI to be used in resource-restricted scenarios like IoT (Internet of Things), for example.
 
