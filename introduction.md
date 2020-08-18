@@ -1,6 +1,6 @@
 # Introduction
 
-The **OpenAPI Specification** allows the description of a remote API accessible through the HTTP protocol. This chapter explains why this is a good thing and why it might interest you.
+The **OpenAPI Specification** allows the description of a remote API accessible through HTTP or HTTP-like protocols. This chapter explains why this is a good thing and why it might interest you.
 
 The concept of an "API" is described first and the advantages of describing APIs using a machine-readable format are introduced, followed by the benefits of using the OpenAPI format. In the last section, the evolution of API descriptions is put into perspective with a brief historical summary.
 
@@ -45,7 +45,7 @@ The next section shows how some of these problems can be alleviated by specifyin
 
 ## API Definition Through a Description File
 
-An **API description file** (sometimes called Contract or Schema) is a **machine-readable**, **complete**, and **fully-detailed** specification of an API. Just like legal contracts, it must also be unambiguous and cover every possible case.
+An **API description file** (sometimes called Contract) is a **machine-readable** specification of an API. It should strive to be as **complete**, and **fully-detailed** as possible, although absolute completeness is not usually a requirement. Also, just like legal contracts, the more **unambiguous** it is, the more useful it becomes.
 
 Its main advantage over documentation which only humans can read is that it enables **automated processing**, opening the door to the benefits listed at [the beginning of this guide](start-here.md).
 
@@ -70,6 +70,10 @@ This openness has encouraged the creation of a vast amount of tools (take a look
 
 It's probably because of the amount of tools available when working with OpenAPI that it has become **the most broadly adopted industry standard for describing modern APIs**.
 
+It is also worth mentioning that the OAS does not aim at being able to describe **every possible API**, since doing so would require a rather large and unwieldy specification. Instead, it tries to **describe efficiently the most common use cases**. Still, the benefits provided by OpenAPI are so numerous that it is usually worth it to design your API so it can be fully described with the OAS.
+
+Finally, OpenAPI can describe APIs based on the HTTP protocol (like RESTful ones) but also APIs based on **HTTP-like protocols** like CoAP (Constrained Application Protocol) or WebSockets. This allows OpenAPI to be used in resource-restricted scenarios like IoT (Internet of Things), for example.
+
 Feel free to jump now to the next chapter, [The OpenAPI Specification explained](specification.md), to start learning how to use the OAS. Or stay a bit longer to gain historical perspective with a comparison of the evolution of local and remote API descriptions.
 
 ## A Brief Historical Comparison
@@ -82,9 +86,9 @@ As you can see, there are a lot of items to agree upon, and all of them must be 
 
 Fortunately, higher-level languages were created which, among other things, provide **method signatures**. These signatures are part of the code and are therefore **machine-readable**, allowing for compile-time detection of mismatches: The API provider publishes the signatures of all its methods and the consumer's compiler ensures that the API is used correctly (to a greater extent than documentation alone).
 
-Later on, the Internet arrived and with it appeared **remote APIs**. HTTP-based APIs, for instance, request a certain page from a server and expect the response to contain information in a certain format. Initially all this was specified through documentation and the **same problems that existed in the Assembly language** resurfaced again, namely, if the request was not made in the format expected by the server things would not work, and errors could not be detected a compile-time.
+Later on, the Internet arrived and with it appeared **remote APIs**. HTTP-based APIs, for instance, request a certain resource from a server and expect the response to contain information in a certain format. Initially all this was specified through documentation and the **same problems that existed in the Assembly language** resurfaced again, namely, if the request was not made in the format expected by the server things would not work, and errors could not be detected a compile-time.
 
-Machine-readable API descriptions (including **OpenAPI**) were then invented to bring to remote APIs the same degree of robustness that method signatures brought to local APIs. Tools do exist now which check that request are made in the correct format, or even ensure it by generating the request code themselves.
+Machine-readable API descriptions (including **OpenAPI**) were then invented to bring to remote APIs the same degree of robustness that method signatures brought to local APIs. Tools do exist now which check that requests are made in the correct format, or even ensure it by generating the request code themselves.
 
 The benefits delivered by machine-readable descriptions of remote APIs, though, have far surpassed those of method signatures. For instance, OpenAPI can attach examples and notes to most API sections, to complement the automatically-generated documents, or reuse parts of the description to make the whole file leaner.
 
