@@ -6,6 +6,8 @@ This guide is directed at **HTTP-based API** designers and writers wishing to be
 
 Machine-readable API descriptions are ubiquitous nowadays and **OpenAPI** is **the most broadly adopted industry standard for describing new APIs**. It is therefore worth learning it and getting it right from the start.
 
+These pages are a companion to the [OpenAPI Specification](http://spec.openapis.org/oas/v3.0.3), helping the reader learn it and answering questions like "What is the best way to accomplish... ?" or "What is the purpose of... ?" that are naturally out of the scope of the specification.
+
 - If you are unsure if this guide is for you, read the next section below.
 - If you do not know what "API", "machine-readable description" or "OpenAPI" mean start by reading the [Introduction](introduction.md) chapter.
 - If this is your first time writing an **OpenAPI Description document** read [The OpenAPI Specification explained](specification.md) chapter for step-by-step tutorials.
