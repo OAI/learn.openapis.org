@@ -11,7 +11,8 @@ paths:
     get:
       summary: Get the whole board
       description: Retrieves the current state of the board and the winner.
-      tags: [Gameplay]
+      tags:
+        - Gameplay
       operationId: get-board
       responses:
         "200":
@@ -26,7 +27,8 @@ paths:
     get:
       summary: Get a single board square
       description: Retrieves the requested square.
-      tags: [Gameplay]
+      tags:
+        - Gameplay
       operationId: get-square
       parameters:
         - $ref: "#/components/parameters/rowParam"
@@ -46,7 +48,8 @@ paths:
     put:
       summary: Set a single board square
       description: Places a mark on the board and retrieves the whole board and the winner (if any).
-      tags: [Gameplay]
+      tags:
+        - Gameplay
       operationId: put-square
       requestBody:
         content:
