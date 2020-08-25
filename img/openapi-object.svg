@@ -12,7 +12,7 @@
 <!-- openapiObject -->
 <g id="node1" class="node">
 <title>openapiObject</title>
-<g id="a_node1"><a xlink:href="http://spec.openapis.org/oas/v3.0.3#openapi-object" xlink:title="&lt;TABLE&gt;">
+<g id="a_node1"><a xlink:href="http://spec.openapis.org/oas/v3.0.3#oasObject" xlink:title="&lt;TABLE&gt;">
 <polygon fill="#94d60a" stroke="transparent" points="8,-110 8,-131 124,-131 124,-110 8,-110"/>
 <polygon fill="none" stroke="black" points="8,-110 8,-131 124,-131 124,-110 8,-110"/>
 <text text-anchor="start" x="11" y="-117.8" font-family="arial" font-weight="bold" font-size="14.00">OpenAPI Object</text>
@@ -34,7 +34,7 @@
 <!-- infoObject -->
 <g id="node2" class="node">
 <title>infoObject</title>
-<g id="a_node2"><a xlink:href="http://spec.openapis.org/oas/v3.0.3#info-object" xlink:title="&lt;TABLE&gt;">
+<g id="a_node2"><a xlink:href="http://spec.openapis.org/oas/v3.0.3#infoObject" xlink:title="&lt;TABLE&gt;">
 <polygon fill="#94d60a" stroke="transparent" points="176,-67 176,-88 258,-88 258,-67 176,-67"/>
 <polygon fill="none" stroke="black" points="176,-67 176,-88 258,-88 258,-67 176,-67"/>
 <text text-anchor="start" x="179" y="-74.8" font-family="arial" font-weight="bold" font-size="14.00">Info Object</text>
