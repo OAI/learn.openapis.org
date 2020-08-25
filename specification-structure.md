@@ -71,10 +71,10 @@ To be entirely precise, an OpenAPI document is a single JSON object containing f
 
 The OAS structure is long and complex so this section just describes the minimal set of fields it must contain, while following pages give more details about specific objects. The [OpenAPI Map](http://openapi-map.apihandyman.io/) is a nice visual tool that can help familiarize yourself with this long specification.
 
-The root object in any OpenAPI document is the [OpenAPI Object](http://spec.openapis.org/oas/v3.0.3#openapi-object) and only three of its fields are mandatory: `openapi`, `info` and `paths`.
+The root object in any OpenAPI document is the [OpenAPI Object](http://spec.openapis.org/oas/v3.0.3#oasObject) and only three of its fields are mandatory: `openapi`, `info` and `paths`.
 
 * `openapi` (**string**): This indicates the version of the OAS this document is using, e.g. "3.0.3". Tools can then check that the document correctly adheres to the spec.
-* `info` ([Info Object](http://spec.openapis.org/oas/v3.0.3#info-object)): This provides general information about the API (like its description, author and contact information) but the only mandatory fields are `title` and `version`.
+* `info` ([Info Object](http://spec.openapis.org/oas/v3.0.3#infoObject)): This provides general information about the API (like its description, author and contact information) but the only mandatory fields are `title` and `version`.
   * `title` (**string**): A human-readable name for the API, like "GitHub REST API", useful to keep API collections organized.
   * `version` (**string**): Indicates the version **of the API document** (not to be confused with the OAS version above). Tools can use this field to ensure that clients and servers are interacting through the same version of the API at runtime.
 * `paths` ([Paths Object](http://spec.openapis.org/oas/v3.0.3#pathsObject)): This describes all the **endpoints** of the API, including their parameters and all possible server responses. Server and client code can be generated from this description, along with the documentation.

@@ -4,7 +4,7 @@ rankdir=LR
 bgcolor=white
 
 openapiObject [
-    URL = "http://spec.openapis.org/oas/v3.0.3#openapi-object"
+    URL = "http://spec.openapis.org/oas/v3.0.3#oasObject"
     label = <<table border="0" cellspacing="0">
         <tr><td border="1" bgcolor="#94d60a"><font face="arial"><b>OpenAPI Object</b></font></td></tr>
         <tr><td border="1" bgcolor="#6ca437">openapi</td></tr>
@@ -13,7 +13,7 @@ openapiObject [
         <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>]
 
 infoObject [
-    URL = "http://spec.openapis.org/oas/v3.0.3#info-object"
+    URL = "http://spec.openapis.org/oas/v3.0.3#infoObject"
     label = <<table border="0" cellspacing="0">
         <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Info Object</b></font></td></tr>
         <tr><td border="1" bgcolor="#6ca437">title</td></tr>
