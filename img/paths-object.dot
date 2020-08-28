@@ -1,0 +1,78 @@
+digraph pathsObject {
+node[shape=none; fontname=monospace]
+rankdir=LR
+bgcolor=white
+
+openapiObject [
+    URL = "http://spec.openapis.org/oas/v3.0.3#oasObject"
+    label = <<table border="0" cellspacing="0">
+        <tr><td border="1" bgcolor="#939598"><font face="arial"><b>OpenAPI Object</b></font></td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">openapi</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">info</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71" port="paths">paths</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">…</td></tr></table>>]
+
+pathsObject [
+    URL = "http://spec.openapis.org/oas/v3.0.3#pathsObject"
+    label = <<table border="0" cellspacing="0">
+        <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Paths Object</b></font></td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="endpoint1">/endpoint1</td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="endpoint2">/endpoint2</td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="endpoint3">/endpoint3</td></tr>
+        <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>]
+
+pathItemObject [
+    URL = "http://spec.openapis.org/oas/v3.0.3#pathItemObject"
+    label = <<table border="0" cellspacing="0">
+        <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Path Item Object</b></font></td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="get">get</td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="put">put</td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="post">post</td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="delete">delete</td></tr>
+        <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>]
+
+operationObject [
+    URL = "http://spec.openapis.org/oas/v3.0.3#operationObject"
+    label = <<table border="0" cellspacing="0">
+        <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Operation Object</b></font></td></tr>
+        <tr><td border="1" bgcolor="#6ca437">summary</td></tr>
+        <tr><td border="1" bgcolor="#6ca437">description</td></tr>
+        <tr><td border="1" bgcolor="#6ca437">requestBody</td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="responses">responses</td></tr>
+        <tr><td border="1" bgcolor="#6ca437">operationId</td></tr>
+        <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>]
+
+responsesObject [
+    URL = "http://spec.openapis.org/oas/v3.0.3#responsesObject"
+    label = <<table border="0" cellspacing="0">
+        <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Responses Object</b></font></td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="code1">"HTTP code1"</td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="code2">"HTTP code2"</td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="code3">"HTTP code3"</td></tr>
+        <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>]
+
+responseObject [
+    URL = "http://spec.openapis.org/oas/v3.0.3#responseObject"
+    label = <<table border="0" cellspacing="0">
+        <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Response Object</b></font></td></tr>
+        <tr><td border="1" bgcolor="#6ca437">description</td></tr>
+        <tr><td border="1" bgcolor="#6ca437">content</td></tr>
+        <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>]
+
+openapiObject:paths->pathsObject:header
+
+pathsObject:endpoint1->pathItemObject:header [weight=10]
+pathsObject:endpoint2->pathItemObject:header
+pathsObject:endpoint3->pathItemObject:header
+
+pathItemObject:get->operationObject:header [weight=10]
+pathItemObject:put->operationObject:header
+pathItemObject:post->operationObject:header
+pathItemObject:delete->operationObject:header
+
+operationObject:responses->responsesObject:header
+
+responsesObject:code1->responseObject:header [weight=10]
+responsesObject:code2->responseObject:header
+responsesObject:code3->responseObject:header
+}
