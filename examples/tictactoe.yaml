@@ -1,7 +1,9 @@
 openapi: 3.0.3
 info:
   title: Tic Tac Toe
-  description: Care for a game?
+  description: |
+    This API allows writing down marks on a Tic Tac Toe board
+    and requesting the state of the board or of individual squares.
   version: 1.0.0
 tags:
   - name: Gameplay
@@ -16,7 +18,7 @@ paths:
       operationId: get-board
       responses:
         "200":
-          description: ""
+          description: "OK"
           content:
             application/json:
               schema:
@@ -35,16 +37,18 @@ paths:
         - $ref: "#/components/parameters/columnParam"
       responses:
         "200":
-          description: ""
+          description: "OK"
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/mark"
         "400":
-          description: Mistakes were made
+          description: The provided parameters are incorrect
           content:
-            text:
-              example: "Illegal coords"
+            text/html:
+              schema:
+                $ref: "#/components/schemas/errorMessage"
+              example: "Illegal coordinates"
     put:
       summary: Set a single board square
       description: Places a mark on the board and retrieves the whole board and the winner (if any).
@@ -61,39 +65,46 @@ paths:
         - $ref: "#/components/parameters/columnParam"
       responses:
         "200":
-          description: ""
+          description: "OK"
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/status"
         "400":
-          description: Mistakes were made
+          description: The provided parameters are incorrect
           content:
-            text:
+            text/html:
+              schema:
+                $ref: "#/components/schemas/errorMessage"
               examples:
-                illegalCoord:
-                  value: "Illegal coords"
+                illegalCoordinates:
+                  value: "Illegal coordinates."
                 notEmpty:
-                  value: "Square is not empty"
+                  value: "Square is not empty."
                 invalidMark:
-                  value: "Invalid Mark (X or O)"
+                  value: "Invalid Mark (X or O)."
 
 components:
   parameters:
     rowParam:
+      description: Board row (vertical coordinate)
       name: row
       in: path
       required: true
       schema:
-        $ref: "#/components/schemas/coord"
+        $ref: "#/components/schemas/coordinate"
     columnParam:
+      description: Board column (horizontal coordinate)
       name: column
       in: path
       required: true
       schema:
-        $ref: "#/components/schemas/coord"
+        $ref: "#/components/schemas/coordinate"
   schemas:
-    coord:
+    errorMessage:
+      type: string
+      description: A text message describing an error
+    coordinate:
       type: integer
       minimum: 1
       maximum: 3
