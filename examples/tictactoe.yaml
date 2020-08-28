@@ -26,15 +26,15 @@ paths:
 
   # Single square operations
   /board/{row}/{column}:
+    parameters:
+      - $ref: "#/components/parameters/rowParam"
+      - $ref: "#/components/parameters/columnParam"
     get:
       summary: Get a single board square
       description: Retrieves the requested square.
       tags:
         - Gameplay
       operationId: get-square
-      parameters:
-        - $ref: "#/components/parameters/rowParam"
-        - $ref: "#/components/parameters/columnParam"
       responses:
         "200":
           description: "OK"
@@ -60,9 +60,6 @@ paths:
           application/json:
             schema:
               $ref: "#/components/schemas/mark"
-      parameters:
-        - $ref: "#/components/parameters/rowParam"
-        - $ref: "#/components/parameters/columnParam"
       responses:
         "200":
           description: "OK"
