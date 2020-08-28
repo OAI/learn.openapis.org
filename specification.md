@@ -5,8 +5,8 @@ The [OpenAPI Specification](http://spec.openapis.org/oas/v3.0.3) is the ultimate
 The following pages introduce the syntax and structure of an OpenAPI document, its main building blocks and a minimal API document. Afterwards, the different blocks are detailed, starting from the most common and progressing towards advanced ones.
 
 - [Structure of an OpenAPI Document](specification-structure.md): JSON, YAML, `openapi` and `info`
-- [API Endpoints](specification-paths.md): `paths`.
-- [Parameters for an Endpoint](specification-parameters.md): `parameters`.
+- [API Endpoints](specification-paths.md): `paths` and `responses`.
+- [Parameters for an Endpoint](specification-parameters.md): `parameters` and `requestBody`.
 - [Content of Message Bodies](specification-content.md): `content`.
 - [API Servers](specification-servers.md): `servers`.
 - [Reusing Descriptions](specification-components.md): `components` and `$ref`.
