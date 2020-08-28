@@ -1,0 +1,126 @@
+openapi: 3.0.3
+info:
+  title: Tic Tac Toe
+  description: Care for a game?
+  version: 1.0.0
+tags:
+  - name: Gameplay
+paths:
+  # Whole board operations
+  /board:
+    get:
+      summary: Get the whole board
+      description: Retrieves the current state of the board and the winner.
+      tags:
+        - Gameplay
+      operationId: get-board
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/status"
+
+  # Single square operations
+  /board/{row}/{column}:
+    get:
+      summary: Get a single board square
+      description: Retrieves the requested square.
+      tags:
+        - Gameplay
+      operationId: get-square
+      parameters:
+        - $ref: "#/components/parameters/rowParam"
+        - $ref: "#/components/parameters/columnParam"
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/mark"
+        "400":
+          description: Mistakes were made
+          content:
+            text:
+              example: "Illegal coords"
+    put:
+      summary: Set a single board square
+      description: Places a mark on the board and retrieves the whole board and the winner (if any).
+      tags:
+        - Gameplay
+      operationId: put-square
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/mark"
+      parameters:
+        - $ref: "#/components/parameters/rowParam"
+        - $ref: "#/components/parameters/columnParam"
+      responses:
+        "200":
+          description: ""
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/status"
+        "400":
+          description: Mistakes were made
+          content:
+            text:
+              examples:
+                illegalCoord:
+                  value: "Illegal coords"
+                notEmpty:
+                  value: "Square is not empty"
+                invalidMark:
+                  value: "Invalid Mark (X or O)"
+
+components:
+  parameters:
+    rowParam:
+      name: row
+      in: path
+      required: true
+      schema:
+        $ref: "#/components/schemas/coord"
+    columnParam:
+      name: column
+      in: path
+      required: true
+      schema:
+        $ref: "#/components/schemas/coord"
+  schemas:
+    coord:
+      type: integer
+      minimum: 1
+      maximum: 3
+      example: 1
+    mark:
+      type: string
+      enum: [".", "X", "O"]
+      description: Possible values for a board square. `.` means empty square.
+      example: "."
+    board:
+      type: array
+      maxItems: 3
+      minItems: 3
+      items:
+        type: array
+        maxItems: 3
+        minItems: 3
+        items:
+          $ref: "#/components/schemas/mark"
+    winner:
+      type: string
+      enum: [".", "X", "O"]
+      description: Winner of the game. `.` means nobody has won yet.
+      example: "."
+    status:
+      properties:
+        winner:
+          $ref: "#/components/schemas/winner"
+        board:
+          $ref: "#/components/schemas/board"
