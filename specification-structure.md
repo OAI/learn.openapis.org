@@ -66,7 +66,7 @@ anObject:
 Finally, object field names are case-sensitive: `openapi` is not the same thing as `OpenAPI`.
 
 > **NOTE:**
-> Ellipsis (...) are used throughout this guide to indicate an incomplete code snippet. Ellipsis are not part of JSON or YAML.
+> Ellipses (...) are used throughout this guide to indicate an incomplete code snippet. Ellipses are not part of JSON or YAML.
 
 ## Minimal Document Structure
 
