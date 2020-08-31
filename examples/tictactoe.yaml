@@ -100,6 +100,7 @@ components:
   schemas:
     errorMessage:
       type: string
+      maxLength: 256
       description: A text message describing an error
     coordinate:
       type: integer
@@ -127,6 +128,7 @@ components:
       description: Winner of the game. `.` means nobody has won yet.
       example: "."
     status:
+      type: object
       properties:
         winner:
           $ref: "#/components/schemas/winner"

@@ -1,0 +1,79 @@
+digraph pathsObject {
+node[shape=none; fontname=monospace]
+rankdir=LR
+bgcolor=white
+splines=true
+
+responseObject [
+    URL = "https://spec.openapis.org/oas/v3.0.3#responseObject"
+    label = <<table border="0" cellspacing="0">
+        <tr><td border="1" bgcolor="#939598"><font face="arial"><b>Response Object</b></font></td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">description</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71" port="content">content</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">…</td></tr></table>>]
+
+requestBodyObject [
+    URL = "https://spec.openapis.org/oas/v3.0.3#requestBodyObject"
+    label = <<table border="0" cellspacing="0">
+        <tr><td border="1" bgcolor="#939598"><font face="arial"><b>Request Body Object</b></font></td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">description</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71" port="content">content</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">…</td></tr></table>>]
+
+mediaMap [
+    URL = "https://spec.openapis.org/oas/v3.0.3#responseObject"
+    label = <<table border="0" cellspacing="0">
+        <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Media Map</b></font></td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="media1">media-type-1</td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="media2">media-type-2</td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="media3">media-type-3</td></tr>
+        <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>]
+
+mediaTypeObject [
+    URL = "https://spec.openapis.org/oas/v3.0.3#mediaTypeObject"
+    label = <<table border="0" cellspacing="0">
+        <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Media Type Object</b></font></td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="schema">schema</td></tr>
+        <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>]
+
+schemaObject [
+    URL = "https://spec.openapis.org/oas/v3.0.3#schemaObject"
+    label = <<table border="0" cellspacing="0">
+        <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Schema Object</b></font></td></tr>
+        <tr><td border="1" bgcolor="#6ca437">title</td></tr>
+        <tr><td border="1" bgcolor="#6ca437">description</td></tr>
+        <tr><td border="1" bgcolor="#6ca437">type</td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="items">items</td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="properties">properties</td></tr>
+        <tr><td border="1" bgcolor="#6ca437">example</td></tr>
+        <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>]
+
+propertiesMap [
+    URL = "https://spec.openapis.org/oas/v3.0.3#schemaObject"
+    label = <<table border="0" cellspacing="0">
+        <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Properties Map</b></font></td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="property1">property-1</td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="property2">property-2</td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="property3">property-3</td></tr>
+        <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>]
+
+responseObject:content->mediaMap:header [weight=10]
+
+requestBodyObject:content->mediaMap:header
+
+mediaMap:media1->mediaTypeObject:header [weight=10]
+mediaMap:media2->mediaTypeObject:header
+mediaMap:media3->mediaTypeObject:header
+
+mediaTypeObject:schema->schemaObject:header
+
+schemaObject:properties->propertiesMap:header [weight=10]
+schemaObject:items:e->schemaObject:header:n
+
+mergerNode [shape=point]
+
+propertiesMap:property1:e->mergerNode:s [dir=none, weight=10]
+propertiesMap:property2:e->mergerNode:s [dir=none]
+propertiesMap:property3:e->mergerNode:s [dir=none]
+mergerNode:n->schemaObject:header:n
+}
