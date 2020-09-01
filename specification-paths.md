@@ -47,7 +47,7 @@ paths:
 
 ## The Operation Object
 
-Besides giving the operation a `summary` and a `description`, the [Operation Object](http://spec.openapis.org/oas/v3.0.3#operationObject) basically describes the operation's parameters and the possible server responses. The rest of this page explains the `responses` field (which is **mandatory**) whereas `parameters` are dealt with in [another page](specification-parameters.md).
+Besides giving the operation a `summary` and a `description`, the [Operation Object](http://spec.openapis.org/oas/v3.0.3#operationObject) basically describes the operation's parameters, payload and possible server responses. The rest of this page explains the `responses` field (which is **mandatory**) whereas parameters and payload are dealt with in [another page](specification-parameters.md).
 
 ```yaml
 paths:
