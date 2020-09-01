@@ -1,0 +1,99 @@
+digraph pathsObject {
+node[shape=none; fontname=monospace]
+rankdir=LR
+bgcolor=white
+
+openapiObject [
+    URL = "http://spec.openapis.org/oas/v3.0.3#oasObject"
+    label = <<table border="0" cellspacing="0">
+        <tr><td border="1" bgcolor="#939598"><font face="arial"><b>OpenAPI Object</b></font></td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">openapi</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">info</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">paths</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71" port="components">components</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">…</td></tr></table>>]
+
+componentsObject [
+    URL = "http://spec.openapis.org/oas/v3.0.3#componentsObject"
+    label = <<table border="0" cellspacing="0">
+        <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Components Object</b></font></td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="schemas">schemas</td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="responses">responses</td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="parameters">parameters</td></tr>
+        <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>]
+
+schemasMap [
+    URL = "http://spec.openapis.org/oas/v3.0.3#componentsObject"
+    label = <<table border="0" cellspacing="0">
+        <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Schemas Map</b></font></td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="schema1">schema1</td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="schema2">schema2</td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="schema3">schema3</td></tr>
+        <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>]
+
+responsesMap [
+    URL = "http://spec.openapis.org/oas/v3.0.3#componentsObject"
+    label = <<table border="0" cellspacing="0">
+        <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Responses Map</b></font></td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="response1">response1</td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="response2">response2</td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="response3">response3</td></tr>
+        <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>]
+
+parametersMap [
+    URL = "http://spec.openapis.org/oas/v3.0.3#componentsObject"
+    label = <<table border="0" cellspacing="0">
+        <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Parameters Map</b></font></td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="parameter1">parameter1</td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="parameter2">parameter2</td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="parameter3">parameter3</td></tr>
+        <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>]
+
+schemaObject [
+    URL = "https://spec.openapis.org/oas/v3.0.3#schemaObject"
+    label = <<table border="0" cellspacing="0">
+        <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>Schema Object</b></font></td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">title</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">description</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">type</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71" port="items">items</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71" port="properties">properties</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">example</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">…</td></tr></table>>]
+
+responseObject [
+    URL = "http://spec.openapis.org/oas/v3.0.3#responseObject"
+    label = <<table border="0" cellspacing="0">
+        <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>Response Object</b></font></td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">description</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">content</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">…</td></tr></table>>]
+
+parameterObject [
+    URL = "http://spec.openapis.org/oas/v3.0.3#parameterObject"
+    label = <<table border="0" cellspacing="0">
+        <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>Parameter Object</b></font></td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">name</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">description</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">in</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">required</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">…</td></tr></table>>]
+
+openapiObject:components->componentsObject:header
+
+componentsObject:schemas->schemasMap:header
+componentsObject:responses->responsesMap:header
+componentsObject:parameters->parametersMap:header
+
+schemasMap:schema1->schemaObject:header [weight=10]
+schemasMap:schema2->schemaObject:header
+schemasMap:schema3->schemaObject:header
+
+responsesMap:response1->responseObject:header [weight=10]
+responsesMap:response2->responseObject:header
+responsesMap:response3->responseObject:header
+
+parametersMap:parameter1->parameterObject:header [weight=10]
+parametersMap:parameter2->parameterObject:header
+parametersMap:parameter3->parameterObject:header
+}
