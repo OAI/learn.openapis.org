@@ -8,7 +8,7 @@ This field can be found both in [Response Objects](https://spec.openapis.org/oas
 
 <figure style="text-align:center">
   <img src="img/content-field.svg"/>
-  <figcaption>The Response Object is explained in the <a href="specification-paths.md">API Endpoints</a> page.<br/>The Request Body Object is explained in the <a href="specification-parameters.md">Parameters and Payload of an Endpoint</a> page.</figcaption>
+  <figcaption>The Response Object is explained in the <a href="specification-paths.md">API Endpoints</a> page.<br/>The Request Body Object is explained in the <a href="specification-parameters.md">Parameters and Payload of an Operation</a> page.</figcaption>
 </figure>
 
 This allows returning content (or accepting content) in **different formats**, each one with a different structure described by the Media Type Object. **Wildcards** are accepted for the media types, with the more specific ones taking precedence over the generic ones.
