@@ -9,7 +9,7 @@ accessible through the `components` field in the root [OpenAPI Object](https://s
 
 <figure style="text-align:center">
   <img src="img/components-object.svg"/>
-  <figcaption></figcaption>
+  <figcaption>The OpenAPI Object is explained in the <a href="specification-structure.md">Structure of an OpenAPI Document</a> page.<br/>The Schema Object is explained in the <a href="specification-content.md">Content of Message Bodies</a> page.<br/>The Response Object is explained in the <a href="specification-paths.md">API Endpoints</a> page.<br/>The Parameter Object is explained in the <a href="specification-parameters.md">Parameters and Payload of an Endpoint</a> page.</figcaption>
 </figure>
 
 Most objects in the OAS can be replaced by a **reference** to a **component**, drastically reducing document size and maintenance (just like methods do in programming languages).
