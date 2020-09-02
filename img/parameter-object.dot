@@ -1,0 +1,105 @@
+digraph pathsObject {
+node[shape=none; fontname=monospace]
+rankdir=LR
+bgcolor=white
+
+pathItemObject [
+    URL = "https://spec.openapis.org/oas/v3.0.3#pathItemObject"
+    label = <<table border="0" cellspacing="0">
+        <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>Path Item Object</b></font></td></tr>
+        <tr><td border="1" bgcolor="#6d6e71" port="get">get</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71" port="put">put</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71" port="post">post</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71" port="delete">delete</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71" port="parameters">parameters</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">…</td></tr></table>>]
+
+operationObject [
+    URL = "https://spec.openapis.org/oas/v3.0.3#operationObject"
+    label = <<table border="0" cellspacing="0">
+        <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>Operation Object</b></font></td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">summary</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">description</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71" port="requestBody">requestBody</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">responses</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">operationId</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71" port="parameters">parameters</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">…</td></tr></table>>]
+
+requestBodyObject [
+    URL = "https://spec.openapis.org/oas/v3.0.3#requestBodyObject"
+    label = <<table border="0" cellspacing="0">
+        <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Request Body Object</b></font></td></tr>
+        <tr><td border="1" bgcolor="#6ca437">description</td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="content">content</td></tr>
+        <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>]
+
+requestMediaMap [
+    URL = "https://spec.openapis.org/oas/v3.0.3#requestBodyContent"
+    label = <<table border="0" cellspacing="0">
+        <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>Media Map</b></font></td></tr>
+        <tr><td border="1" bgcolor="#6d6e71" port="media1">media-type-1</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71" port="media2">media-type-2</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71" port="media3">media-type-3</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">…</td></tr></table>>]
+
+parameterObject [
+    URL = "https://spec.openapis.org/oas/v3.0.3#parameterObject"
+    label = <<table border="0" cellspacing="0">
+        <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Parameter Object</b></font></td></tr>
+        <tr><td border="1" bgcolor="#6ca437">name</td></tr>
+        <tr><td border="1" bgcolor="#6ca437">in</td></tr>
+        <tr><td border="1" bgcolor="#6ca437">description</td></tr>
+        <tr><td border="1" bgcolor="#6ca437">required</td></tr>
+        <tr><td border="1" bgcolor="#6ca437">style</td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="content">content</td></tr>
+        <tr><td border="1" bgcolor="#6ca437" port="schema">schema</td></tr>
+        <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>]
+
+schemaObject [
+    URL = "https://spec.openapis.org/oas/v3.0.3#schemaObject"
+    label = <<table border="0" cellspacing="0">
+        <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>Schema Object</b></font></td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">title</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">description</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">type</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">items</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">properties</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">example</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">…</td></tr></table>>]
+
+paramMediaMap [
+    URL = "https://spec.openapis.org/oas/v3.0.3#parameterContent"
+    label = <<table border="0" cellspacing="0">
+        <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>Media Map</b></font></td></tr>
+        <tr><td border="1" bgcolor="#6d6e71" port="media">single-media-type</td></tr></table>>]
+
+mediaTypeObject [
+    URL = "https://spec.openapis.org/oas/v3.0.3#mediaTypeObject"
+    label = <<table border="0" cellspacing="0">
+        <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>Media Type Object</b></font></td></tr>
+        <tr><td border="1" bgcolor="#6d6e71" port="schema">schema</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">…</td></tr></table>>]
+
+pathItemObject:get->operationObject:header
+pathItemObject:put->operationObject:header
+pathItemObject:post->operationObject:header
+pathItemObject:delete->operationObject:header
+
+pathItemObject:parameters->parameterObject:header [weight=10 label="*"]
+operationObject:parameters->parameterObject:header [label="*"]
+operationObject:requestBody->requestBodyObject:header [weight=10]
+
+requestBodyObject:content->requestMediaMap:header [weight=10]
+
+requestMediaMap:media1->mediaTypeObject:header
+requestMediaMap:media2->mediaTypeObject:header
+requestMediaMap:media3->mediaTypeObject:header [weight=10]
+
+parameterObject:schema->schemaObject:header [weight=10]
+parameterObject:content->paramMediaMap:header
+
+paramMediaMap:media->mediaTypeObject:header [weight=1]
+
+mediaTypeObject:schema->schemaObject:header
+}
