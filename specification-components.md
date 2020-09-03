@@ -1,6 +1,6 @@
 # Reusing Descriptions
 
-The examples given so far have started to grow large because of the verbose nature of OpenAPI documents. This page introduces a mechanism to remove redundancy from the document by reusing portions of it.
+As is often the case, the example built through the previous pages has grown too large to be easily manageable. This page introduces a mechanism to remove redundancy from an OpenAPI document by reusing portions of it.
 
 ## The Components Object
 
