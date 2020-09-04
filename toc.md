@@ -15,3 +15,5 @@
 ### [Parameters and Payload of an Operation](specification-parameters.md)
 
 ### [Reusing Descriptions](specification-components.md)
+
+### [API Servers](specification-servers.md)

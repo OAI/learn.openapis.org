@@ -13,7 +13,7 @@ API Endpoints (also called Operations or Routes) are called **Paths** in the OAS
 
 Every field in the [Paths Object](https://spec.openapis.org/oas/v3.0.3#pathsObject) is a [Path Item Object](https://spec.openapis.org/oas/v3.0.3#pathItemObject) describing one API endpoint. Fields are used instead of an Array because they enforce endpoint name uniqueness at the syntax level (any JSON or YAML parser can detect mistakes without requiring an OpenAPI validator).
 
-Paths **must start with a forward slash** `/` since they are directly appended to the server URL ([described later](specification-servers.md)) to construct the full endpoint URL.
+Paths **must start with a forward slash** `/` since they are directly appended to the server URL (described in the [API Servers](specification-servers.md) page) to construct the full endpoint URL.
 
 The [Tic Tac Toe sample API](examples/tictactoe.yaml) is used in this guide to exemplify each concept and it is built piece by piece as the guide progresses. Here's the first snippet already containing a single endpoint:
 

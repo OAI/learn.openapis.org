@@ -1,0 +1,105 @@
+digraph serverObject {
+node[shape=none; fontname=monospace; tooltip = "Click to jump to the specification of this object"]
+rankdir=LR
+bgcolor=white
+
+subgraph clusterOtherObjects {
+    color=none
+    tooltip="serverObject"
+
+    openapiObject [
+        URL = "https://spec.openapis.org/oas/v3.0.3#oasObject"
+        label = <<table border="0" cellspacing="0">
+            <tr><td border="1" bgcolor="#939598"><font face="arial"><b>OpenAPI Object</b></font></td></tr>
+            <tr><td border="1" bgcolor="#6d6e71">openapi</td></tr>
+            <tr><td border="1" bgcolor="#6d6e71">info</td></tr>
+            <tr><td border="1" bgcolor="#6d6e71" port="paths">paths</td></tr>
+            <tr><td border="1" bgcolor="#6d6e71" port="servers">servers</td></tr>
+            <tr><td border="1" bgcolor="#6d6e71">…</td></tr></table>>]
+
+    pathsObject [
+        URL = "https://spec.openapis.org/oas/v3.0.3#pathsObject"
+        label = <<table border="0" cellspacing="0">
+            <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>Paths Object</b></font></td></tr>
+            <tr><td border="1" bgcolor="#6d6e71" port="endpoint1">/endpoint1</td></tr>
+            <tr><td border="1" bgcolor="#6d6e71" port="endpoint2">/endpoint2</td></tr>
+            <tr><td border="1" bgcolor="#6d6e71" port="endpoint3">/endpoint3</td></tr>
+            <tr><td border="1" bgcolor="#6d6e71">…</td></tr></table>>]
+
+    pathItemObject [
+        URL = "https://spec.openapis.org/oas/v3.0.3#pathItemObject"
+        label = <<table border="0" cellspacing="0">
+            <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>Path Item Object</b></font></td></tr>
+            <tr><td border="1" bgcolor="#6d6e71" port="get">get</td></tr>
+            <tr><td border="1" bgcolor="#6d6e71" port="put">put</td></tr>
+            <tr><td border="1" bgcolor="#6d6e71" port="post">post</td></tr>
+            <tr><td border="1" bgcolor="#6d6e71" port="delete">delete</td></tr>
+            <tr><td border="1" bgcolor="#6d6e71" port="servers">servers</td></tr>
+            <tr><td border="1" bgcolor="#6d6e71">…</td></tr></table>>]
+
+    operationObject [
+        URL = "https://spec.openapis.org/oas/v3.0.3#operationObject"
+        label = <<table border="0" cellspacing="0">
+            <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>Operation Object</b></font></td></tr>
+            <tr><td border="1" bgcolor="#6d6e71">summary</td></tr>
+            <tr><td border="1" bgcolor="#6d6e71">description</td></tr>
+            <tr><td border="1" bgcolor="#6d6e71">requestBody</td></tr>
+            <tr><td border="1" bgcolor="#6d6e71" port="responses">responses</td></tr>
+            <tr><td border="1" bgcolor="#6d6e71">operationId</td></tr>
+            <tr><td border="1" bgcolor="#6d6e71" port="servers">servers</td></tr>
+        <tr><td border="1" bgcolor="#6d6e71">…</td></tr></table>>]
+}
+
+subgraph clusterOwnObjects {
+    color=none
+    tooltip="serverObject"
+
+    serverObject [
+        URL = "https://spec.openapis.org/oas/v3.0.3#serverObject"
+        label = <<table border="0" cellspacing="0">
+            <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Server Object</b></font></td></tr>
+            <tr><td border="1" bgcolor="#6ca437">url</td></tr>
+            <tr><td border="1" bgcolor="#6ca437">description</td></tr>
+            <tr><td border="1" bgcolor="#6ca437" port="variables">variables</td></tr>
+            <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>]
+
+    variablesMap [
+        URL = "https://spec.openapis.org/oas/v3.0.3#serverVariables"
+        label = <<table border="0" cellspacing="0">
+            <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Variables Map</b></font></td></tr>
+            <tr><td border="1" bgcolor="#6ca437" port="var1">variable1</td></tr>
+            <tr><td border="1" bgcolor="#6ca437" port="var2">variable2</td></tr>
+            <tr><td border="1" bgcolor="#6ca437" port="var3">variable3</td></tr>
+            <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>]
+
+    serverVariableObject [
+        URL = "https://spec.openapis.org/oas/v3.0.3#serverVariableObject"
+        label = <<table border="0" cellspacing="0">
+            <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Server Variable Object</b></font></td></tr>
+            <tr><td border="1" bgcolor="#6ca437">enum</td></tr>
+            <tr><td border="1" bgcolor="#6ca437">default</td></tr>
+            <tr><td border="1" bgcolor="#6ca437">description</td></tr>
+            <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>]
+}
+
+openapiObject:servers->serverObject:header:n [label="*" weight=100]
+openapiObject:paths->pathsObject:header
+
+pathsObject:endpoint1->pathItemObject:header [weight=1000]
+pathsObject:endpoint2->pathItemObject:header
+pathsObject:endpoint3->pathItemObject:header
+
+pathItemObject:servers:e->serverObject:header:n  [label="*"]
+
+pathItemObject:get->operationObject:header [weight=1000]
+pathItemObject:put->operationObject:header
+pathItemObject:post->operationObject:header
+pathItemObject:delete->operationObject:header
+
+operationObject:servers:e->serverObject:header:n  [label="*"]
+
+serverObject:variables->variablesMap:header [weight=1000]
+variablesMap:var1->serverVariableObject:header [weight=1000]
+variablesMap:var2->serverVariableObject:header
+variablesMap:var3->serverVariableObject:header
+}
