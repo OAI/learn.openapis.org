@@ -70,17 +70,17 @@ Finally, object field names are case-sensitive: `openapi` is not the same thing 
 
 ## Minimal Document Structure
 
-To be entirely precise, an OpenAPI document is a single JSON object containing fields adhering to the structure defined in the [OpenAPI Specification](http://spec.openapis.org/oas/v3.0.3) (OAS).
+To be entirely precise, an OpenAPI document is a single JSON object containing fields adhering to the structure defined in the [OpenAPI Specification](https://spec.openapis.org/oas/v3.0.3) (OAS).
 
-The OAS structure is long and complex so this section just describes the minimal set of fields it must contain, while following pages give more details about specific objects. The [OpenAPI Map](http://openapi-map.apihandyman.io/) is a nice visual tool that can help familiarize the reader with this long specification.
+The OAS structure is long and complex so this section just describes the minimal set of fields it must contain, while following pages give more details about specific objects. The [OpenAPI Map](https://openapi-map.apihandyman.io/) is a nice visual tool that can help familiarize the reader with this long specification.
 
-The root object in any OpenAPI document is the [OpenAPI Object](http://spec.openapis.org/oas/v3.0.3#oasObject) and only three of its fields are mandatory: `openapi`, `info` and `paths`.
+The root object in any OpenAPI document is the [OpenAPI Object](https://spec.openapis.org/oas/v3.0.3#oasObject) and only three of its fields are mandatory: `openapi`, `info` and `paths`.
 
 * `openapi` (**string**): This indicates the version of the OAS this document is using, e.g. "3.0.3". Using this field tools can check that the document correctly adheres to the spec.
-* `info` ([Info Object](http://spec.openapis.org/oas/v3.0.3#infoObject)): This provides general information about the API (like its description, author and contact information) but the only mandatory fields are `title` and `version`.
+* `info` ([Info Object](https://spec.openapis.org/oas/v3.0.3#infoObject)): This provides general information about the API (like its description, author and contact information) but the only mandatory fields are `title` and `version`.
   * `title` (**string**): A human-readable name for the API, like "GitHub REST API", useful to keep API collections organized.
   * `version` (**string**): Indicates the version **of the API document** (not to be confused with the OAS version above). Tools can use this field to generate code that ensures that clients and servers are interacting through the same version of the API, for example.
-* `paths` ([Paths Object](http://spec.openapis.org/oas/v3.0.3#pathsObject)): This describes all the **endpoints** of the API, including their parameters and all possible server responses. Server and client code can be generated from this description, along with its documentation.
+* `paths` ([Paths Object](https://spec.openapis.org/oas/v3.0.3#pathsObject)): This describes all the **endpoints** of the API, including their parameters and all possible server responses. Server and client code can be generated from this description, along with its documentation.
 
 <figure style="text-align:center">
   <img src="img/openapi-object.svg"/>
@@ -104,7 +104,7 @@ This API is not very useful because it **defines no operations** (it has no endp
 This page has shown that:
 
 * The syntax (language) used to write OpenAPI documents can be **JSON**, **YAML** or **both**.
-* An OpenAPI document is a JSON object including the fields described in the [OpenAPI Specification](http://spec.openapis.org/oas/v3.0.3).
+* An OpenAPI document is a JSON object including the fields described in the [OpenAPI Specification](https://spec.openapis.org/oas/v3.0.3).
 * Every OpenAPI document must contain a root object with at least the fields `openapi`, `info` and `paths`.
 
 [The following page](specification-paths.md) describes the contents of the `paths` field so endpoints can be added to the above minimal snippet.

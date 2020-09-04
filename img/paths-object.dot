@@ -4,7 +4,7 @@ rankdir=LR
 bgcolor=white
 
 openapiObject [
-    URL = "http://spec.openapis.org/oas/v3.0.3#oasObject"
+    URL = "https://spec.openapis.org/oas/v3.0.3#oasObject"
     label = <<table border="0" cellspacing="0">
         <tr><td border="1" bgcolor="#939598"><font face="arial"><b>OpenAPI Object</b></font></td></tr>
         <tr><td border="1" bgcolor="#6d6e71">openapi</td></tr>
@@ -13,7 +13,7 @@ openapiObject [
         <tr><td border="1" bgcolor="#6d6e71">…</td></tr></table>>]
 
 pathsObject [
-    URL = "http://spec.openapis.org/oas/v3.0.3#pathsObject"
+    URL = "https://spec.openapis.org/oas/v3.0.3#pathsObject"
     label = <<table border="0" cellspacing="0">
         <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Paths Object</b></font></td></tr>
         <tr><td border="1" bgcolor="#6ca437" port="endpoint1">/endpoint1</td></tr>
@@ -22,7 +22,7 @@ pathsObject [
         <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>]
 
 pathItemObject [
-    URL = "http://spec.openapis.org/oas/v3.0.3#pathItemObject"
+    URL = "https://spec.openapis.org/oas/v3.0.3#pathItemObject"
     label = <<table border="0" cellspacing="0">
         <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Path Item Object</b></font></td></tr>
         <tr><td border="1" bgcolor="#6ca437" port="get">get</td></tr>
@@ -32,7 +32,7 @@ pathItemObject [
         <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>]
 
 operationObject [
-    URL = "http://spec.openapis.org/oas/v3.0.3#operationObject"
+    URL = "https://spec.openapis.org/oas/v3.0.3#operationObject"
     label = <<table border="0" cellspacing="0">
         <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Operation Object</b></font></td></tr>
         <tr><td border="1" bgcolor="#6ca437">summary</td></tr>
@@ -43,7 +43,7 @@ operationObject [
         <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>]
 
 responsesObject [
-    URL = "http://spec.openapis.org/oas/v3.0.3#responsesObject"
+    URL = "https://spec.openapis.org/oas/v3.0.3#responsesObject"
     label = <<table border="0" cellspacing="0">
         <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Responses Object</b></font></td></tr>
         <tr><td border="1" bgcolor="#6ca437" port="code1">"HTTP code1"</td></tr>
@@ -52,7 +52,7 @@ responsesObject [
         <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>]
 
 responseObject [
-    URL = "http://spec.openapis.org/oas/v3.0.3#responseObject"
+    URL = "https://spec.openapis.org/oas/v3.0.3#responseObject"
     label = <<table border="0" cellspacing="0">
         <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Response Object</b></font></td></tr>
         <tr><td border="1" bgcolor="#6ca437">description</td></tr>
