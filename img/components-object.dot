@@ -1,4 +1,4 @@
-digraph pathsObject {
+digraph componentsObject {
 node[shape=none; fontname=monospace]
 rankdir=LR
 bgcolor=white
