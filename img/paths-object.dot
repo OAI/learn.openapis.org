@@ -1,5 +1,5 @@
 digraph pathsObject {
-node[shape=none; fontname=monospace]
+node[shape=none; fontname=monospace; tooltip = "Click to jump to the specification of this object"]
 rankdir=LR
 bgcolor=white
 

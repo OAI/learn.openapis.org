@@ -12,7 +12,7 @@
 <!-- openapiObject -->
 <g id="node1" class="node">
 <title>openapiObject</title>
-<g id="a_node1"><a xlink:href="https://spec.openapis.org/oas/v3.0.3#oasObject" xlink:title="&lt;TABLE&gt;">
+<g id="a_node1"><a xlink:href="https://spec.openapis.org/oas/v3.0.3#oasObject" xlink:title="Click to jump to the specification of this object">
 <polygon fill="#939598" stroke="transparent" points="8,-389 8,-410 124,-410 124,-389 8,-389"/>
 <polygon fill="none" stroke="black" points="8,-389 8,-410 124,-410 124,-389 8,-389"/>
 <text text-anchor="start" x="11" y="-396.8" font-family="arial" font-weight="bold" font-size="14.00">OpenAPI Object</text>
@@ -37,7 +37,7 @@
 <!-- componentsObject -->
 <g id="node2" class="node">
 <title>componentsObject</title>
-<g id="a_node2"><a xlink:href="https://spec.openapis.org/oas/v3.0.3#componentsObject" xlink:title="&lt;TABLE&gt;">
+<g id="a_node2"><a xlink:href="https://spec.openapis.org/oas/v3.0.3#componentsObject" xlink:title="Click to jump to the specification of this object">
 <polygon fill="#94d60a" stroke="transparent" points="176.5,-304 176.5,-325 321.5,-325 321.5,-304 176.5,-304"/>
 <polygon fill="none" stroke="black" points="176.5,-304 176.5,-325 321.5,-325 321.5,-304 176.5,-304"/>
 <text text-anchor="start" x="179.5" y="-311.8" font-family="arial" font-weight="bold" font-size="14.00">Components Object</text>
@@ -65,7 +65,7 @@
 <!-- schemasMap -->
 <g id="node3" class="node">
 <title>schemasMap</title>
-<g id="a_node3"><a xlink:href="https://spec.openapis.org/oas/v3.0.3#componentsObject" xlink:title="&lt;TABLE&gt;">
+<g id="a_node3"><a xlink:href="https://spec.openapis.org/oas/v3.0.3#componentsObject" xlink:title="Click to jump to the specification of this object">
 <polygon fill="#94d60a" stroke="transparent" points="381.5,-455 381.5,-476 486.5,-476 486.5,-455 381.5,-455"/>
 <polygon fill="none" stroke="black" points="381.5,-455 381.5,-476 486.5,-476 486.5,-455 381.5,-455"/>
 <text text-anchor="start" x="384.5" y="-462.8" font-family="arial" font-weight="bold" font-size="14.00">Schemas Map</text>
@@ -93,7 +93,7 @@
 <!-- responsesMap -->
 <g id="node4" class="node">
 <title>responsesMap</title>
-<g id="a_node4"><a xlink:href="https://spec.openapis.org/oas/v3.0.3#componentsObject" xlink:title="&lt;TABLE&gt;">
+<g id="a_node4"><a xlink:href="https://spec.openapis.org/oas/v3.0.3#componentsObject" xlink:title="Click to jump to the specification of this object">
 <polygon fill="#94d60a" stroke="transparent" points="374.5,-261 374.5,-282 492.5,-282 492.5,-261 374.5,-261"/>
 <polygon fill="none" stroke="black" points="374.5,-261 374.5,-282 492.5,-282 492.5,-261 374.5,-261"/>
 <text text-anchor="start" x="377.5" y="-268.8" font-family="arial" font-weight="bold" font-size="14.00">Responses Map</text>
@@ -121,7 +121,7 @@
 <!-- parametersMap -->
 <g id="node5" class="node">
 <title>parametersMap</title>
-<g id="a_node5"><a xlink:href="https://spec.openapis.org/oas/v3.0.3#componentsObject" xlink:title="&lt;TABLE&gt;">
+<g id="a_node5"><a xlink:href="https://spec.openapis.org/oas/v3.0.3#componentsObject" xlink:title="Click to jump to the specification of this object">
 <polygon fill="#94d60a" stroke="transparent" points="373.5,-130 373.5,-151 494.5,-151 494.5,-130 373.5,-130"/>
 <polygon fill="none" stroke="black" points="373.5,-130 373.5,-151 494.5,-151 494.5,-130 373.5,-130"/>
 <text text-anchor="start" x="376.5" y="-137.8" font-family="arial" font-weight="bold" font-size="14.00">Parameters Map</text>
@@ -149,7 +149,7 @@
 <!-- schemaObject -->
 <g id="node6" class="node">
 <title>schemaObject</title>
-<g id="a_node6"><a xlink:href="https://spec.openapis.org/oas/v3.0.3#schemaObject" xlink:title="&lt;TABLE&gt;">
+<g id="a_node6"><a xlink:href="https://spec.openapis.org/oas/v3.0.3#schemaObject" xlink:title="Click to jump to the specification of this object">
 <polygon fill="#939598" stroke="transparent" points="553.5,-434 553.5,-455 665.5,-455 665.5,-434 553.5,-434"/>
 <polygon fill="none" stroke="black" points="553.5,-434 553.5,-455 665.5,-455 665.5,-434 553.5,-434"/>
 <text text-anchor="start" x="556.5" y="-441.8" font-family="arial" font-weight="bold" font-size="14.00">Schema Object</text>
@@ -198,7 +198,7 @@
 <!-- responseObject -->
 <g id="node7" class="node">
 <title>responseObject</title>
-<g id="a_node7"><a xlink:href="https://spec.openapis.org/oas/v3.0.3#responseObject" xlink:title="&lt;TABLE&gt;">
+<g id="a_node7"><a xlink:href="https://spec.openapis.org/oas/v3.0.3#responseObject" xlink:title="Click to jump to the specification of this object">
 <polygon fill="#939598" stroke="transparent" points="547.5,-240 547.5,-261 672.5,-261 672.5,-240 547.5,-240"/>
 <polygon fill="none" stroke="black" points="547.5,-240 547.5,-261 672.5,-261 672.5,-240 547.5,-240"/>
 <text text-anchor="start" x="550.5" y="-247.8" font-family="arial" font-weight="bold" font-size="14.00">Response Object</text>
@@ -235,7 +235,7 @@
 <!-- parameterObject -->
 <g id="node8" class="node">
 <title>parameterObject</title>
-<g id="a_node8"><a xlink:href="https://spec.openapis.org/oas/v3.0.3#parameterObject" xlink:title="&lt;TABLE&gt;">
+<g id="a_node8"><a xlink:href="https://spec.openapis.org/oas/v3.0.3#parameterObject" xlink:title="Click to jump to the specification of this object">
 <polygon fill="#939598" stroke="transparent" points="546.5,-109 546.5,-130 673.5,-130 673.5,-109 546.5,-109"/>
 <polygon fill="none" stroke="black" points="546.5,-109 546.5,-130 673.5,-130 673.5,-109 546.5,-109"/>
 <text text-anchor="start" x="549.5" y="-116.8" font-family="arial" font-weight="bold" font-size="14.00">Parameter Object</text>
