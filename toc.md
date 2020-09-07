@@ -16,4 +16,6 @@
 
 ### [Reusing Descriptions](specification-components.md)
 
+### [Providing Documentation and Examples](specification-docs.md)
+
 ### [API Servers](specification-servers.md)
