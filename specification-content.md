@@ -25,7 +25,7 @@ content:
 
 ## The Media Type Object
 
-The [Media Type Object](https://spec.openapis.org/oas/v3.0.3#mediaTypeObject) describes the structure of the content and provides examples for documentation and mocking purposes (examples are dealt with in the [Examples page](specification-examples.md)).
+The [Media Type Object](https://spec.openapis.org/oas/v3.0.3#mediaTypeObject) describes the structure of the content and provides examples for documentation and mocking purposes (examples are dealt with in the [Documentation page](specification-docs.md)).
 
 The structure is described in the `schema` field explained next.
 

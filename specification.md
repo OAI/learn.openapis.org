@@ -9,5 +9,5 @@ The following pages introduce the syntax and structure of an OpenAPI document, i
 - [Content of Message Bodies](specification-content.md): `content` and `schema`.
 - [Parameters and Payload of an Operation](specification-parameters.md): `parameters` and `requestBody`.
 - [Reusing Descriptions](specification-components.md): `components` and `$ref`.
-- [Providing Examples](specification-examples.md): `example` and `examples`.
+- [Providing Documentation and Examples](specification-docs.md): `example` and `examples`.
 - [API Servers](specification-servers.md): `servers`.
