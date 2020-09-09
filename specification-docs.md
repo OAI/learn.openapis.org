@@ -32,9 +32,11 @@ paths:
 
 Additionally, the [Path Item](https://spec.openapis.org/oas/v3.0.3#pathItemObject), [Operation](https://spec.openapis.org/oas/v3.0.3#operationObject) and [Example](https://spec.openapis.org/oas/v3.0.3#exampleObject) objects, which usually have long descriptions, accept a `summary` field providing a short description. Documentation generators can use this field in the full list of paths, or in page headers, for example.
 
-## Providing Long Descriptions
+## Providing Long Descriptions in YAML
 
-Long descriptions like the one above end when a YAML line is found with smaller indentation. Leading space is important!
+In JSON format all strings are enclosed in quotes and it is therefore clear where they begin and end. In YAML, though, strings more than one line long can be a bit confusing.
+
+To begin with, long descriptions like the one above end when a YAML line is found with smaller indentation. Leading space is important!
 
 Furthermore, the above example uses the **plain mode** for strings. It is easy to use because it does not require any special syntax, but it can confuse YAML-parsing tools if the string contains colon `:` or hash `#` characters. In these cases, the whole string must be enclosed in single or double quotes:
 
