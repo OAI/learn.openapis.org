@@ -19,3 +19,5 @@
 ### [Providing Documentation and Examples](specification-docs.md)
 
 ### [API Servers](specification-servers.md)
+
+## [Best Practices](best-practices.md)
