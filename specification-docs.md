@@ -1,4 +1,4 @@
-# 09 Providing Documentation and Examples
+# Providing Documentation and Examples
 
 Besides machine-readable descriptions, an OpenAPI document can also include traditional documentation meant to be read by developers. Automatic documentation generators can then merge both and produce comprehensive, nicely-structured reference guides, for example.
 
