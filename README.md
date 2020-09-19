@@ -15,3 +15,5 @@ Workspace for the new documentation, **prior to publishing**.
 | :warning: Work in Progress :warning: |
 | --- |
 | The content of these pages is subject to change at any time! |
+
+<p>Original site customized based on a theme based on theme by Patrick Marsceill, distributed by an <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT license.</a></p>
