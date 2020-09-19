@@ -1,3 +1,10 @@
+---
+
+parent: The OpenAPI Specification Explained
+nav_order: 5
+
+---
+
 # Reusing Descriptions
 
 As is often the case, the example built through the previous pages has grown too large to be easily manageable. This page introduces a mechanism to remove redundancy from an OpenAPI document by reusing portions of it.

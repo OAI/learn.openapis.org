@@ -1,3 +1,10 @@
+---
+
+parent: The OpenAPI Specification Explained
+nav_order: 4
+
+---
+
 # Parameters and Payload of an Operation
 
 [The previous page](specification-content.md) has shown how to describe an operation's response format, this is, the **output data** of an operation. On the other hand, this page shows how to specify the **input data**, this is, the additional information that complements the endpoint and the operation to fully detail a request.

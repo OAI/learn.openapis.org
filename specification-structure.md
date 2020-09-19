@@ -1,3 +1,10 @@
+---
+
+parent: The OpenAPI Specification Explained
+nav_order: 1
+
+---
+
 # Structure of an OpenAPI Document
 
 An OpenAPI document describes an HTTP-like API in one or more machine-readable files. This page describes the syntax of these files and the minimal structure they must contain.

@@ -1,3 +1,10 @@
+---
+
+parent: The OpenAPI Specification Explained
+nav_order: 7
+
+---
+
 # API Servers
 
 This page shows how to specify the server where the API can be accessed, which can contain multiple URLs and even variable portions.

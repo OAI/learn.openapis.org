@@ -1,3 +1,10 @@
+---
+
+parent: The OpenAPI Specification Explained
+nav_order: 3
+
+---
+
 # Content of Message Bodies
 
 [The previous page](specification-paths.md) showed how to define API endpoints but it didn't explain how to describe the content of the responses through the `content` field. This page clarifies this important field, which can also be used to describe queries, as shown in the [Parameters page](specification-parameters.md).
