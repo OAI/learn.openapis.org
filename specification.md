@@ -1,4 +1,4 @@
-# The OpenAPI Specification Explained
+# 03 The OpenAPI Specification Explained
 
 The [OpenAPI Specification](https://spec.openapis.org/oas/v3.0.3) is the ultimate source of knowledge regarding this API description format. However, its length is daunting to newcomers and makes it hard for experienced users to find specific bits of information. This chapter provides a soft landing for readers not yet familiar with OpenAPI and is organized by topic, simplifying browsing.
 

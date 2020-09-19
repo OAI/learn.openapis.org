@@ -1,1 +1,3 @@
 remote_theme: pmarsceill/just-the-docs
+title: OpenAPI Documentation
+description: For API designers and writers wishing formalize their API in an **OpenAPI Description document**.

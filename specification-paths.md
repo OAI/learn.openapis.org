@@ -1,4 +1,4 @@
-# API Endpoints
+# 05 API Endpoints
 
 [The previous page](specification-structure.md) showed the minimal structure of an OpenAPI document but did not add any operation to the API. This page explains how to do it.
 
