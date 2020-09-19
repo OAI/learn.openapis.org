@@ -7,7 +7,7 @@
 This field can be found both in [Response Objects](https://spec.openapis.org/oas/v3.0.3#responseObject) and [Request Body Objects](https://spec.openapis.org/oas/v3.0.3#requestBodyObject). It is a map pairing standard [RFC6838 Media Types](https://tools.ietf.org/html/rfc6838) with OpenAPI [Media Type Objects](https://spec.openapis.org/oas/v3.0.3#mediaTypeObject).
 
 <figure style="text-align:center">
-  <img src="img/content-field.svg"/>
+  <object type="image/svg+xml" data="img/content-field.svg"></object>
   <figcaption>The Response Object is explained in the <a href="specification-paths.md">API Endpoints</a> page.<br/>The Request Body Object is explained in the <a href="specification-parameters.md">Parameters and Payload of an Operation</a> page.</figcaption>
 </figure>
 

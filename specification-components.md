@@ -8,7 +8,7 @@ The [Components Object](https://spec.openapis.org/oas/v3.0.3#componentsObject),
 accessible through the `components` field in the root [OpenAPI Object](https://spec.openapis.org/oas/v3.0.3#oasObject), contains definitions for objects to be reused in other parts of the document.
 
 <figure style="text-align:center">
-  <img src="img/components-object.svg"/>
+   <object type="image/svg+xml" data="img/components-object.svg"></object>
   <figcaption>The OpenAPI Object is explained in the <a href="specification-structure.md">Structure of an OpenAPI Document</a> page.<br/>The Schema Object is explained in the <a href="specification-content.md">Content of Message Bodies</a> page.<br/>The Response Object is explained in the <a href="specification-paths.md">API Endpoints</a> page.<br/>The Parameter Object is explained in the <a href="specification-parameters.md">Parameters and Payload of an Operation</a> page.</figcaption>
 </figure>
 

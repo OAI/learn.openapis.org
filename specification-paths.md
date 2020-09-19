@@ -7,7 +7,7 @@
 API Endpoints (also called Operations or Routes) are called **Paths** in the OAS. The [Paths Object](https://spec.openapis.org/oas/v3.0.3#pathsObject), accessible through the `paths` field in the root [OpenAPI Object](https://spec.openapis.org/oas/v3.0.3#oasObject), is the container for all operations supported by the API:
 
 <figure style="text-align:center">
-  <img src="img/paths-object.svg" />
+  <object type="image/svg+xml" data="img/paths-object.svg"></object>
   <figcaption>The OpenAPI Object is explained in the <a href="specification-structure.md">Structure of an OpenAPI Document</a> page.</figcaption>
 </figure>
 
