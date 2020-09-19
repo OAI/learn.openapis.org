@@ -6,3 +6,5 @@ logo: "/assets/images/OpenAPI_Logo_Pantone-1.png"
 footer_content: "Copyright &copy; OpenAPI Initiative"
 color_scheme: oai
 highlighter: rouge
+plugins:
+  - jekyll-sitemap
