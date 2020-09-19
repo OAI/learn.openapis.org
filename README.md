@@ -1,6 +1,6 @@
 # Home
 
-<img alt="OpenAPI Initiative" src="https://www.openapis.org/wp-content/uploads/sites/3/2018/02/OpenAPI_Logo_Pantone-1.png" width="600" height="auto">
+<img alt="OpenAPI Initiative" src="/assets/images/OpenAPI_Logo_Pantone-1.png" width="100%" height="auto">
 
 Are you new to the OpenAPI standard? 
 

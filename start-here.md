@@ -1,4 +1,4 @@
-# Start Here
+# Getting started
 
 ## Intended Audience
 
