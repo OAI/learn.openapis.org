@@ -56,9 +56,8 @@ If precise control over the location of line breaks is required, two more string
 - **Literal mode** (Pipe `|` indicator character): Line breaks in the source YAML file are preserved in the output.
 - **Folded mode** (Greater-than sign `>` indicator character): Line breaks are removed so the output is a single string. Use an empty line to force a line break.
 
-<table style="border-style:none;width:100%">
-<th>YAML source</th><th>Output</th>
-<tr style="vertical-align:top"><td>
+
+### YAML source - Literal mode
 
 ```yaml
 description: |
@@ -68,7 +67,7 @@ description: |
   And an extra one.
 ```
 
-</td><td>
+### Output - Literal mode
 
 ```text
 This is a string
@@ -77,7 +76,7 @@ in multiple lines.
 And an extra one.
 ```
 
-</td></tr><tr style="vertical-align:top"><td>
+### YAML source - Folded mode
 
 ```yaml
 description: >
@@ -87,14 +86,12 @@ description: >
   And an extra one.
 ```
 
-</td><td>
+### Output - Folded mode
 
 ```text
 This is a string in multiple lines.
 And an extra one.
 ```
-
-</td></tr></table>
 
 The literal and folded modes do not need to use quotes.
 

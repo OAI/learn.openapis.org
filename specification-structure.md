@@ -19,7 +19,7 @@ JSON can represent **Numbers**, **Strings**, **Booleans**, **`null` values**, **
 
 Here's a comparison showing the different syntaxes.
 
-<table style="border-style:none;width:100%"><tr style="vertical-align:top"><td>
+
 
 JSON:
 
@@ -38,9 +38,6 @@ JSON:
   }
 }
 ```
-
-</td><td>
-
 YAML:
 
 ```yaml
@@ -56,7 +53,6 @@ anObject:
     - 3
 ```
 
-</td></tr></table>
 
 Basically, JSON does not support comments and requires: **commas** separating fields, **curly brackets** around objects, double **quotation marks** around strings and **square brackets** around arrays. On the other hand, YAML requires **hyphens** before array items and relies heavily on **indentation**, which can be cumbersome on large files (indentation is entirely optional in JSON).
 

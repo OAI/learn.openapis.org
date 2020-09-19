@@ -51,7 +51,6 @@ The [Schema Object](https://spec.openapis.org/oas/v3.0.3#schemaObject) defines a
 
 For example, for `string` types the length of the string can be limited with `minLength` and `maxLength`. Similarly, `integer` types, accept `minimum` and `maximum` values. No matter the type, if the amount of options for the data is limited to a certain set, it can be specified with the `enum` array. All these properties are listed in the [Schema Object](https://spec.openapis.org/oas/v3.0.3#schemaObject) specification.
 
-<table style="border-style:none;width:100%"><tr style="vertical-align:top"><td>
 
 Example integer with limited range:
 
@@ -63,8 +62,6 @@ content:
       minimum: 1
       maximum: 100
 ```
-
-</td><td>
 
 Example string with only three valid options:
 
@@ -78,8 +75,6 @@ content:
       - Bob
       - Carl
 ```
-
-</td></table>
 
 Array types must have an `items` field, which is a [Schema Object](https://spec.openapis.org/oas/v3.0.3#schemaObject) itself, and defines the type for each element of the array. Additionally, the size of the array can be limited with `minItems` and `maxItems`.
 
