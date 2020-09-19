@@ -10,10 +10,8 @@ Read our [Getting started](start-here.md) page first.
 
 Workspace for the new documentation, **prior to publishing**.
 
-| :warning: Work in Progress :warning: |
-
-| :warning: Work in Progress :warning: |
+|  Work in Progress |
 | --- |
 | The content of these pages is subject to change at any time! |
 
-<p>Original site customized based on a theme based on theme by Patrick Marsceill, distributed by an <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT license.</a></p>
+<p>Original site customized based on a theme based on theme by Patrick Marsceill, distributed by an <a href="https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt">MIT license.</a></p>
