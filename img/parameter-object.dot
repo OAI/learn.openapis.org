@@ -4,7 +4,7 @@ rankdir=LR
 bgcolor=white
 
 pathItemObject [
-    URL = "https://spec.openapis.org/oas/v3.0.3#pathItemObject"
+    URL = "https://spec.openapis.org/oas/v3.0.3#pathItemObject" target="_blank"
     label = <<table border="0" cellspacing="0">
         <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>Path Item Object</b></font></td></tr>
         <tr><td border="1" bgcolor="#6d6e71" port="get">get</td></tr>
@@ -15,7 +15,7 @@ pathItemObject [
         <tr><td border="1" bgcolor="#6d6e71">…</td></tr></table>>]
 
 operationObject [
-    URL = "https://spec.openapis.org/oas/v3.0.3#operationObject"
+    URL = "https://spec.openapis.org/oas/v3.0.3#operationObject" target="_blank"
     label = <<table border="0" cellspacing="0">
         <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>Operation Object</b></font></td></tr>
         <tr><td border="1" bgcolor="#6d6e71">summary</td></tr>
@@ -27,7 +27,7 @@ operationObject [
         <tr><td border="1" bgcolor="#6d6e71">…</td></tr></table>>]
 
 requestBodyObject [
-    URL = "https://spec.openapis.org/oas/v3.0.3#requestBodyObject"
+    URL = "https://spec.openapis.org/oas/v3.0.3#requestBodyObject" target="_blank"
     label = <<table border="0" cellspacing="0">
         <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Request Body Object</b></font></td></tr>
         <tr><td border="1" bgcolor="#6ca437">description</td></tr>
@@ -35,7 +35,7 @@ requestBodyObject [
         <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>]
 
 requestMediaMap [
-    URL = "https://spec.openapis.org/oas/v3.0.3#requestBodyContent"
+    URL = "https://spec.openapis.org/oas/v3.0.3#requestBodyContent" target="_blank"
     label = <<table border="0" cellspacing="0">
         <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>Media Map</b></font></td></tr>
         <tr><td border="1" bgcolor="#6d6e71" port="media1">media-type-1</td></tr>
@@ -44,7 +44,7 @@ requestMediaMap [
         <tr><td border="1" bgcolor="#6d6e71">…</td></tr></table>>]
 
 parameterObject [
-    URL = "https://spec.openapis.org/oas/v3.0.3#parameterObject"
+    URL = "https://spec.openapis.org/oas/v3.0.3#parameterObject" target="_blank"
     label = <<table border="0" cellspacing="0">
         <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Parameter Object</b></font></td></tr>
         <tr><td border="1" bgcolor="#6ca437">name</td></tr>
@@ -57,7 +57,7 @@ parameterObject [
         <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>]
 
 schemaObject [
-    URL = "https://spec.openapis.org/oas/v3.0.3#schemaObject"
+    URL = "https://spec.openapis.org/oas/v3.0.3#schemaObject" target="_blank"
     label = <<table border="0" cellspacing="0">
         <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>Schema Object</b></font></td></tr>
         <tr><td border="1" bgcolor="#6d6e71">title</td></tr>
@@ -69,13 +69,13 @@ schemaObject [
         <tr><td border="1" bgcolor="#6d6e71">…</td></tr></table>>]
 
 paramMediaMap [
-    URL = "https://spec.openapis.org/oas/v3.0.3#parameterContent"
+    URL = "https://spec.openapis.org/oas/v3.0.3#parameterContent" target="_blank"
     label = <<table border="0" cellspacing="0">
         <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>Media Map</b></font></td></tr>
         <tr><td border="1" bgcolor="#6d6e71" port="media">single-media-type</td></tr></table>>]
 
 mediaTypeObject [
-    URL = "https://spec.openapis.org/oas/v3.0.3#mediaTypeObject"
+    URL = "https://spec.openapis.org/oas/v3.0.3#mediaTypeObject" target="_blank"
     label = <<table border="0" cellspacing="0">
         <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>Media Type Object</b></font></td></tr>
         <tr><td border="1" bgcolor="#6d6e71" port="schema">schema</td></tr>
