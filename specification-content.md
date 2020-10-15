@@ -1,3 +1,10 @@
+---
+
+parent: The OpenAPI Specification Explained
+nav_order: 3
+
+---
+
 # Content of Message Bodies
 
 [The previous page](specification-paths.md) showed how to define API endpoints but it didn't explain how to describe the content of the responses through the `content` field. This page clarifies this important field, which can also be used to describe queries, as shown in the [Parameters page](specification-parameters.md).
@@ -7,7 +14,7 @@
 This field can be found both in [Response Objects](https://spec.openapis.org/oas/v3.0.3#responseObject) and [Request Body Objects](https://spec.openapis.org/oas/v3.0.3#requestBodyObject). It is a map pairing standard [RFC6838 Media Types](https://tools.ietf.org/html/rfc6838) with OpenAPI [Media Type Objects](https://spec.openapis.org/oas/v3.0.3#mediaTypeObject).
 
 <figure style="text-align:center">
-  <img src="img/content-field.svg"/>
+  <object type="image/svg+xml" data="img/content-field.svg"></object>
   <figcaption>The Response Object is explained in the <a href="specification-paths.md">API Endpoints</a> page.<br/>The Request Body Object is explained in the <a href="specification-parameters.md">Parameters and Payload of an Operation</a> page.</figcaption>
 </figure>
 
@@ -44,7 +51,6 @@ The [Schema Object](https://spec.openapis.org/oas/v3.0.3#schemaObject) defines a
 
 For example, for `string` types the length of the string can be limited with `minLength` and `maxLength`. Similarly, `integer` types, accept `minimum` and `maximum` values. No matter the type, if the amount of options for the data is limited to a certain set, it can be specified with the `enum` array. All these properties are listed in the [Schema Object](https://spec.openapis.org/oas/v3.0.3#schemaObject) specification.
 
-<table style="border-style:none;width:100%"><tr style="vertical-align:top"><td>
 
 Example integer with limited range:
 
@@ -56,8 +62,6 @@ content:
       minimum: 1
       maximum: 100
 ```
-
-</td><td>
 
 Example string with only three valid options:
 
@@ -71,8 +75,6 @@ content:
       - Bob
       - Carl
 ```
-
-</td></table>
 
 Array types must have an `items` field, which is a [Schema Object](https://spec.openapis.org/oas/v3.0.3#schemaObject) itself, and defines the type for each element of the array. Additionally, the size of the array can be limited with `minItems` and `maxItems`.
 

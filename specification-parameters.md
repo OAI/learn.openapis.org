@@ -1,3 +1,10 @@
+---
+
+parent: The OpenAPI Specification Explained
+nav_order: 4
+
+---
+
 # Parameters and Payload of an Operation
 
 [The previous page](specification-content.md) has shown how to describe an operation's response format, this is, the **output data** of an operation. On the other hand, this page shows how to specify the **input data**, this is, the additional information that complements the endpoint and the operation to fully detail a request.
@@ -5,7 +12,7 @@
 OpenAPI provides two mechanisms to specify input data, **parameters** and **request body** (message payload). Parameters are typically used to identify a resource, whereas the message payload provides content for that resource.
 
 <figure style="text-align:center">
-  <img src="img/parameter-object.svg" />
+  <object type="image/svg+xml" data="img/parameter-object.svg"></object>
   <figcaption>
     The edges marked with an asterisk are arrays.<br/>
     The Path Item and Operation Objects are explained in the <a href="specification-paths.md">API Endpoints</a> page.<br/>
