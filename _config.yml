@@ -3,7 +3,7 @@ title: OpenAPI Documentation
 description: For API designers and writers wishing formalize their API in an OpenAPI Description document.
 baseurl: /Documentation
 logo: "/assets/images/OpenAPI_Logo_Pantone-1.png"
-footer_content: "Copyright &copy; OpenAPI Initiative"
+footer_content: "&copy; 2020 OpenAPI Initiative. <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. The documentation is maintained in <a href="https://github.com/OAI/Documentation/">https://github.com/OAI/Documentation/</a>."
 color_scheme: oai
 highlighter: rouge
 plugins:
