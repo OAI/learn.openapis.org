@@ -1,3 +1,10 @@
+---
+
+nav_order: 3
+
+---
+
+
 # Best Practices
 
 This page contains general pieces of advice which do not strictly belong to the [Specification Explained](specification.md) chapter because they are not directly tied to the OpenAPI Specification.
