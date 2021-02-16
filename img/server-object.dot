@@ -8,7 +8,7 @@ subgraph clusterOtherObjects {
     tooltip="serverObject"
 
     openapiObject [
-        URL = "https://spec.openapis.org/oas/v3.0.3#oasObject" target="_blank"
+        URL = "https://spec.openapis.org/oas/v3.1.0#oasObject" target="_blank"
         label = <<table border="0" cellspacing="0">
             <tr><td border="1" bgcolor="#939598"><font face="arial"><b>OpenAPI Object</b></font></td></tr>
             <tr><td border="1" bgcolor="#6d6e71">openapi</td></tr>
@@ -18,7 +18,7 @@ subgraph clusterOtherObjects {
             <tr><td border="1" bgcolor="#6d6e71">…</td></tr></table>>]
 
     pathsObject [
-        URL = "https://spec.openapis.org/oas/v3.0.3#pathsObject" target="_blank"
+        URL = "https://spec.openapis.org/oas/v3.1.0#pathsObject" target="_blank"
         label = <<table border="0" cellspacing="0">
             <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>Paths Object</b></font></td></tr>
             <tr><td border="1" bgcolor="#6d6e71" port="endpoint1">/endpoint1</td></tr>
@@ -27,7 +27,7 @@ subgraph clusterOtherObjects {
             <tr><td border="1" bgcolor="#6d6e71">…</td></tr></table>>]
 
     pathItemObject [
-        URL = "https://spec.openapis.org/oas/v3.0.3#pathItemObject" target="_blank"
+        URL = "https://spec.openapis.org/oas/v3.1.0#pathItemObject" target="_blank"
         label = <<table border="0" cellspacing="0">
             <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>Path Item Object</b></font></td></tr>
             <tr><td border="1" bgcolor="#6d6e71" port="get">get</td></tr>
@@ -38,7 +38,7 @@ subgraph clusterOtherObjects {
             <tr><td border="1" bgcolor="#6d6e71">…</td></tr></table>>]
 
     operationObject [
-        URL = "https://spec.openapis.org/oas/v3.0.3#operationObject" target="_blank"
+        URL = "https://spec.openapis.org/oas/v3.1.0#operationObject" target="_blank"
         label = <<table border="0" cellspacing="0">
             <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>Operation Object</b></font></td></tr>
             <tr><td border="1" bgcolor="#6d6e71">summary</td></tr>
@@ -55,7 +55,7 @@ subgraph clusterOwnObjects {
     tooltip="serverObject"
 
     serverObject [
-        URL = "https://spec.openapis.org/oas/v3.0.3#serverObject" target="_blank"
+        URL = "https://spec.openapis.org/oas/v3.1.0#serverObject" target="_blank"
         label = <<table border="0" cellspacing="0">
             <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Server Object</b></font></td></tr>
             <tr><td border="1" bgcolor="#6ca437">url</td></tr> target="_blank"
@@ -64,7 +64,7 @@ subgraph clusterOwnObjects {
             <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>]
 
     variablesMap [
-        URL = "https://spec.openapis.org/oas/v3.0.3#serverVariables" target="_blank"
+        URL = "https://spec.openapis.org/oas/v3.1.0#serverVariables" target="_blank"
         label = <<table border="0" cellspacing="0">
             <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Variables Map</b></font></td></tr>
             <tr><td border="1" bgcolor="#6ca437" port="var1">variable1</td></tr>
@@ -73,7 +73,7 @@ subgraph clusterOwnObjects {
             <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>]
 
     serverVariableObject [
-        URL = "https://spec.openapis.org/oas/v3.0.3#serverVariableObject" target="_blank"
+        URL = "https://spec.openapis.org/oas/v3.1.0#serverVariableObject" target="_blank"
         label = <<table border="0" cellspacing="0">
             <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Server Variable Object</b></font></td></tr>
             <tr><td border="1" bgcolor="#6ca437">enum</td></tr>

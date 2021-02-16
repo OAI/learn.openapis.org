@@ -75,7 +75,7 @@ This is a collection of small hints related to working with large API descriptio
 
   Bear in mind that some tools might have issues with large files, whereas some other tools might not handle too many files gracefully. The solution will have to take your toolkit into account.
 
-- **Use tags to keep things organized**: [Tags](https://spec.openapis.org/oas/v3.0.3#oasTags) have not been described in the Specification chapter, but they can help you arrange your operations and find them faster. A tag is simply a piece of metadata (a unique name and an optional description) that you can attach to [operations](specification-paths.md). Tools, specially [GUI editors](https://openapi.tools/#gui-editors), can then sort all your API's operation by their tags to help you keep them organized.
+- **Use tags to keep things organized**: [Tags](https://spec.openapis.org/oas/v3.1.0#oasTags) have not been described in the Specification chapter, but they can help you arrange your operations and find them faster. A tag is simply a piece of metadata (a unique name and an optional description) that you can attach to [operations](specification-paths.md). Tools, specially [GUI editors](https://openapi.tools/#gui-editors), can then sort all your API's operation by their tags to help you keep them organized.
 
 ## Links to External Best Practices
 
