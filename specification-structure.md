@@ -97,7 +97,7 @@ openapi: 3.0.3
 info:
   title: A minimal OpenAPI document
   version: 0.0.1
-paths: # No endpoints defined
+paths: {} # No endpoints defined
 ```
 
 This API is not very useful because it **defines no operations** (it has no endpoints). [The next page](specification-paths.md) remedies that.
