@@ -12,7 +12,7 @@
 <!-- openapiObject -->
 <g id="node1" class="node">
 <title>openapiObject</title>
-<g id="a_node1"><a xlink:href="https://spec.openapis.org/oas/v3.0.3#oasObject" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node1"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#oasObject" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#939598" stroke="transparent" points="8,-279 8,-300 124,-300 124,-279 8,-279"/>
 <polygon fill="none" stroke="black" points="8,-279 8,-300 124,-300 124,-279 8,-279"/>
 <text text-anchor="start" x="11" y="-286.8" font-family="arial" font-weight="bold" font-size="14.00">OpenAPI Object</text>
@@ -34,7 +34,7 @@
 <!-- pathsObject -->
 <g id="node2" class="node">
 <title>pathsObject</title>
-<g id="a_node2"><a xlink:href="https://spec.openapis.org/oas/v3.0.3#pathsObject" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node2"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#pathsObject" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#94d60a" stroke="transparent" points="176.5,-215 176.5,-236 271.5,-236 271.5,-215 176.5,-215"/>
 <polygon fill="none" stroke="black" points="176.5,-215 176.5,-236 271.5,-236 271.5,-215 176.5,-215"/>
 <text text-anchor="start" x="179.5" y="-222.8" font-family="arial" font-weight="bold" font-size="14.00">Paths Object</text>
@@ -62,7 +62,7 @@
 <!-- pathItemObject -->
 <g id="node3" class="node">
 <title>pathItemObject</title>
-<g id="a_node3"><a xlink:href="https://spec.openapis.org/oas/v3.0.3#pathItemObject" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node3"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#pathItemObject" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#94d60a" stroke="transparent" points="323,-194 323,-215 443,-215 443,-194 323,-194"/>
 <polygon fill="none" stroke="black" points="323,-194 323,-215 443,-215 443,-194 323,-194"/>
 <text text-anchor="start" x="326" y="-201.8" font-family="arial" font-weight="bold" font-size="14.00">Path Item Object</text>
@@ -105,7 +105,7 @@
 <!-- operationObject -->
 <g id="node4" class="node">
 <title>operationObject</title>
-<g id="a_node4"><a xlink:href="https://spec.openapis.org/oas/v3.0.3#operationObject" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node4"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#operationObject" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#94d60a" stroke="transparent" points="495,-173 495,-194 619,-194 619,-173 495,-173"/>
 <polygon fill="none" stroke="black" points="495,-173 495,-194 619,-194 619,-173 495,-173"/>
 <text text-anchor="start" x="498" y="-180.8" font-family="arial" font-weight="bold" font-size="14.00">Operation Object</text>
@@ -157,7 +157,7 @@
 <!-- responsesObject -->
 <g id="node5" class="node">
 <title>responsesObject</title>
-<g id="a_node5"><a xlink:href="https://spec.openapis.org/oas/v3.0.3#responsesObject" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node5"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#responsesObject" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#94d60a" stroke="transparent" points="671.5,-88 671.5,-109 804.5,-109 804.5,-88 671.5,-88"/>
 <polygon fill="none" stroke="black" points="671.5,-88 671.5,-109 804.5,-109 804.5,-88 671.5,-88"/>
 <text text-anchor="start" x="674.5" y="-95.8" font-family="arial" font-weight="bold" font-size="14.00">Responses Object</text>
@@ -185,7 +185,7 @@
 <!-- responseObject -->
 <g id="node6" class="node">
 <title>responseObject</title>
-<g id="a_node6"><a xlink:href="https://spec.openapis.org/oas/v3.0.3#responseObject" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node6"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#responseObject" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#94d60a" stroke="transparent" points="856.5,-67 856.5,-88 981.5,-88 981.5,-67 856.5,-67"/>
 <polygon fill="none" stroke="black" points="856.5,-67 856.5,-88 981.5,-88 981.5,-67 856.5,-67"/>
 <text text-anchor="start" x="859.5" y="-74.8" font-family="arial" font-weight="bold" font-size="14.00">Response Object</text>

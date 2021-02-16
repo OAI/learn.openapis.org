@@ -11,7 +11,7 @@ nav_order: 3
 
 ## The `content` Field
 
-This field can be found both in [Response Objects](https://spec.openapis.org/oas/v3.0.3#responseObject) and [Request Body Objects](https://spec.openapis.org/oas/v3.0.3#requestBodyObject). It is a map pairing standard [RFC6838 Media Types](https://tools.ietf.org/html/rfc6838) with OpenAPI [Media Type Objects](https://spec.openapis.org/oas/v3.0.3#mediaTypeObject).
+This field can be found both in [Response Objects](https://spec.openapis.org/oas/v3.1.0#responseObject) and [Request Body Objects](https://spec.openapis.org/oas/v3.1.0#requestBodyObject). It is a map pairing standard [RFC6838 Media Types](https://tools.ietf.org/html/rfc6838) with OpenAPI [Media Type Objects](https://spec.openapis.org/oas/v3.1.0#mediaTypeObject).
 
 <figure style="text-align:center">
   <object type="image/svg+xml" data="img/content-field.svg"></object>
@@ -32,7 +32,7 @@ content:
 
 ## The Media Type Object
 
-The [Media Type Object](https://spec.openapis.org/oas/v3.0.3#mediaTypeObject) describes the structure of the content and provides examples for documentation and mocking purposes (examples are dealt with in the [Documentation page](specification-docs.md)).
+The [Media Type Object](https://spec.openapis.org/oas/v3.1.0#mediaTypeObject) describes the structure of the content and provides examples for documentation and mocking purposes (examples are dealt with in the [Documentation page](specification-docs.md)).
 
 The structure is described in the `schema` field explained next.
 
@@ -45,11 +45,11 @@ content:
 
 ## The Schema Object
 
-The [Schema Object](https://spec.openapis.org/oas/v3.0.3#schemaObject) defines a data type which can be a primitive (integer, string, ...), an array or an object depending on its `type` field.
+The [Schema Object](https://spec.openapis.org/oas/v3.1.0#schemaObject) defines a data type which can be a primitive (integer, string, ...), an array or an object depending on its `type` field.
 
 `type` is a string and its possible values are: `number`, `string`, `boolean`, `array` and `object`. Depending on the selected type a number of other fields are available to further specify the data format.
 
-For example, for `string` types the length of the string can be limited with `minLength` and `maxLength`. Similarly, `integer` types, accept `minimum` and `maximum` values. No matter the type, if the amount of options for the data is limited to a certain set, it can be specified with the `enum` array. All these properties are listed in the [Schema Object](https://spec.openapis.org/oas/v3.0.3#schemaObject) specification.
+For example, for `string` types the length of the string can be limited with `minLength` and `maxLength`. Similarly, `integer` types, accept `minimum` and `maximum` values. No matter the type, if the amount of options for the data is limited to a certain set, it can be specified with the `enum` array. All these properties are listed in the [Schema Object](https://spec.openapis.org/oas/v3.1.0#schemaObject) specification.
 
 
 Example integer with limited range:
@@ -76,7 +76,7 @@ content:
       - Carl
 ```
 
-Array types must have an `items` field, which is a [Schema Object](https://spec.openapis.org/oas/v3.0.3#schemaObject) itself, and defines the type for each element of the array. Additionally, the size of the array can be limited with `minItems` and `maxItems`.
+Array types must have an `items` field, which is a [Schema Object](https://spec.openapis.org/oas/v3.1.0#schemaObject) itself, and defines the type for each element of the array. Additionally, the size of the array can be limited with `minItems` and `maxItems`.
 
 ```yaml
 content:
@@ -89,7 +89,7 @@ content:
         type: integer
 ```
 
-Finally, object types must have a `properties` field listing the properties of the object. This field is a map pairing property names with a [Schema Object](https://spec.openapis.org/oas/v3.0.3#schemaObject) defining their type. This allows building data types as complex as required.
+Finally, object types must have a `properties` field listing the properties of the object. This field is a map pairing property names with a [Schema Object](https://spec.openapis.org/oas/v3.1.0#schemaObject) defining their type. This allows building data types as complex as required.
 
 Here's an example defining an object with two fields: a `productName` string and a `productPrice` number:
 
@@ -110,7 +110,7 @@ content:
 The [Tic Tac Toe sample API](examples/tictactoe.yaml) given so far has one endpoint with one unspecified response. The snippet below adds the description of this content:
 
 ```yaml
-openapi: 3.0.3
+openapi: 3.1.0
 info:
   title: Tic Tac Toe
   description: |
@@ -164,8 +164,8 @@ This document is starting to grow too big and complex. The [Reusing Descriptions
 
 This page has shown how to describe the content of the body of a response or query. More precisely:
 
-- The `content` field maps Media Types to [Media Type Objects](https://spec.openapis.org/oas/v3.0.3#mediaTypeObject).
-- Each [Media Type Object](https://spec.openapis.org/oas/v3.0.3#mediaTypeObject) has a `schema` field describing a [Schema Object](https://spec.openapis.org/oas/v3.0.3#schemaObject).
-- [Schema Objects](https://spec.openapis.org/oas/v3.0.3#schemaObject) define a data `type` which can be customized through multiple properties like `minimum`, `maximum`, `items`, `properties` and many more.
+- The `content` field maps Media Types to [Media Type Objects](https://spec.openapis.org/oas/v3.1.0#mediaTypeObject).
+- Each [Media Type Object](https://spec.openapis.org/oas/v3.1.0#mediaTypeObject) has a `schema` field describing a [Schema Object](https://spec.openapis.org/oas/v3.1.0#schemaObject).
+- [Schema Objects](https://spec.openapis.org/oas/v3.1.0#schemaObject) define a data `type` which can be customized through multiple properties like `minimum`, `maximum`, `items`, `properties` and many more.
 
 [The next page](specification-parameters.md) explains how to define the parameters that an endpoint accepts.

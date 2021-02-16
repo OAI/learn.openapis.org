@@ -11,14 +11,14 @@ This page shows how to specify the server where the API can be accessed, which c
 
 ## The Server Object
 
-The [Server Object](https://spec.openapis.org/oas/v3.0.3#serverObject) provides the base URLs where the API is being served. It can be found in the `servers` array present in the root [OpenAPI Object](https://spec.openapis.org/oas/v3.0.3#oasServers), the [Path Item Object](https://spec.openapis.org/oas/v3.0.3#pathItemServers) and the [Operation Object](https://spec.openapis.org/oas/v3.0.3#operationServers).
+The [Server Object](https://spec.openapis.org/oas/v3.1.0#serverObject) provides the base URLs where the API is being served. It can be found in the `servers` array present in the root [OpenAPI Object](https://spec.openapis.org/oas/v3.1.0#oasServers), the [Path Item Object](https://spec.openapis.org/oas/v3.1.0#pathItemServers) and the [Operation Object](https://spec.openapis.org/oas/v3.1.0#operationServers).
 
 <figure style="text-align:center">
   <object type="image/svg+xml" data="img/server-object.svg"></object>
   <figcaption>The edges marked with an asterisk are arrays.<br/>The OpenAPI Object is explained in the <a href="specification-structure.md">Structure of an OpenAPI Document</a> page.<br/>The Paths, Path Item and Operation Objects are explained in the <a href="specification-paths.md">API Endpoints</a> page.</figcaption>
 </figure>
 
-Each element in a `servers` array is a [Server Object](https://spec.openapis.org/oas/v3.0.3#serverObject) providing, at least, a `url` field with the base URL for that server. An optional `description` aids in keeping server lists organized:
+Each element in a `servers` array is a [Server Object](https://spec.openapis.org/oas/v3.1.0#serverObject) providing, at least, a `url` field with the base URL for that server. An optional `description` aids in keeping server lists organized:
 
 ```yaml
 servers:
@@ -30,7 +30,7 @@ servers:
   description: Server located in Shenzhen
 ```
 
-Individual API endpoints (as specified in the [Paths Object](https://spec.openapis.org/oas/v3.0.3#pathsObject)) are then appended to this URL to construct the full endpoint URL. For example:
+Individual API endpoints (as specified in the [Paths Object](https://spec.openapis.org/oas/v3.1.0#pathsObject)) are then appended to this URL to construct the full endpoint URL. For example:
 
 ```yaml
 servers:
@@ -76,9 +76,9 @@ servers:
 - url: https://{username}.server.com:{port}/{version}
 ```
 
-These variables **must** then be further detailed in the `variables` field. This field is a map pairing variable names (matching the ones in curly braces in the server's `url`) and [Server Variable Objects](https://spec.openapis.org/oas/v3.0.3#serverVariableObject).
+These variables **must** then be further detailed in the `variables` field. This field is a map pairing variable names (matching the ones in curly braces in the server's `url`) and [Server Variable Objects](https://spec.openapis.org/oas/v3.1.0#serverVariableObject).
 
-The [Server Variable Object](https://spec.openapis.org/oas/v3.0.3#serverVariableObject) has the following fields:
+The [Server Variable Object](https://spec.openapis.org/oas/v3.1.0#serverVariableObject) has the following fields:
 
 - `default` (string): This is a **mandatory** field and it is the value that should be used if there is no other value to provide.
 - `enum` (array of strings): If present, this array lists the valid values for the variable (and the `default` value must be in the array).
@@ -103,12 +103,12 @@ servers:
 ```
 
 > **NOTE**:
-> The `default` variable value works differently than the default [Schema Object](https://spec.openapis.org/oas/v3.0.3#schemaObject) value used in other parts of the OpenAPI Specification. The latter is optional, meaning that if a [Schema Object](https://spec.openapis.org/oas/v3.0.3#schemaObject) value is not provided it should be assumed to be the default value. On the other hand, server variables **must always be provided**.
+> The `default` variable value works differently than the default [Schema Object](https://spec.openapis.org/oas/v3.1.0#schemaObject) value used in other parts of the OpenAPI Specification. The latter is optional, meaning that if a [Schema Object](https://spec.openapis.org/oas/v3.1.0#schemaObject) value is not provided it should be assumed to be the default value. On the other hand, server variables **must always be provided**.
 
 ## Summary
 
 This page has shown that:
 
 - Server lists can be provided through the `servers` array.
-- This array is present at different levels ([OpenAPI Object](https://spec.openapis.org/oas/v3.0.3#oasServers), [Path Item Object](https://spec.openapis.org/oas/v3.0.3#pathItemServers) and  [Operation Object](https://spec.openapis.org/oas/v3.0.3#operationServers)) and only the innermost one is used.
+- This array is present at different levels ([OpenAPI Object](https://spec.openapis.org/oas/v3.1.0#oasServers), [Path Item Object](https://spec.openapis.org/oas/v3.1.0#pathItemServers) and  [Operation Object](https://spec.openapis.org/oas/v3.1.0#operationServers)) and only the innermost one is used.
 - Server URLs can contain `variables` for further customization like `https://{username}.server.com:{port}/{version}`

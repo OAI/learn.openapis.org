@@ -26,7 +26,7 @@
 <!-- openapiObject -->
 <g id="node1" class="node">
 <title>openapiObject</title>
-<g id="a_node1"><a xlink:href="https://spec.openapis.org/oas/v3.0.3#oasObject" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node1"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#oasObject" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#939598" stroke="transparent" points="24,-348 24,-369 140,-369 140,-348 24,-348"/>
 <polygon fill="none" stroke="black" points="24,-348 24,-369 140,-369 140,-348 24,-348"/>
 <text text-anchor="start" x="27" y="-355.8" font-family="arial" font-weight="bold" font-size="14.00">OpenAPI Object</text>
@@ -51,7 +51,7 @@
 <!-- pathsObject -->
 <g id="node2" class="node">
 <title>pathsObject</title>
-<g id="a_node2"><a xlink:href="https://spec.openapis.org/oas/v3.0.3#pathsObject" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node2"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#pathsObject" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#939598" stroke="transparent" points="203,-432 203,-453 298,-453 298,-432 203,-432"/>
 <polygon fill="none" stroke="black" points="203,-432 203,-453 298,-453 298,-432 203,-432"/>
 <text text-anchor="start" x="206" y="-439.8" font-family="arial" font-weight="bold" font-size="14.00">Paths Object</text>
@@ -79,7 +79,7 @@
 <!-- serverObject -->
 <g id="node5" class="node">
 <title>serverObject</title>
-<g id="a_node5"><a xlink:href="https://spec.openapis.org/oas/v3.0.3#serverObject" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node5"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#serverObject" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#94d60a" stroke="transparent" points="199,-189 199,-210 301,-210 301,-189 199,-189"/>
 <polygon fill="none" stroke="black" points="199,-189 199,-210 301,-210 301,-189 199,-189"/>
 <text text-anchor="start" x="202" y="-196.8" font-family="arial" font-weight="bold" font-size="14.00">Server Object</text>
@@ -108,7 +108,7 @@
 <!-- pathItemObject -->
 <g id="node3" class="node">
 <title>pathItemObject</title>
-<g id="a_node3"><a xlink:href="https://spec.openapis.org/oas/v3.0.3#pathItemObject" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node3"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#pathItemObject" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#939598" stroke="transparent" points="360,-411 360,-432 480,-432 480,-411 360,-411"/>
 <polygon fill="none" stroke="black" points="360,-411 360,-432 480,-432 480,-411 360,-411"/>
 <text text-anchor="start" x="363" y="-418.8" font-family="arial" font-weight="bold" font-size="14.00">Path Item Object</text>
@@ -154,7 +154,7 @@
 <!-- operationObject -->
 <g id="node4" class="node">
 <title>operationObject</title>
-<g id="a_node4"><a xlink:href="https://spec.openapis.org/oas/v3.0.3#operationObject" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node4"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#operationObject" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#939598" stroke="transparent" points="552.5,-390 552.5,-411 676.5,-411 676.5,-390 552.5,-390"/>
 <polygon fill="none" stroke="black" points="552.5,-390 552.5,-411 676.5,-411 676.5,-390 552.5,-390"/>
 <text text-anchor="start" x="555.5" y="-397.8" font-family="arial" font-weight="bold" font-size="14.00">Operation Object</text>
@@ -223,7 +223,7 @@
 <!-- variablesMap -->
 <g id="node6" class="node">
 <title>variablesMap</title>
-<g id="a_node6"><a xlink:href="https://spec.openapis.org/oas/v3.0.3#serverVariables" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node6"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#serverVariables" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#94d60a" stroke="transparent" points="367,-125 367,-146 473,-146 473,-125 367,-125"/>
 <polygon fill="none" stroke="black" points="367,-125 367,-146 473,-146 473,-125 367,-125"/>
 <text text-anchor="start" x="370" y="-132.8" font-family="arial" font-weight="bold" font-size="14.00">Variables Map</text>
@@ -251,7 +251,7 @@
 <!-- serverVariableObject -->
 <g id="node7" class="node">
 <title>serverVariableObject</title>
-<g id="a_node7"><a xlink:href="https://spec.openapis.org/oas/v3.0.3#serverVariableObject" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node7"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#serverVariableObject" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#94d60a" stroke="transparent" points="533.5,-104 533.5,-125 696.5,-125 696.5,-104 533.5,-104"/>
 <polygon fill="none" stroke="black" points="533.5,-104 533.5,-125 696.5,-125 696.5,-104 533.5,-104"/>
 <text text-anchor="start" x="536.5" y="-111.8" font-family="arial" font-weight="bold" font-size="14.00">Server Variable Object</text>
