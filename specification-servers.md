@@ -15,7 +15,7 @@ The [Server Object](https://spec.openapis.org/oas/v3.1.0#serverObject) provides 
 
 <figure style="text-align:center">
   <object type="image/svg+xml" data="img/server-object.svg"></object>
-  <figcaption>The edges marked with an asterisk are arrays.<br/>The OpenAPI Object is explained in the <a href="specification-structure.md">Structure of an OpenAPI Document</a> page.<br/>The Paths, Path Item and Operation Objects are explained in the <a href="specification-paths.md">API Endpoints</a> page.</figcaption>
+  <figcaption>The edges marked with an asterisk are arrays.<br/>The OpenAPI Object is explained in the <a href="specification-structure.html">Structure of an OpenAPI Document</a> page.<br/>The Paths, Path Item and Operation Objects are explained in the <a href="specification-paths.html">API Endpoints</a> page.</figcaption>
 </figure>
 
 Each element in a `servers` array is a [Server Object](https://spec.openapis.org/oas/v3.1.0#serverObject) providing, at least, a `url` field with the base URL for that server. An optional `description` aids in keeping server lists organized:
