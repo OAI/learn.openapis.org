@@ -15,7 +15,7 @@ API Endpoints (also called Operations or Routes) are called **Paths** in the OAS
 
 <figure style="text-align:center">
   <object type="image/svg+xml" data="img/paths-object.svg"></object>
-  <figcaption>The OpenAPI Object is explained in the <a href="specification-structure.md">Structure of an OpenAPI Document</a> page.</figcaption>
+  <figcaption>The OpenAPI Object is explained in the <a href="specification-structure.html">Structure of an OpenAPI Document</a> page.</figcaption>
 </figure>
 
 Every field in the [Paths Object](https://spec.openapis.org/oas/v3.1.0#pathsObject) is a [Path Item Object](https://spec.openapis.org/oas/v3.1.0#pathItemObject) describing one API endpoint. Fields are used instead of an Array because they enforce endpoint name uniqueness at the syntax level (any JSON or YAML parser can detect mistakes without requiring an OpenAPI validator).

@@ -16,7 +16,7 @@ accessible through the `components` field in the root [OpenAPI Object](https://s
 
 <figure style="text-align:center">
    <object type="image/svg+xml" data="img/components-object.svg"></object>
-  <figcaption>The OpenAPI Object is explained in the <a href="specification-structure.md">Structure of an OpenAPI Document</a> page.<br/>The Schema Object is explained in the <a href="specification-content.md">Content of Message Bodies</a> page.<br/>The Response Object is explained in the <a href="specification-paths.md">API Endpoints</a> page.<br/>The Parameter Object is explained in the <a href="specification-parameters.md">Parameters and Payload of an Operation</a> page.</figcaption>
+  <figcaption>The OpenAPI Object is explained in the <a href="specification-structure.html">Structure of an OpenAPI Document</a> page.<br/>The Schema Object is explained in the <a href="specification-content.html">Content of Message Bodies</a> page.<br/>The Response Object is explained in the <a href="specification-paths.html">API Endpoints</a> page.<br/>The Parameter Object is explained in the <a href="specification-parameters.html">Parameters and Payload of an Operation</a> page.</figcaption>
 </figure>
 
 Most objects in an OpenAPI document can be replaced by a **reference** to a **component**, drastically reducing the document's size and maintenance cost (just like methods do in programming languages).

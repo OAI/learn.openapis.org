@@ -15,8 +15,8 @@ OpenAPI provides two mechanisms to specify input data, **parameters** and **requ
   <object type="image/svg+xml" data="img/parameter-object.svg"></object>
   <figcaption>
     The edges marked with an asterisk are arrays.<br/>
-    The Path Item and Operation Objects are explained in the <a href="specification-paths.md">API Endpoints</a> page.<br/>
-    The Media Type and Schema Objects are explained in the <a href="specification-content.md">Content of Message Bodies</a> page.
+    The Path Item and Operation Objects are explained in the <a href="specification-paths.html">API Endpoints</a> page.<br/>
+    The Media Type and Schema Objects are explained in the <a href="specification-content.html">Content of Message Bodies</a> page.
   </figcaption>
 </figure>
 
@@ -106,7 +106,7 @@ The tables given below exemplify the most common styles `simple`, `form`, `label
   |        | `1234`   | `id=1234` | `.1234` | `;id=1234` |
 
 - **Array types**: For example, an array named `ids` containing the integers 1, 2 and 3.
-  
+
   The `explode` field can be used to separate each element of the array into a separate parameter.
 
   | style:               | `simple` | `form`              | `label`  | `matrix`             |
@@ -115,7 +115,7 @@ The tables given below exemplify the most common styles `simple`, `form`, `label
   | with `explode=true`  | `1,2,3`  | `ids=1&ids=2&ids=3` | `.1.2.3` | `;ids=1;ids=2;ids=3` |
 
 - **Object types**: For example, an object named `color` containing integer fields R, G and B with values 1, 2 and 3.
-  
+
   Again, `explode` can be used to separate each field into a separate parameter.
 
   | style:               | `simple`      | `form`              | `label`        | `matrix`             |
