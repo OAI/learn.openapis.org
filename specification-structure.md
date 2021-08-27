@@ -77,7 +77,7 @@ To be entirely precise, an OpenAPI document is a single JSON object containing f
 
 The OAS structure is long and complex so this section just describes the minimal set of fields it must contain, while following pages give more details about specific objects. The [OpenAPI Map](https://openapi-map.apihandyman.io/) is a nice visual tool that can help familiarize the reader with this long specification.
 
-The root object in any OpenAPI document is the [OpenAPI Object](https://spec.openapis.org/oas/v3.1.0#oasObject) and only three of its fields are mandatory: `openapi`, `info` and `paths`.
+The root object in any OpenAPI document is the [OpenAPI Object](https://spec.openapis.org/oas/v3.1.0#oasObject) and only two of its fields are mandatory: `openapi`, and `info`. Additionally, at least one of `paths`, `components` and `webhooks` is required.
 
 * `openapi` (**string**): This indicates the version of the OAS this document is using, e.g. "3.1.0". Using this field tools can check that the document correctly adheres to the spec.
 * `info` ([Info Object](https://spec.openapis.org/oas/v3.1.0#infoObject)): This provides general information about the API (like its description, author and contact information) but the only mandatory fields are `title` and `version`.
@@ -108,6 +108,6 @@ This page has shown that:
 
 * The syntax (language) used to write OpenAPI documents can be **JSON**, **YAML** or **both**.
 * An OpenAPI document is a JSON object including the fields described in the [OpenAPI Specification](https://spec.openapis.org/oas/v3.1.0).
-* Every OpenAPI document must contain a root object with at least the fields `openapi`, `info` and `paths`.
+* Every OpenAPI document must contain a root object with at least the fields `openapi`, and `info`,  and either `paths`, `components` or `webhooks`.
 
 [The following page](specification-paths.md) describes the contents of the `paths` field so endpoints can be added to the above minimal snippet.
