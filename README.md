@@ -6,6 +6,4 @@ Are you new to the OpenAPI standard?
 
 Read our [Getting started](start-here.md) page first.
 
-
-
-<p>Original site customized based on a theme based on theme by Patrick Marsceill, distributed by an <a href="https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt">MIT license.</a></p>
+<p>Original site customized from on a theme by Patrick Marsceill distributed under the <a href="https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt">MIT license.</a></p>
