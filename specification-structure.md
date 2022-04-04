@@ -77,13 +77,13 @@ To be entirely precise, an OpenAPI document is a single JSON object containing f
 
 The OAS structure is long and complex so this section just describes the minimal set of fields it must contain, while following pages give more details about specific objects. The [OpenAPI Map](https://openapi-map.apihandyman.io/) is a nice visual tool that can help familiarize the reader with this long specification.
 
-The root object in any OpenAPI document is the [OpenAPI Object](https://spec.openapis.org/oas/v3.1.0#oasObject) and only two of its fields are mandatory: `openapi`, and `info`. Additionally, at least one of `paths`, `components` and `webhooks` is required.
+The root object in any OpenAPI document is the [OpenAPI Object](https://spec.openapis.org/oas/v3.1.0#openapi-object) and only two of its fields are mandatory: `openapi`, and `info`. Additionally, at least one of `paths`, `components` and `webhooks` is required.
 
 * `openapi` (**string**): This indicates the version of the OAS this document is using, e.g. "3.1.0". Using this field tools can check that the document correctly adheres to the spec.
-* `info` ([Info Object](https://spec.openapis.org/oas/v3.1.0#infoObject)): This provides general information about the API (like its description, author and contact information) but the only mandatory fields are `title` and `version`.
+* `info` ([Info Object](https://spec.openapis.org/oas/v3.1.0#info-object)): This provides general information about the API (like its description, author and contact information) but the only mandatory fields are `title` and `version`.
   * `title` (**string**): A human-readable name for the API, like "GitHub REST API", useful to keep API collections organized.
   * `version` (**string**): Indicates the version **of the API document** (not to be confused with the OAS version above). Tools can use this field to generate code that ensures that clients and servers are interacting through the same version of the API, for example.
-* `paths` ([Paths Object](https://spec.openapis.org/oas/v3.1.0#pathsObject)): This describes all the **endpoints** of the API, including their parameters and all possible server responses. Server and client code can be generated from this description, along with its documentation.
+* `paths` ([Paths Object](https://spec.openapis.org/oas/v3.1.0#paths-object)): This describes all the **endpoints** of the API, including their parameters and all possible server responses. Server and client code can be generated from this description, along with its documentation.
 
 <figure style="text-align:center">
   <object type="image/svg+xml" data="img/openapi-object.svg"></object>
