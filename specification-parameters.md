@@ -22,9 +22,9 @@ OpenAPI provides two mechanisms to specify input data, **parameters** and **requ
 
 ## The Parameter Object
 
-The `parameters` field in the [Path Item](https://spec.openapis.org/oas/v3.1.0#pathItemObject) and [Operation](https://spec.openapis.org/oas/v3.1.0#operationObject) Objects is an **array** containing [Parameter Objects](https://spec.openapis.org/oas/v3.1.0#parameterObject). When provided in the Path Item Object, the parameters are **shared by all operations** on that path (which can override individual parameters at the Operation Object level but not remove them).
+The `parameters` field in the [Path Item](https://spec.openapis.org/oas/v3.1.0#path-item-object) and [Operation](https://spec.openapis.org/oas/v3.1.0#operation-object) Objects is an **array** containing [Parameter Objects](https://spec.openapis.org/oas/v3.1.0#parameter-object). When provided in the Path Item Object, the parameters are **shared by all operations** on that path (which can override individual parameters at the Operation Object level but not remove them).
 
-Each [Parameter Object](https://spec.openapis.org/oas/v3.1.0#parameterObject) describes one parameter with the following **mandatory** fields:
+Each [Parameter Object](https://spec.openapis.org/oas/v3.1.0#parameter-object) describes one parameter with the following **mandatory** fields:
 
 - `in` (string): Location of the parameter as shown below.
 - `name` (string): Case-sensitive. Must be unique in each location.
@@ -40,7 +40,7 @@ The type of the parameters, their format and their serialization can be specifie
 
 Parameters can reside in different locations, indicated by the `in` field. The most common ones are:
 
-- `path`: The parameter is part of the route of this operation (and hence of its URL). The parameter's name **must** appear in the path as a [template expression](https://spec.openapis.org/oas/v3.1.0#pathTemplating), i.e., delimited by curly braces `{}`.
+- `path`: The parameter is part of the route of this operation (and hence of its URL). The parameter's name **must** appear in the path as a [template expression](https://spec.openapis.org/oas/v3.1.0#path-templating), i.e., delimited by curly braces `{}`.
 
   For example, the path `/users/{id}` must contain at least one parameter described with:
 
@@ -88,7 +88,7 @@ parameters:
 
 The [Content of Message Bodies](specification-content.md) page describes Schema objects in greater detail.
 
-In more advanced scenarios the `content` field can be used instead. It provides a **single-entry map** of Media Types to [Media Type Objects](https://spec.openapis.org/oas/v3.1.0#mediaTypeObject) (More details can be found in the [Content of Message Bodies](specification-content.md) page).
+In more advanced scenarios the `content` field can be used instead. It provides a **single-entry map** of Media Types to [Media Type Objects](https://spec.openapis.org/oas/v3.1.0#media-type-object) (More details can be found in the [Content of Message Bodies](specification-content.md) page).
 
 > **NOTE**:
 > Exactly one of `schema` or `content` **must** be present. They cannot appear at the same time.
@@ -129,7 +129,7 @@ For more serialization options see the [Parameter Object](https://spec.openapis.
 
 When updating a record on a database, the parameters are typically used to identify the record whereas the message body provides its new content.
 
-The message body of a request is specified through the `requestBody` field in the [Operation Object](https://spec.openapis.org/oas/v3.1.0#operationRequestBody), which is a [Request Body Object](https://spec.openapis.org/oas/v3.1.0#requestBodyObject).
+The message body of a request is specified through the `requestBody` field in the [Operation Object](https://spec.openapis.org/oas/v3.1.0#operationRequestBody), which is a [Request Body Object](https://spec.openapis.org/oas/v3.1.0#request-body-object).
 
 ```yaml
 paths:
@@ -139,7 +139,7 @@ paths:
         ...
 ```
 
-The only mandatory field in the [Request Body Object](https://spec.openapis.org/oas/v3.1.0#requestBodyObject) is `content` which is described in detail in the [Content of Message Bodies](specification-content.md) page.
+The only mandatory field in the [Request Body Object](https://spec.openapis.org/oas/v3.1.0#request-body-object) is `content` which is described in detail in the [Content of Message Bodies](specification-content.md) page.
 
 As a reminder, the snippet below describes an operation with a JSON request body containing a single integer with values between 1 and 100.
 
