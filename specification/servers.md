@@ -1,8 +1,8 @@
 ---
-
+layout: default
+title: API Servers
 parent: The OpenAPI Specification Explained
 nav_order: 7
-
 ---
 
 # API Servers
@@ -15,7 +15,7 @@ The [Server Object](https://spec.openapis.org/oas/v3.1.0#server-object) provides
 
 <figure style="text-align:center">
   <object type="image/svg+xml" data="img/server-object.svg"></object>
-  <figcaption>The edges marked with an asterisk are arrays.<br/>The OpenAPI Object is explained in the <a href="specification-structure.html">Structure of an OpenAPI Document</a> page.<br/>The Paths, Path Item and Operation Objects are explained in the <a href="specification-paths.html">API Endpoints</a> page.</figcaption>
+  <figcaption>The edges marked with an asterisk are arrays.<br/>The OpenAPI Object is explained in the <a href="structure.html">Structure of an OpenAPI Document</a> page.<br/>The Paths, Path Item and Operation Objects are explained in the <a href="paths.html">API Endpoints</a> page.</figcaption>
 </figure>
 
 Each element in a `servers` array is a [Server Object](https://spec.openapis.org/oas/v3.1.0#server-object) providing, at least, a `url` field with the base URL for that server. An optional `description` aids in keeping server lists organized:
@@ -61,7 +61,7 @@ GET requests to the `/users` endpoint are served from `https://server2.com` and 
 >
 > If the servers are used for different environments (for example Testing and Production), chances are that their APIs will be different and describing them in a single document will be complicated.
 >
-> In these cases it is probably better to use different documents, and even different API versions. Read the [Reusing Descriptions](specification-components.md) page to learn how to avoid code duplication and maintenance costs in these scenarios.
+> In these cases it is probably better to use different documents, and even different API versions. Read the [Reusing Descriptions](components.md) page to learn how to avoid code duplication and maintenance costs in these scenarios.
 
 Conversely, if no servers are provided, it is assumed that all API endpoints are relative to the location where the OpenAPI document is being served.
 

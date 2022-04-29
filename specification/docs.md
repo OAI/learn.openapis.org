@@ -1,8 +1,8 @@
 ---
-
+layout: default
+title: Providing Documentation and Examples
 parent: The OpenAPI Specification Explained
 nav_order: 6
-
 ---
 
 # Providing Documentation and Examples
@@ -195,4 +195,4 @@ This page has shown the features provided by OpenAPI to aid in the documentation
 - Text can use rich formatting using **CommonMark** syntax, quickly summarized in this page.
 - Documentation can be extended with sample code using the `example` or `examples` fields.
 
-[The next page](specification-servers.md) shows how to specify the server where the API can be accessed.
+[The next page](servers.md) shows how to specify the server where the API can be accessed.

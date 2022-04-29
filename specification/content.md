@@ -1,13 +1,13 @@
 ---
-
+layout: default
+title: Content of Message Bodies
 parent: The OpenAPI Specification Explained
 nav_order: 3
-
 ---
 
 # Content of Message Bodies
 
-[The previous page](specification-paths.md) showed how to define API endpoints but it didn't explain how to describe the content of the responses through the `content` field. This page clarifies this important field, which can also be used to describe queries, as shown in the [Parameters page](specification-parameters.md).
+[The previous page](paths.md) showed how to define API endpoints but it didn't explain how to describe the content of the responses through the `content` field. This page clarifies this important field, which can also be used to describe queries, as shown in the [Parameters page](parameters.md).
 
 ## The `content` Field
 
@@ -15,7 +15,7 @@ This field can be found both in [Response Objects](https://spec.openapis.org/oas
 
 <figure style="text-align:center">
   <object type="image/svg+xml" data="img/content-field.svg"></object>
-  <figcaption>The Response Object is explained in the <a href="specification-paths.html">API Endpoints</a> page.<br/>The Request Body Object is explained in the <a href="specification-parameters.html">Parameters and Payload of an Operation</a> page.</figcaption>
+  <figcaption>The Response Object is explained in the <a href="paths.html">API Endpoints</a> page.<br/>The Request Body Object is explained in the <a href="parameters.html">Parameters and Payload of an Operation</a> page.</figcaption>
 </figure>
 
 This allows returning content (or accepting content) in **different formats**, each one with a different structure described by the Media Type Object. **Wildcards** are accepted for the media types, with the more specific ones taking precedence over the generic ones.
@@ -32,7 +32,7 @@ content:
 
 ## The Media Type Object
 
-The [Media Type Object](https://spec.openapis.org/oas/v3.1.0#media-type-object) describes the structure of the content and provides examples for documentation and mocking purposes (examples are dealt with in the [Documentation page](specification-docs.md)).
+The [Media Type Object](https://spec.openapis.org/oas/v3.1.0#media-type-object) describes the structure of the content and provides examples for documentation and mocking purposes (examples are dealt with in the [Documentation page](docs.md)).
 
 The structure is described in the `schema` field explained next.
 
@@ -158,7 +158,7 @@ The response contains an object is JSON format with two fields:
 - `winner` is a string with only three possible values: `.`, `X` and `O`.
 - `board` is a 3-element array where each item is another 3-element array, effectively building a 3x3 square matrix. Each element in the matrix is a string with only three possible values: `.`, `X` and `O`.
 
-This document is starting to grow too big and complex. The [Reusing Descriptions](specification-components.md) page explains how to name sections of an OpenAPI document in order to reuse them (like the strings with three options above, which appear twice).
+This document is starting to grow too big and complex. The [Reusing Descriptions](components.md) page explains how to name sections of an OpenAPI document in order to reuse them (like the strings with three options above, which appear twice).
 
 ## Summary
 
@@ -168,4 +168,4 @@ This page has shown how to describe the content of the body of a response or que
 - Each [Media Type Object](https://spec.openapis.org/oas/v3.1.0#media-type-object) has a `schema` field describing a [Schema Object](https://spec.openapis.org/oas/v3.1.0#schema-object).
 - [Schema Objects](https://spec.openapis.org/oas/v3.1.0#schema-object) define a data `type` which can be customized through multiple properties like `minimum`, `maximum`, `items`, `properties` and many more.
 
-[The next page](specification-parameters.md) explains how to define the parameters that an endpoint accepts.
+[The next page](parameters.md) explains how to define the parameters that an endpoint accepts.
