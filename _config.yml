@@ -12,3 +12,5 @@ color_scheme: oai
 highlighter: rouge
 plugins:
   - jekyll-sitemap
+exclude:
+  - README.md
