@@ -86,7 +86,7 @@ The root object in any OpenAPI document is the [OpenAPI Object](https://spec.ope
 * `paths` ([Paths Object](https://spec.openapis.org/oas/v3.1.0#paths-object)): This describes all the **endpoints** of the API, including their parameters and all possible server responses. Server and client code can be generated from this description, along with its documentation.
 
 <figure style="text-align:center">
-  <object type="image/svg+xml" data="img/openapi-object.svg"></object>
+  <object type="image/svg+xml" data="{{site.baseurl}}/img/openapi-object.svg"></object>
   <figcaption>Diagrams are used in this guide to show the relationship between the different objects.</figcaption>
 </figure>
 

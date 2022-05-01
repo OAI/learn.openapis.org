@@ -14,7 +14,7 @@ This page shows how to specify the server where the API can be accessed, which c
 The [Server Object](https://spec.openapis.org/oas/v3.1.0#server-object) provides the base URLs where the API is being served. It can be found in the `servers` array present in the root [OpenAPI Object](https://spec.openapis.org/oas/v3.1.0#oasServers), the [Path Item Object](https://spec.openapis.org/oas/v3.1.0#pathItemServers) and the [Operation Object](https://spec.openapis.org/oas/v3.1.0#operationServers).
 
 <figure style="text-align:center">
-  <object type="image/svg+xml" data="img/server-object.svg"></object>
+  <object type="image/svg+xml" data="{{site.baseurl}}/img/server-object.svg"></object>
   <figcaption>The edges marked with an asterisk are arrays.<br/>The OpenAPI Object is explained in the <a href="structure.html">Structure of an OpenAPI Document</a> page.<br/>The Paths, Path Item and Operation Objects are explained in the <a href="paths.html">API Endpoints</a> page.</figcaption>
 </figure>
 

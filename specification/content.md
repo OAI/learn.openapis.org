@@ -14,7 +14,7 @@ nav_order: 3
 This field can be found both in [Response Objects](https://spec.openapis.org/oas/v3.1.0#response-object) and [Request Body Objects](https://spec.openapis.org/oas/v3.1.0#request-body-object). It is a map pairing standard [RFC6838 Media Types](https://tools.ietf.org/html/rfc6838) with OpenAPI [Media Type Objects](https://spec.openapis.org/oas/v3.1.0#media-type-object).
 
 <figure style="text-align:center">
-  <object type="image/svg+xml" data="img/content-field.svg"></object>
+  <object type="image/svg+xml" data="{{site.baseurl}}/img/content-field.svg"></object>
   <figcaption>The Response Object is explained in the <a href="paths.html">API Endpoints</a> page.<br/>The Request Body Object is explained in the <a href="parameters.html">Parameters and Payload of an Operation</a> page.</figcaption>
 </figure>
 
