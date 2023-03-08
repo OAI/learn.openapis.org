@@ -4,7 +4,7 @@
 
 Are you new to the OpenAPI standard? 
 
-Read our [Getting started](start-here.md) page first.
+Read our [Getting started](https://oai.github.io/Documentation/start-here.html) page first.
 
 
 
