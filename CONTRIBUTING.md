@@ -31,10 +31,3 @@ Alternatively, you can use the following Docker command to build and serve the d
 ```shell
 docker run -v $(pwd):/site bretfisher/jekyll-serve
 ```
-
-or
-
-```shell
-docker run -v $(pwd):/site bretfisher/jekyll-serve bundle exec jekyll servce --incremental
-```
-
