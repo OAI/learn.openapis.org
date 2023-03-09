@@ -25,3 +25,16 @@ Configuration file: /Users/phil/src/OAI/Documentation/_config.yml
  Auto-regeneration: enabled for '/Users/phil/src/OAI/Documentation'
     Server address: http://127.0.0.1:4000/Documentation/
 ```
+
+Alternatively, you can use the following Docker command to build and serve the documentation:
+
+```shell
+docker run -v $(pwd):/site bretfisher/jekyll-serve
+```
+
+or
+
+```shell
+docker run -v $(pwd):/site bretfisher/jekyll-serve bundle exec jekyll servce --incremental
+```
+
