@@ -1,5 +1,10 @@
-# Getting started
+---
+layout: home
+title: Getting Started
+nav_order: 1
+---
 
+# Getting started
 ## Intended Audience
 
 This guide is directed at **HTTP-based API** designers and writers wishing to benefit from having their API formalized in an **OpenAPI Description document**.
