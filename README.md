@@ -2,7 +2,7 @@
 
 <img alt="OpenAPI Initiative" src="assets/images/OpenAPI_Logo_Pantone-1.png" width="100%" height="auto">
 
-Are you new to the OpenAPI standard? 
+Are you new to the OpenAPI specification? 
 
 Read our [Getting started](https://oai.github.io/Documentation/start-here.html) page first.
 
