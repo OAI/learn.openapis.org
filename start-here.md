@@ -30,7 +30,7 @@ Having your API formally described in a machine-readable format allows automated
 On top of this, the **OpenAPI Specification** also provides you with:
 
 - **A non-proprietary format**: You have a say in the future direction of the Specification!
-- **The most developed tooling ecosystem**: As a direct result of the previous statement, OpenAPI offers a vast number of tools to work with it. Just take a quick look at [OpenAPI.Tools](https://openapi.tools/).
+- **The most developed tooling ecosystem**: As a direct result of the previous statement, OpenAPI offers a vast number of tools to work with it. Just take a quick look at [OpenAPI Tooling](https://tools.openapis.org).
 - **A format readable by both machines and humans**: Even though writing **OpenAPI** documents by hand is not the most convenient way of doing it (See [Best Practices](best-practices.md)), they are plain text files which can be easily browsed in case something needs to be debugged.
 
 So, choose your desired entry point from the list at the top of this page and start your journey!
