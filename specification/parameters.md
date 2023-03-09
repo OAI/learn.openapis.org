@@ -1,22 +1,22 @@
 ---
-
+layout: default
+title: Parameters and Payload of an Operation
 parent: The OpenAPI Specification Explained
 nav_order: 4
-
 ---
 
 # Parameters and Payload of an Operation
 
-[The previous page](specification-content.md) has shown how to describe an operation's response format, this is, the **output data** of an operation. On the other hand, this page shows how to specify the **input data**, this is, the additional information that complements the endpoint and the operation to fully detail a request.
+[The previous page](content.md) has shown how to describe an operation's response format, this is, the **output data** of an operation. On the other hand, this page shows how to specify the **input data**, this is, the additional information that complements the endpoint and the operation to fully detail a request.
 
 OpenAPI provides two mechanisms to specify input data, **parameters** and **request body** (message payload). Parameters are typically used to identify a resource, whereas the message payload provides content for that resource.
 
 <figure style="text-align:center">
-  <object type="image/svg+xml" data="img/parameter-object.svg"></object>
+  <object type="image/svg+xml" data="{{site.baseurl}}/img/parameter-object.svg"></object>
   <figcaption>
     The edges marked with an asterisk are arrays.<br/>
-    The Path Item and Operation Objects are explained in the <a href="specification-paths.html">API Endpoints</a> page.<br/>
-    The Media Type and Schema Objects are explained in the <a href="specification-content.html">Content of Message Bodies</a> page.
+    The Path Item and Operation Objects are explained in the <a href="paths.html">API Endpoints</a> page.<br/>
+    The Media Type and Schema Objects are explained in the <a href="content.html">Content of Message Bodies</a> page.
   </figcaption>
 </figure>
 
@@ -86,9 +86,9 @@ parameters:
     maximum: 100
 ```
 
-The [Content of Message Bodies](specification-content.md) page describes Schema objects in greater detail.
+The [Content of Message Bodies](content.md) page describes Schema objects in greater detail.
 
-In more advanced scenarios the `content` field can be used instead. It provides a **single-entry map** of Media Types to [Media Type Objects](https://spec.openapis.org/oas/v3.1.0#media-type-object) (More details can be found in the [Content of Message Bodies](specification-content.md) page).
+In more advanced scenarios the `content` field can be used instead. It provides a **single-entry map** of Media Types to [Media Type Objects](https://spec.openapis.org/oas/v3.1.0#media-type-object) (More details can be found in the [Content of Message Bodies](content.md) page).
 
 > **NOTE**:
 > Exactly one of `schema` or `content` **must** be present. They cannot appear at the same time.
@@ -139,7 +139,7 @@ paths:
         ...
 ```
 
-The only mandatory field in the [Request Body Object](https://spec.openapis.org/oas/v3.1.0#request-body-object) is `content` which is described in detail in the [Content of Message Bodies](specification-content.md) page.
+The only mandatory field in the [Request Body Object](https://spec.openapis.org/oas/v3.1.0#request-body-object) is `content` which is described in detail in the [Content of Message Bodies](content.md) page.
 
 As a reminder, the snippet below describes an operation with a JSON request body containing a single integer with values between 1 and 100.
 
@@ -199,7 +199,7 @@ paths:
 - The parameters are two integers, named `row` and `column` which are located in the path of the operation. This matches the path name which contains `{row}` and `{column}`.
 - The `put` operation, additionally, must provide a request body which must be one of the three provided strings: `.`, `X` and `O`.
 
-The complete [Tic Tac Toe sample API](examples/tictactoe.yaml) does not look exactly like the above snippet because it reuses portions of the document to remove redundancy. This technique is explained in the [Reusing Descriptions](specification-components.md) page.
+The complete [Tic Tac Toe sample API](examples/tictactoe.yaml) does not look exactly like the above snippet because it reuses portions of the document to remove redundancy. This technique is explained in the [Reusing Descriptions](components.md) page.
 
 ## Summary
 
@@ -209,4 +209,4 @@ This page has shown:
 - Parameters can be located in different places (`path`, `query`, `headers`) and their content (`schema`) and serialization (`style`) is highly customizable.
 - The request body is specified, much like responses are, using the `content` field.
 
-[The next page](specification-components.md) explains how to reuse portions of an OpenAPI document to remove redundancy, reducing file size and maintenance cost.
+[The next page](components.md) explains how to reuse portions of an OpenAPI document to remove redundancy, reducing file size and maintenance cost.

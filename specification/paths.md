@@ -1,26 +1,26 @@
 ---
-
+layout: default
+title: API Endpoints
 parent: The OpenAPI Specification Explained
 nav_order: 2
-
 ---
 
 # API Endpoints
 
-[The previous page](specification-structure.md) showed the minimal structure of an OpenAPI document but did not add any operation to the API. This page explains how to do it.
+[The previous page](structure.md) showed the minimal structure of an OpenAPI document but did not add any operation to the API. This page explains how to do it.
 
 ## The Endpoints list
 
 API Endpoints (also called Operations or Routes) are called **Paths** in the OAS. The [Paths Object](https://spec.openapis.org/oas/v3.1.0#paths-object), accessible through the `paths` field in the root [OpenAPI Object](https://spec.openapis.org/oas/v3.1.0#openapi-object), is the container for all operations supported by the API:
 
 <figure style="text-align:center">
-  <object type="image/svg+xml" data="img/paths-object.svg"></object>
-  <figcaption>The OpenAPI Object is explained in the <a href="specification-structure.html">Structure of an OpenAPI Document</a> page.</figcaption>
+  <object type="image/svg+xml" data="{{site.baseurl}}/img/paths-object.svg"></object>
+  <figcaption>The OpenAPI Object is explained in the <a href="structure.html">Structure of an OpenAPI Document</a> page.</figcaption>
 </figure>
 
 Every field in the [Paths Object](https://spec.openapis.org/oas/v3.1.0#paths-object) is a [Path Item Object](https://spec.openapis.org/oas/v3.1.0#path-item-object) describing one API endpoint. Fields are used instead of an Array because they enforce endpoint name uniqueness at the syntax level (any JSON or YAML parser can detect mistakes without requiring an OpenAPI validator).
 
-Paths **must start with a forward slash** `/` since they are directly appended to the server URL (described in the [API Servers](specification-servers.md) page) to construct the full endpoint URL.
+Paths **must start with a forward slash** `/` since they are directly appended to the server URL (described in the [API Servers](servers.md) page) to construct the full endpoint URL.
 
 The [Tic Tac Toe sample API](examples/tictactoe.yaml) is used in this guide to exemplify each concept and it is built piece by piece as the guide progresses. Here's the first snippet already containing a single endpoint:
 
@@ -54,7 +54,7 @@ paths:
 
 ## The Operation Object
 
-Besides giving the operation a `summary` and a `description`, the [Operation Object](https://spec.openapis.org/oas/v3.1.0#operation-object) basically describes the operation's parameters, payload and possible server responses. The rest of this page explains the `responses` field, whereas parameters and payload are dealt with in [another page](specification-parameters.md).
+Besides giving the operation a `summary` and a `description`, the [Operation Object](https://spec.openapis.org/oas/v3.1.0#operation-object) basically describes the operation's parameters, payload and possible server responses. The rest of this page explains the `responses` field, whereas parameters and payload are dealt with in [another page](parameters.md).
 
 ```yaml
 paths:
@@ -89,7 +89,7 @@ paths:
 
 The [Response Object](https://spec.openapis.org/oas/v3.1.0#response-object) contains a **mandatory** `description` of the meaning of the response in the context of this operation, complementing the sense of the HTTP response codes (which are generic in nature). This helps developers understand better how to react to this particular code.
 
-The most important field, though, is `content` because it describes the possible payloads of the response. Due to its complexity, this field's format is detailed next, in [its own page](specification-content.md).
+The most important field, though, is `content` because it describes the possible payloads of the response. Due to its complexity, this field's format is detailed next, in [its own page](content.md).
 
 ```yaml
 paths:
@@ -133,4 +133,4 @@ The complete document can be found in the [Tic Tac Toe sample API](examples/tict
 
 This page has shown how to specify endpoints (`paths`), their available operations (`get`, `put`, ...) and their possible outcomes (`responses`).
 
-The [next page](specification-content.md) shows how to specify the `content` of the responses.
+The [next page](content.md) shows how to specify the `content` of the responses.
