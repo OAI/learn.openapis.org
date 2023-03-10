@@ -61,7 +61,7 @@ GET requests to the `/users` endpoint are served from `https://server2.com` and 
 >
 > If the servers are used for different environments (for example Testing and Production), chances are that their APIs will be different and describing them in a single document will be complicated.
 >
-> In these cases it is probably better to use different documents, and even different API versions. Read the [Reusing Descriptions](components.md) page to learn how to avoid code duplication and maintenance costs in these scenarios.
+> In these cases it is probably better to use different documents, and even different API versions. Read the [Reusing Descriptions](components) page to learn how to avoid code duplication and maintenance costs in these scenarios.
 
 Conversely, if no servers are provided, it is assumed that all API endpoints are relative to the location where the OpenAPI document is being served.
 

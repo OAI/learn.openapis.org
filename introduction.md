@@ -11,7 +11,7 @@ The **OpenAPI Specification** allows the description of a remote API accessible 
 
 The concept of an "API" is described first and the advantages of describing APIs using a machine-readable format are introduced, followed by the benefits of using the OpenAPI format. In the last section, the evolution of API descriptions is put into perspective with a brief historical summary.
 
-If you are already familiar with the benefits of machine-readable API descriptions and the OpenAPI in particular you may skip ahead to the next chapter, [The OpenAPI Specification explained](specification.md).
+If you are already familiar with the benefits of machine-readable API descriptions and the OpenAPI in particular you may skip ahead to the next chapter, [The OpenAPI Specification explained](specification).
 
 ## What Is an API?
 
@@ -54,7 +54,7 @@ The next section shows how some of these problems can be alleviated by specifyin
 
 An **API description file** (sometimes called Contract) is a **machine-readable** specification of an API. It should strive to be as **complete**, and **fully-detailed** as possible, although absolute completeness is not usually a requirement. Also, just like legal contracts, the more **unambiguous** it is, the more useful it becomes.
 
-Its main advantage over documentation which only humans can read is that it enables **automated processing**, opening the door to the benefits listed at [the beginning of this guide](start-here.md).
+Its main advantage over documentation which only humans can read is that it enables **automated processing**, opening the door to the benefits listed at [the beginning of this guide](start-here).
 
 To begin with, documentation for humans including the list of available methods and their details can be easily generated from the API description file. Done as a step in the build process, this easily prevents out-of-sync docs.
 
@@ -83,7 +83,7 @@ If parts of your API cannot be described using the OAS, and they cannot be redes
 
 Finally, OpenAPI can describe APIs based on the HTTP protocol (like RESTful ones) but also APIs based on **HTTP-like protocols** like CoAP (Constrained Application Protocol) or WebSockets. This allows OpenAPI to be used in resource-restricted scenarios like IoT (Internet of Things), for example.
 
-Feel free to jump now to the next chapter, [The OpenAPI Specification explained](specification.md), to start learning how to use the OAS. Or stay a bit longer to gain historical perspective with a comparison of the evolution of local and remote API descriptions.
+Feel free to jump now to the next chapter, [The OpenAPI Specification explained](specification), to start learning how to use the OAS. Or stay a bit longer to gain historical perspective with a comparison of the evolution of local and remote API descriptions.
 
 ## A Brief Historical Comparison
 
@@ -101,4 +101,4 @@ Machine-readable API descriptions (including **OpenAPI**) were then invented to 
 
 The benefits delivered by machine-readable descriptions of remote APIs, though, have far surpassed those of method signatures. For instance, OpenAPI can attach examples and notes to most API sections, to complement the automatically-generated documents, or reuse parts of the description to make the whole file leaner.
 
-Learn about all these capabilities and more in the next chapter, [The OpenAPI Specification explained](specification.md).
+Learn about all these capabilities and more in the next chapter, [The OpenAPI Specification explained](specification).

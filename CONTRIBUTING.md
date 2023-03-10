@@ -29,5 +29,5 @@ Configuration file: /Users/phil/src/OAI/Documentation/_config.yml
 Alternatively, you can use the following Docker command to build and serve the documentation:
 
 ```shell
-docker run -v $(pwd):/site bretfisher/jekyll-serve
+docker run -v $(pwd):/site -p 4000:4000 bretfisher/jekyll-serve
 ```
