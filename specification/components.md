@@ -111,4 +111,4 @@ This page has shown that:
 - Components can be referenced from any place where an object of the same type is expected using `$ref`.
 - References are actually URIs so they are very flexible.
 
-[The next page](docs.md) explains how to include documentation and examples in an OpenAPI document.
+[The next page](docs) explains how to include documentation and examples in an OpenAPI document.

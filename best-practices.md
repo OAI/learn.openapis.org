@@ -6,7 +6,7 @@ nav_order: 4
 
 # Best Practices
 
-This page contains general pieces of advice which do not strictly belong to the [Specification Explained](specification.md) chapter because they are not directly tied to the OpenAPI Specification.
+This page contains general pieces of advice which do not strictly belong to the [Specification Explained](specification) chapter because they are not directly tied to the OpenAPI Specification.
 
 However, they greatly simplify creating and maintaining OpenAPI documents, so they are worth keeping in mind.
 
@@ -73,7 +73,7 @@ Instead, you should try the other existing creation methods and choose the one t
 
 This is a collection of small hints related to working with large API description documents.
 
-- **Do not repeat yourself** (The DRY principle). If the same piece of YAML or JSON appears more than once in the document, it's time to move it to the `components` section and reference it from other places using `$ref` (See [Reusing Descriptions](specification/components.md). Not only will the resulting document be smaller but it will also be much easier to maintain).
+- **Do not repeat yourself** (The DRY principle). If the same piece of YAML or JSON appears more than once in the document, it's time to move it to the `components` section and reference it from other places using `$ref` (See [Reusing Descriptions](specification/components). Not only will the resulting document be smaller but it will also be much easier to maintain).
 
   Components can be referenced from other files, so you can even reuse them across different API documents!
 
@@ -83,7 +83,7 @@ This is a collection of small hints related to working with large API descriptio
 
   Bear in mind that some tools might have issues with large files, whereas some other tools might not handle too many files gracefully. The solution will have to take your toolkit into account.
 
-- **Use tags to keep things organized**: [Tags](https://spec.openapis.org/oas/v3.1.0#oasTags) have not been described in the Specification chapter, but they can help you arrange your operations and find them faster. A tag is simply a piece of metadata (a unique name and an optional description) that you can attach to [operations](specification/paths.md). Tools, specially [GUI editors](https://openapi.tools/#gui-editors), can then sort all your API's operation by their tags to help you keep them organized.
+- **Use tags to keep things organized**: [Tags](https://spec.openapis.org/oas/v3.1.0#oasTags) have not been described in the Specification chapter, but they can help you arrange your operations and find them faster. A tag is simply a piece of metadata (a unique name and an optional description) that you can attach to [operations](specification/paths). Tools, specially [GUI editors](https://openapi.tools/#gui-editors), can then sort all your API's operation by their tags to help you keep them organized.
 
 ## Links to External Best Practices
 

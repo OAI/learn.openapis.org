@@ -100,7 +100,7 @@ info:
 paths: {} # No endpoints defined
 ```
 
-This API is not very useful because it **defines no operations** (it has no endpoints). [The next page](paths.md) remedies that.
+This API is not very useful because it **defines no operations** (it has no endpoints). [The next page](paths) remedies that.
 
 ## Summary
 
@@ -110,4 +110,4 @@ This page has shown that:
 * An OpenAPI document is a JSON object including the fields described in the [OpenAPI Specification](https://spec.openapis.org/oas/v3.1.0).
 * Every OpenAPI document must contain a root object with at least the fields `openapi`, and `info`,  and either `paths`, `components` or `webhooks`.
 
-[The following page](paths.md) describes the contents of the `paths` field so endpoints can be added to the above minimal snippet.
+[The following page](paths) describes the contents of the `paths` field so endpoints can be added to the above minimal snippet.

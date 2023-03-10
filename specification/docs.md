@@ -195,4 +195,4 @@ This page has shown the features provided by OpenAPI to aid in the documentation
 - Text can use rich formatting using **CommonMark** syntax, quickly summarized in this page.
 - Documentation can be extended with sample code using the `example` or `examples` fields.
 
-[The next page](servers.md) shows how to specify the server where the API can be accessed.
+[The next page](servers) shows how to specify the server where the API can be accessed.
