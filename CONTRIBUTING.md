@@ -1,5 +1,7 @@
 # Contributing
 
+## Building the site
+
 The documentation uses [jekyll](https://jekyllrb.com/), a Ruby based static site generator, with [Just the Docs](https://github.com/just-the-docs/just-the-docs). You will need to set up Ruby locally to run the server and see your changes.
 
 ``` bash
@@ -31,3 +33,7 @@ Alternatively, you can use the following Docker command to build and serve the d
 ```shell
 docker run -v $(pwd):/site bretfisher/jekyll-serve
 ```
+
+### Regenerating the images
+
+This can be done with the `dot` tool from the `graphviz` package.
