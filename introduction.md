@@ -73,7 +73,7 @@ The OpenAPI Specification (**OAS**) is a **vendor neutral** description format f
 
 Currently, the OAS is maintained, evolved and promoted by the OpenAPI Initiative (**OAI**), a consortium of industry experts with an open governance structure under the Linux Foundation umbrella. This means all meetings and decisions are public and changes to the OAS can be proposed and discussed by anyone.
 
-This openness has encouraged the creation of a vast amount of tools (take a look at [OpenAPI.Tools](https://openapi.tools/), for example) which perfectly showcase the power of open, machine-readable API descriptions (called **documents** in OpenAPI).
+This openness has encouraged the creation of a vast amount of tools (take a look at [the OpenAPI tools list](https://tools.openapis.org/), for example) which perfectly showcase the power of open, machine-readable API descriptions (called **documents** in OpenAPI).
 
 It's probably because of the amount of tools available when working with OpenAPI that it has become **the most broadly adopted industry standard for describing modern APIs**.
 

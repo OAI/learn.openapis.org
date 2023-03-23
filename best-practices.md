@@ -26,10 +26,10 @@ Therefore, unless these descriptive limitations are perfectly known and taken in
 
 Sometimes, however, since it is late in the process, it will be preferred to twist the API description so that it matches *more or less* the actual API. It goes without saying that this leads to **unintuitive and incomplete descriptions**, that will rarely scale in the future.
 
-Finally, there exist a number of [validation tools](https://openapi.tools/#data-validators) that can verify that the implemented code adheres to the OpenAPI description. Running these tools as part of a Continuous Integration process allows changing the OpenAPI document with peace of mind, since deviations in the code behavior will be promptly detected.
+Finally, there exist a number of [validation tools](https://tools.openapis.org/categories/data-validators) that can verify that the implemented code adheres to the OpenAPI description. Running these tools as part of a Continuous Integration process allows changing the OpenAPI document with peace of mind, since deviations in the code behavior will be promptly detected.
 
 > **Bottom line:**
-> OpenAPI opens the door to a [wealth of automated tools](https://openapi.tools). Make sure you use them!
+> OpenAPI opens the door to a [wealth of automated tools](https://tools.openapis.org). Make sure you use them!
 
 ## Keep a Single Source of Truth
 
@@ -61,9 +61,9 @@ While there is nothing stopping you from doing this, and, in fact, hand-written 
 
 Instead, you should try the other existing creation methods and choose the one that better suits you and your team (No YAML or JSON knowledge needed!):
 
-- **OpenAPI Editors**: Be it [text editors](https://openapi.tools/#text-editors) or [GUI editors](https://openapi.tools/#gui-editors) they usually take care of repetitive tasks, allow you to keep a library of reusable components and provide real-time preview of the generated documentation.
+- **OpenAPI Editors**: Be it [text editors](https://tools.openapis.org/categories/text-editors) or [GUI editors](https://tools.openapis.org/categories/gui-editors) they usually take care of repetitive tasks, allow you to keep a library of reusable components and provide real-time preview of the generated documentation.
 
-- **Domain-Specific Languages**: As its name indicates, [DSL](https://openapi.tools/#dsl)'s are API description languages tailored to specific development fields. A tool is then used to produce the OpenAPI document. A new language has to be learned, but, in return, extremely concise descriptions can be achieved.
+- **Domain-Specific Languages**: As its name indicates, [DSL](https://tools.openapis.org/categories/dsl)'s are API description languages tailored to specific development fields. A tool is then used to produce the OpenAPI document. A new language has to be learned, but, in return, extremely concise descriptions can be achieved.
 
 - **Code Annotations**: Most programming languages allow you to _annotate_ the code, be it with specific syntax or with general code comments. These annotations, for example, can be used to extend a method signature with information regarding the API endpoint and HTTP method that lead to it. A tool can then parse the code annotations and generate OpenAPI documents automatically. This method fits very nicely with the code-first approach, so keep in mind the first advice given at the top of this page when using it (Use a Design-First Approach)...
 
@@ -83,7 +83,7 @@ This is a collection of small hints related to working with large API descriptio
 
   Bear in mind that some tools might have issues with large files, whereas some other tools might not handle too many files gracefully. The solution will have to take your toolkit into account.
 
-- **Use tags to keep things organized**: [Tags](https://spec.openapis.org/oas/v3.1.0#oasTags) have not been described in the Specification chapter, but they can help you arrange your operations and find them faster. A tag is simply a piece of metadata (a unique name and an optional description) that you can attach to [operations](specification/paths). Tools, specially [GUI editors](https://openapi.tools/#gui-editors), can then sort all your API's operation by their tags to help you keep them organized.
+- **Use tags to keep things organized**: [Tags](https://spec.openapis.org/oas/v3.1.0#oasTags) have not been described in the Specification chapter, but they can help you arrange your operations and find them faster. A tag is simply a piece of metadata (a unique name and an optional description) that you can attach to [operations](specification/paths). Tools, specially [GUI editors](https://tools.openapis.org/categories/gui-editors), can then sort all your API's operation by their tags to help you keep them organized.
 
 ## Links to External Best Practices
 
