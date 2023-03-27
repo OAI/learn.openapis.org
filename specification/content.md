@@ -107,7 +107,7 @@ content:
 
 ## Tic Tac Toe Example
 
-The [Tic Tac Toe sample API](/examples/tictactoe.yaml) given so far has one endpoint with one unspecified response. The snippet below adds the description of this content:
+The [Tic Tac Toe sample API](https://github.com/OAI/Documentation/blob/main/examples/tictactoe.yaml) given so far has one endpoint with one unspecified response. The snippet below adds the description of this content:
 
 ```yaml
 openapi: 3.1.0
