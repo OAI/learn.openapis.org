@@ -157,7 +157,7 @@ The Request Body Object also has a `description` string and a `required` boolean
 
 ## Tic Tac Toe Example
 
-The [Tic Tac Toe sample API](examples/tictactoe.yaml) contains two endpoints, one without parameters or request body (`/board`) and another one with both (`/board/{row}/{column}`). The relevant code snippet for the second endpoint is shown below and it should be easy to understand after reading this page.
+The [Tic Tac Toe sample API](/examples/tictactoe.yaml) contains two endpoints, one without parameters or request body (`/board`) and another one with both (`/board/{row}/{column}`). The relevant code snippet for the second endpoint is shown below and it should be easy to understand after reading this page.
 
 ```yaml
 paths:
