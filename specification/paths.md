@@ -127,7 +127,7 @@ paths:
             ...
 ```
 
-The complete document can be found in the [Tic Tac Toe sample API](/examples/tictactoe.yaml).
+The complete document can be found in the [Tic Tac Toe sample API](https://github.com/OAI/Documentation/blob/main/examples/tictactoe.yaml).
 
 ## Summary
 
