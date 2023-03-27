@@ -166,7 +166,7 @@ schema:
 
 On the other hand, the `examples` field (found in [Parameter](https://spec.openapis.org/oas/v3.1.0#parameterExample) and [Media Type](https://spec.openapis.org/oas/v3.1.0#mediaTypeExample) Objects) is a map pairing an example name with an [Example Object](https://spec.openapis.org/oas/v3.1.0#example-object). This object provides a `summary` and a `description` for the example along with the actual code (inside the `value` field or as an external reference in the `externalValue` field, but not both).
 
-This is a snippet from the [Tic Tac Toe sample API](/examples/tictactoe.yaml):
+This is a snippet from the [Tic Tac Toe sample API](https://github.com/OAI/Documentation/blob/main/examples/tictactoe.yaml):
 
 ```yaml
 responses:
