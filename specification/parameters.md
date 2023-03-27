@@ -199,7 +199,7 @@ paths:
 - The parameters are two integers, named `row` and `column` which are located in the path of the operation. This matches the path name which contains `{row}` and `{column}`.
 - The `put` operation, additionally, must provide a request body which must be one of the three provided strings: `.`, `X` and `O`.
 
-The complete [Tic Tac Toe sample API](examples/tictactoe.yaml) does not look exactly like the above snippet because it reuses portions of the document to remove redundancy. This technique is explained in the [Reusing Descriptions](components) page.
+The complete [Tic Tac Toe sample API](/examples/tictactoe.yaml) does not look exactly like the above snippet because it reuses portions of the document to remove redundancy. This technique is explained in the [Reusing Descriptions](components) page.
 
 ## Summary
 
