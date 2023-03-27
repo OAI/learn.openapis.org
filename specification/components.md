@@ -97,7 +97,7 @@ Note also how the `coordinate` schema is used twice (in the `rowParam` and `colu
 
 ## Tic Tac Toe Example
 
-The complete [Tic Tac Toe sample API](/examples/tictactoe.yaml) (not included here for brevity) makes heavy use of components. Note for example how different endpoints return a `#/components/schemas/status` on success, or a `#/components/schemas/errorMessage` on error.
+The complete [Tic Tac Toe sample API](https://github.com/OAI/Documentation/blob/main/examples/tictactoe.yaml) (not included here for brevity) makes heavy use of components. Note for example how different endpoints return a `#/components/schemas/status` on success, or a `#/components/schemas/errorMessage` on error.
 
 ## Summary
 
