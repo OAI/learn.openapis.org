@@ -33,7 +33,7 @@ Finally, there exist a number of [validation tools](https://tools.openapis.org/c
 
 ## Keep a Single Source of Truth
 
-Regardless of your design approach (design-first of code-first) always keep a single source of truth, i.e., information should **not** be duplicated in different places. It is really the same concept used in programming, where repeated code should be moved to a common function.
+Regardless of your design approach (design-first or code-first) always keep a single source of truth, i.e., information should **not** be duplicated in different places. It is really the same concept used in programming, where repeated code should be moved to a common function.
 
 Otherwise, eventually one of the places will be updated while the other won't, leading to headaches... in the best of cases.
 
