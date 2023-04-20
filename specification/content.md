@@ -76,7 +76,7 @@ content:
       - Carl
 ```
 
-Array types must have an `items` field, which is a [Schema Object](https://spec.openapis.org/oas/v3.1.0#schema-object) itself, and defines the type for each element of the array. Additionally, the size of the array can be limited with `minItems` and `maxItems`.
+Array types should have an `items` field, which is a [Schema Object](https://spec.openapis.org/oas/v3.1.0#schema-object) itself, and defines the type for each element of the array. Additionally, the size of the array can be limited with `minItems` and `maxItems`.
 
 ```yaml
 content:
@@ -89,7 +89,7 @@ content:
         type: integer
 ```
 
-Finally, object types must have a `properties` field listing the properties of the object. This field is a map pairing property names with a [Schema Object](https://spec.openapis.org/oas/v3.1.0#schema-object) defining their type. This allows building data types as complex as required.
+Finally, object types should have a `properties` field listing the properties of the object. This field is a map pairing property names with a [Schema Object](https://spec.openapis.org/oas/v3.1.0#schema-object) defining their type. This allows building data types as complex as required.
 
 Here's an example defining an object with two fields: a `productName` string and a `productPrice` number:
 
