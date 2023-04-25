@@ -4,7 +4,7 @@
 
 Are you new to the OpenAPI specification? 
 
-Read our [Getting started](https://oai.github.io/Documentation) page first.
+Read our [Getting started](https://learn.openapis.org/) page first.
 
 
 
