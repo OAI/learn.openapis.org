@@ -11,7 +11,7 @@ Besides machine-readable descriptions, an OpenAPI document can also include trad
 
 This page shows how to take full advantage of special documentation capabilities in OpenAPI like markdown syntax or example objects.
 
-## The Documentation Fields
+## The Description Field
 
 Almost every object in the OpenAPI Specification accepts a `description` field which can provide additional information for developers, beyond what can be automatically generated from the API descriptions.
 
@@ -142,7 +142,7 @@ A fenced code block
 ![Alt text](Image URL)
 ```
 
-## The Example Object
+## The Examples Object
 
 Finally, some OpenAPI objects can list examples explicitly instead of having them embedded in the `description` field, enabling automated processing by tools.
 
