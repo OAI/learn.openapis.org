@@ -95,7 +95,7 @@ In more advanced scenarios the `content` field can be used instead. It provides 
 
 ### Parameter Serialization Control
 
-The `style` field defines how a parameter is to be serialized and its effect depends on the **type** of the parameter. The resulting matrix is therefore rather complex and can be consulted in the [Parameter Object](https://spec.openapis.org/oas/v3.1.0#style-examples) specification page.
+The `style` field describes how a parameter is to be serialized and its effect depends on the **type** of the parameter. The resulting matrix is therefore rather complex and can be consulted in the [Parameter Object](https://spec.openapis.org/oas/v3.1.0#style-examples) specification page.
 
 The tables given below exemplify the most common styles `simple`, `form`, `label`, and `matrix`:
 
@@ -195,11 +195,11 @@ paths:
         ...
 ```
 
-- Both operations (`get` and `put`) have the same parameters, since they are defined at the Path Item level.
+- Both operations (`get` and `put`) have the same parameters, since they are described at the Path Item level.
 - The parameters are two integers, named `row` and `column` which are located in the path of the operation. This matches the path name which contains `{row}` and `{column}`.
 - The `put` operation, additionally, must provide a request body which must be one of the three provided strings: `.`, `X` and `O`.
 
-The complete [Tic Tac Toe sample API](/examples/tictactoe.yaml) does not look exactly like the above snippet because it reuses portions of the document to remove redundancy. This technique is explained in the [Reusing Descriptions](components) page.
+The complete [Tic Tac Toe sample API](/examples/tictactoe.yaml) does not look exactly like the above snippet because it reuses portions of the description to remove redundancy. This technique is explained in the [Reusing Descriptions](components) page.
 
 ## Summary
 
@@ -209,4 +209,4 @@ This page has shown:
 - Parameters can be located in different places (`path`, `query`, `headers`) and their content (`schema`) and serialization (`style`) is highly customizable.
 - The request body is specified, much like responses are, using the `content` field.
 
-[The next page](components) explains how to reuse portions of an OpenAPI document to remove redundancy, reducing file size and maintenance cost.
+[The next page](components) explains how to reuse portions of an OpenAPI Description to remove redundancy, reducing file size and maintenance cost.

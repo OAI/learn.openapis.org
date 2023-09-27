@@ -158,7 +158,7 @@ The response contains an object is JSON format with two fields:
 - `winner` is a string with only three possible values: `.`, `X` and `O`.
 - `board` is a 3-element array where each item is another 3-element array, effectively building a 3x3 square matrix. Each element in the matrix is a string with only three possible values: `.`, `X` and `O`.
 
-This document is starting to grow too big and complex. The [Reusing Descriptions](components) page explains how to name sections of an OpenAPI document in order to reuse them (like the strings with three options above, which appear twice).
+This part of our description is starting to grow too big and complex. The details of the response schema take up a lot of space, obscuring the request/response structure.  The deep nesting also makes the schema harder to spot within the larger object.  The [Reusing Descriptions](components) page explains how to name sections of an OpenAPI Description (OAD) in order to reuse them (like the strings with three options above, which appear twice).
 
 ## Summary
 

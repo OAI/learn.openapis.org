@@ -7,7 +7,7 @@ nav_order: 6
 
 # Providing Documentation and Examples
 
-Besides machine-readable descriptions, an OpenAPI document can also include traditional documentation meant to be read by developers. Automatic documentation generators can then merge both and produce comprehensive, nicely-structured reference guides, for example.
+Besides machine-readable descriptions, an OpenAPI Description (OAD) can also include traditional documentation meant to be read by developers. Automatic documentation generators can then merge both and produce comprehensive, nicely-structured reference guides, for example.
 
 This page shows how to take full advantage of special documentation capabilities in OpenAPI like markdown syntax or example objects.
 
@@ -15,7 +15,7 @@ This page shows how to take full advantage of special documentation capabilities
 
 Almost every object in the OpenAPI Specification accepts a `description` field which can provide additional information for developers, beyond what can be automatically generated from the API descriptions.
 
-For instance, a parameter's name, type and valid range of values are already present in the API definition. The `description` field can complement this information by explaining the **purpose** of this parameter, the **effect of each value** or possible **interactions** with other parameters:
+For instance, a parameter's name, type and valid range of values are already present in the API description. The `description` field can complement this information by explaining the **purpose** of this parameter, the **effect of each value** or possible **interactions** with other parameters:
 
 ```yaml
 paths:

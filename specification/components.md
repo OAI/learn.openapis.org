@@ -7,19 +7,19 @@ nav_order: 5
 
 # Reusing Descriptions
 
-As is often the case, the example built through the previous pages has grown too large to be easily manageable. This page introduces a mechanism to remove redundancy from an OpenAPI document by reusing portions of it.
+As is often the case, the example built through the previous pages has grown too large to be easily manageable. This page introduces a mechanism to remove redundancy from an OpenAPI Description (OAD) by reusing portions of it.
 
 ## The Components Object
 
 The [Components Object](https://spec.openapis.org/oas/v3.1.0#components-object),
-accessible through the `components` field in the root [OpenAPI Object](https://spec.openapis.org/oas/v3.1.0#openapi-object), contains definitions for objects to be reused in other parts of the document.
+accessible through the `components` field in the root [OpenAPI Object](https://spec.openapis.org/oas/v3.1.0#openapi-object), contains definitions for objects to be reused in other parts of the description.
 
 <figure style="text-align:center">
    <object type="image/svg+xml" data="{{site.baseurl}}/img/components-object.svg"></object>
-  <figcaption>The OpenAPI Object is explained in the <a href="structure.html">Structure of an OpenAPI Document</a> page.<br/>The Schema Object is explained in the <a href="content.html">Content of Message Bodies</a> page.<br/>The Response Object is explained in the <a href="paths.html">API Endpoints</a> page.<br/>The Parameter Object is explained in the <a href="parameters.html">Parameters and Payload of an Operation</a> page.</figcaption>
+  <figcaption>The OpenAPI Object is explained in the <a href="structure.html">Structure of an OpenAPI Description</a> page.<br/>The Schema Object is explained in the <a href="content.html">Content of Message Bodies</a> page.<br/>The Response Object is explained in the <a href="paths.html">API Endpoints</a> page.<br/>The Parameter Object is explained in the <a href="parameters.html">Parameters and Payload of an Operation</a> page.</figcaption>
 </figure>
 
-Most objects in an OpenAPI document can be replaced by a **reference** to a **component**, drastically reducing the document's size and maintenance cost (just like methods do in programming languages).
+Most objects in an OAD can be replaced by a **reference** to a **component**, drastically reducing the OAD's size and maintenance cost (just like methods do in programming languages).
 
 Not all objects can be referenced, though, only those listed as fields of the [Components Object](https://spec.openapis.org/oas/v3.1.0#components-object) like `schemas`, `responses` and `parameters` to name a few.
 
@@ -101,9 +101,9 @@ The complete [Tic Tac Toe sample API](/examples/tictactoe.yaml) (not included he
 
 ## Summary
 
-Whenever the same piece of JSON or YAML is repeated in an OpenAPI document, it is probably worth converting it into a component and referencing it everywhere else.
+Whenever the same piece of JSON or YAML is repeated in an OAD, it is probably worth converting it into a component and referencing it everywhere else.
 
-Furthermore, [Reference Objects](https://spec.openapis.org/oas/v3.1.0#reference-object) allow splitting a document into several files to keep them organized and their individual size manageable.
+Furthermore, [Reference Objects](https://spec.openapis.org/oas/v3.1.0#reference-object) allow splitting a description into several documents to keep them organized and their individual size manageable.
 
 This page has shown that:
 
@@ -111,4 +111,4 @@ This page has shown that:
 - Components can be referenced from any place where an object of the same type is expected using `$ref`.
 - References are actually URIs so they are very flexible.
 
-[The next page](docs) explains how to include documentation and examples in an OpenAPI document.
+[The next page](docs) explains how to include documentation and examples in an OpenAPI Description.

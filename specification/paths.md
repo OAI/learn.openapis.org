@@ -7,7 +7,7 @@ nav_order: 2
 
 # API Endpoints
 
-[The previous page](structure) showed the minimal structure of an OpenAPI document but did not add any operation to the API. This page explains how to do it.
+[The previous page](structure) showed the minimal structure of an OpenAPI Description (OAD) but did not add any operation to the API. This page explains how to do it.
 
 ## The Endpoints list
 
@@ -15,7 +15,7 @@ API Endpoints (also called Operations or Routes) are called **Paths** in the OAS
 
 <figure style="text-align:center">
   <object type="image/svg+xml" data="{{site.baseurl}}/img/paths-object.svg"></object>
-  <figcaption>The OpenAPI Object is explained in the <a href="structure.html">Structure of an OpenAPI Document</a> page.</figcaption>
+  <figcaption>The OpenAPI Object is explained in the <a href="structure.html">Structure of an OpenAPI Description</a> page.</figcaption>
 </figure>
 
 Every field in the [Paths Object](https://spec.openapis.org/oas/v3.1.0#paths-object) is a [Path Item Object](https://spec.openapis.org/oas/v3.1.0#path-item-object) describing one API endpoint. Fields are used instead of an Array because they enforce endpoint name uniqueness at the syntax level (any JSON or YAML parser can detect mistakes without requiring an OpenAPI validator).
@@ -104,7 +104,7 @@ paths:
 
 ## Tic Tac Toe Example
 
-Here's a fragment of the example, containing only the objects that have been defined so far in the guide. At this point the reader should be able to understand every line of this snippet.
+Here's a fragment of the example, containing only the objects that have been described so far in the guide. At this point the reader should be able to understand every line of this snippet.
 
 ```yaml
 openapi: 3.1.0
@@ -127,7 +127,7 @@ paths:
             ...
 ```
 
-The complete document can be found in the [Tic Tac Toe sample API](/examples/tictactoe.yaml).
+The complete OpenAPI Description can be found in the [Tic Tac Toe sample API](/examples/tictactoe.yaml).
 
 ## Summary
 

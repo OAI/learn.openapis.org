@@ -7,9 +7,9 @@ nav_order: 2
 
 # Introduction
 
-The **OpenAPI Specification** allows the description of a remote API accessible through HTTP or HTTP-like protocols. This chapter explains why this is a good thing and why it might interest you.
+The **OpenAPI Specification** (**OAS**) allows the description of a remote API accessible through HTTP or HTTP-like protocols. This description, which may be stored as one or more documents (such as local files or HTTP-accessible network resources), is called an **OpenAPI Description** (**OAD**).  This chapter explains why describing your API with an OAD is a good thing, and why it might interest you.
 
-The concept of an "API" is described first and the advantages of describing APIs using a machine-readable format are introduced, followed by the benefits of using the OpenAPI format. In the last section, the evolution of API descriptions is put into perspective with a brief historical summary.
+The concept of an "API" is described first and the advantages of describing APIs using a machine-readable format are introduced, followed by the benefits of using the OAS format. In the last section, the evolution of API descriptions is put into perspective with a brief historical summary.
 
 If you are already familiar with the benefits of machine-readable API descriptions and the OpenAPI in particular you may skip ahead to the next chapter, [The OpenAPI Specification explained](specification).
 
@@ -33,7 +33,7 @@ Using APIs is an everyday practice in computer science since their benefits are 
 
 Now, in order for all involved parties to adhere to the same API it has to be precisely defined. The next section describes how this has traditionally been achieved.
 
-## API Definition Through Documentation
+## API Description Through Documentation
 
 APIs are typically accompanied by a **reference guide**; a piece of literature explaining to a developer how to use the API.
 
@@ -46,13 +46,13 @@ Unfortunately, everybody working on software development is familiar with one or
 
 In these cases, to find the information they require developers might have to read source code (if available), debug programs or analyze network traffic, which are gigantic **time sinks**.
 
-Furthermore, errors in the usage of an API defined through its documentation cannot be discovered until runtime, which is another time sink.
+Furthermore, errors in the usage of an API described only through documentation cannot be discovered until runtime, which is another time sink.
 
 The next section shows how some of these problems can be alleviated by specifying APIs in a format that automated tools can use.
 
-## API Definition Through a Description File
+## API Description Using the OAS
 
-An **API description file** (sometimes called Contract) is a **machine-readable** specification of an API. It should strive to be as **complete**, and **fully-detailed** as possible, although absolute completeness is not usually a requirement. Also, just like legal contracts, the more **unambiguous** it is, the more useful it becomes.
+An **API description file** (sometimes called _contract_) is a **machine-readable** specification of an API. It should strive to be as **complete**, and **fully-detailed** as possible, although absolute completeness is not usually a requirement. Also, just like legal contracts, the more **unambiguous** it is, the more useful it becomes.
 
 Its main advantage over documentation which only humans can read is that it enables **automated processing**, opening the door to the benefits listed at [the beginning of this guide](start-here).
 
@@ -65,21 +65,21 @@ To name only another possibility, the API description file might include example
 
 For all the above reasons and many more it is highly advisable to use a machine-readable description when designing a new API.
 
-Over the years several API description formats (called Specifications) emerged. The following section lists the benefits of **OpenAPI**, the most widely used specification when creating new APIs.
+Over the years several API description formats (called _specifications_) emerged. The following section lists the benefits of **OpenAPI**, the most widely used specification when creating new APIs.
 
 ## The OpenAPI Specification
 
-The OpenAPI Specification (**OAS**) is a **vendor neutral** description format for HTTP-based remote APIs. It was originally based on the Swagger 2.0 Specification, donated by SmartBear Software in 2015.
+The OpenAPI Specification (**OAS**) is a **vendor-neutral** description format for HTTP-based remote APIs. It was originally based on the Swagger 2.0 Specification, donated by SmartBear Software in 2015.
 
 Currently, the OAS is maintained, evolved and promoted by the OpenAPI Initiative (**OAI**), a consortium of industry experts with an open governance structure under the Linux Foundation umbrella. This means all meetings and decisions are public and changes to the OAS can be proposed and discussed by anyone.
 
-This openness has encouraged the creation of a vast amount of tools (take a look at [the OpenAPI tools list](https://tools.openapis.org/), for example) which perfectly showcase the power of open, machine-readable API descriptions (called **documents** in OpenAPI).
+This openness has encouraged the creation of a vast amount of tools (take a look at [the OpenAPI tools list](https://tools.openapis.org/), for example) which perfectly showcase the power of open, machine-readable API descriptions such as OADs.
 
 It's probably because of the amount of tools available when working with OpenAPI that it has become **the most broadly adopted industry standard for describing modern APIs**.
 
-It is also worth mentioning that the OAS does not aim at being able to describe **every possible API**, since doing so would require a rather large and unwieldy specification. Instead, it tries to **describe efficiently the most common use cases**. Still, the benefits provided by OpenAPI are so numerous that it is usually worth it to design your API so it can be fully defined using the OAS.
+It is also worth mentioning that the OAS does not aim at being able to describe **every possible API**, since doing so would require a rather large and unwieldy specification. Instead, it tries to **describe efficiently the most common use cases**. Still, the benefits provided by OpenAPI are so numerous that it is usually worth it to design your API so it can be fully described using the OAS.
 
-If parts of your API cannot be described using the OAS, and they cannot be redesigned, they can still be left out of the OAS document: OpenAPI lists operations that you can do, but it does not assert anything regarding operations not in the OAS document.
+If parts of your API cannot be described using the OAS, and they cannot be redesigned, they can still be left out of the OAD: OpenAPI lists operations that you can do, but it does not assert anything regarding operations not in the OAD.
 
 Finally, OpenAPI can describe APIs based on the HTTP protocol (like RESTful ones) but also APIs based on **HTTP-like protocols** like CoAP (Constrained Application Protocol) or WebSockets. This allows OpenAPI to be used in resource-restricted scenarios like IoT (Internet of Things), for example.
 
@@ -99,6 +99,6 @@ Later on, the Internet arrived and with it appeared **remote APIs**. HTTP-based 
 
 Machine-readable API descriptions (including **OpenAPI**) were then invented to bring to remote APIs the same degree of robustness that method signatures brought to local APIs. Tools do exist now which check that requests are made in the correct format, or even ensure it by generating the request code themselves.
 
-The benefits delivered by machine-readable descriptions of remote APIs, though, have far surpassed those of method signatures. For instance, OpenAPI can attach examples and notes to most API sections, to complement the automatically-generated documents, or reuse parts of the description to make the whole file leaner.
+The benefits delivered by machine-readable descriptions of remote APIs, though, have far surpassed those of method signatures. For instance, OpenAPI can attach examples and notes to most API sections, to complement the automatically-generated documentation, or reuse parts of the description to make the whole file leaner.
 
 Learn about all these capabilities and more in the next chapter, [The OpenAPI Specification explained](specification).
