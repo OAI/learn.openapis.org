@@ -10,3 +10,5 @@ gem "jekyll-remote-theme"
 group :jekyll_plugins do
   gem "jekyll-sitemap", "~> 1.4"
 end
+
+gem "jekyll-include-cache", "~> 0.2.1"
