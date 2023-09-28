@@ -73,7 +73,7 @@ Finally, object field names are case-sensitive: `openapi` is not the same thing 
 
 ## Minimal OpenAPI Description Structure
 
-To be entirely precise, a minmal OpenAPI Description (OAD) is a single JSON object containing fields adhering to the structure defined in the [OpenAPI Specification](https://spec.openapis.org/oas/v3.1.0) (OAS).
+To be entirely precise, a minimal OpenAPI Description (OAD) is a single JSON object containing fields adhering to the structure defined in the [OpenAPI Specification](https://spec.openapis.org/oas/v3.1.0) (OAS).
 
 The OAS structure is long and complex so this section just describes the minimal set of fields it must contain, while following pages give more details about specific objects. The [OpenAPI Map](https://openapi-map.apihandyman.io/) is a nice visual tool that can help familiarize the reader with this long specification.
 
