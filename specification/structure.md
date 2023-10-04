@@ -11,7 +11,7 @@ An OpenAPI Description (OAD) describes an HTTP-like API in one or more machine-r
 
 ## OpenAPI Description Syntax
 
-OpenAPI Descriptions are written as one or more text documents, commonly called `openapi.json` or `openapi.yaml`.  Each document represents a [JSON](https://en.wikipedia.org/wiki/JSON) object, in either JSON or [YAML](https://en.wikipedia.org/wiki/YAML) format.  **References** are used to link parts of the JSON object(s) to each other, and this linked structure is the complete OpenAPI Description.  Parsing begins with an [OpenAPI Object](https://spec.openapis.org/oas/v3.1.0#openapi-object), and the document containing that object is known as the **entry document**.
+OpenAPI Descriptions are written as one or more text documents. Each document represents a [JSON](https://en.wikipedia.org/wiki/JSON) object, in either JSON or [YAML](https://en.wikipedia.org/wiki/YAML) format.  **References** are used to link parts of the JSON object(s) to each other, and this linked structure is the complete OpenAPI Description.  Parsing begins with an [OpenAPI Object](https://spec.openapis.org/oas/v3.1.0#openapi-object), and the document containing that object is known as the **entry document**, commonly called `openapi.json` or `openapi.yaml`.
 
 This section very briefly describes and compares the JSON and YAML data formats.
 
