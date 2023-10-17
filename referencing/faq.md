@@ -14,7 +14,7 @@ If your OpenAPI Description (OAD):
 1. consists only of a single JSON or YAML document
 1. contains only references that are fragments (beginning with a `"#"`, e.g. `{"$ref": "#/components/responses/oops"}`)
 1. does not have any other keywords in the same object as any `"$ref"`
-1. (OAS 3.1 only) does *not* use `"$id"`if you are using OAS 3.1, you are  *not* using the `"$id"` keyword Schema Objects
+1. (OAS 3.1 only) does *not* use `"$id"`if you are using OAS 3.1, you are  *not* using the `"$id"` keyword in Schema Objects
 1. (OAS 3.1 only) does *not* use `"$dynamicRef"` or `"$dynamicAnchor"`
 
 Then your use of references is simple enough that your references will do what you expect with any tool that supports them at all.  You probably do not need to read the rest of this page.
