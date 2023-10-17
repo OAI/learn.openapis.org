@@ -18,11 +18,11 @@ References exist in several variations in the OpenAPI Specification (OAS) versio
 | OAS Version | Object | Reference Keyword | Adjacent Keywords | Behavior |
 | ----------- | ------ | ----------------- | ----------------- | -------- |
 | 3.0         | Reference Object | `"$ref"`       | ignored           | logically replace the Reference Object with the reference target |
-| 3.1         | Reference Object | `"$ref"`       | `"summary"` and `"description"` allowed; others ignored | logically replace the Reference Object with a coply of the target, overwriting the target's `"summary"` and/or `"description"` fields with those of the Reference Object if they are present |
+| 3.1         | Reference Object | `"$ref"`       | `"summary"` and `"description"` allowed; others ignored | logically replace the Reference Object with a copy of the target, overwriting the target's `"summary"` and/or `"description"` fields with those of the Reference Object if they are present |
 | 3.x         | Path Item Object | `"$ref"`       | allowed under some circumstances | logically replace the Path Item Object containing the `"$ref"` with a Path Item Object that combines the fields of the target Path Item Object with the non-`"$ref"` fields of the Path Item Object containing the `"$ref"`, as long as none of those fields conflict |
 | 3.1         | Schema Object | `"$ref"`   | allowed | Apply the target Schema Object to the same instance location as the Schema Object containing the `"$ref"`, and combine the results with the results of other keywords in the Schema Object containing the `"$ref"` just as you would any other keyword results; this is more-or-less equivalent to using a one-element `"allOf"` |
 | 3.x         | Link Object   | `"operationRef"` | allowed, except `"operationId"` | Treat the reference target as the target of the link described by the Link Object |
-| 3.x         | Descriminator Object | `"mapping"` | n/a | for each name under `"mapping"`, if the value is not the name of a Schema Object under the Components Object, treat it as a reference to the schema to use when the discriminator field matches the mapping name |
+| 3.x         | Discriminator Object | `"mapping"` | n/a | for each name under `"mapping"`, if the value is not the name of a Schema Object under the Components Object, treat it as a reference to the schema to use when the discriminator field matches the mapping name |
 
 Note that not all references are handled by replacing the source with the target.  Some are defined in terms of behavior, and **cannot** be replaced with an inline value.
 
@@ -36,21 +36,60 @@ Also, in this guide the term "reference" alone *always* means reference as defin
 
 ## Non-reference linkages
 
-The following connections between parts of the OAS require that some name or identifier has been seen.  Due to ambiguities in the specification (which the OAI will hopefully be able to clarify in future patch releases), it is not always clear how to handle identifiers that are present in a _document_ that has been referenced, but are not present in the _exact JSON object_ targeted by any single reference.
+The following connections between parts of the OAD require that some name or identifier has been seen.  Note that some of the identifiers are not in objects that can be referenced, but are included for completeness.
 
-Note that some of the identifiers are not in objects that can be referenced, but are included for completeness.
+| OAS Version | Linkage Source                 | Target Object     | Target Field            |
+| ----------- | ------------------------------ | ----------------- | ----------------------- |
+| 3.x         | Discriminator Object           | Components Object | Schema name             |
+| 3.x         | Security Requirement Object    | Components Object | Security Scheme name    |
+| 3.x         | Operation Object               | Tag Object        | `name`                  |
+| 3.x         | Link Object                    | Operation Object  | `operationId`           |
+| 3.x         | Paths Object                   | Server Object     | n/a                     |
+| 3.x         | Paths Object URL template      | Parameter Object  | `name` where `in: path` |
+| 3.x         | Server Object `url` template   | Server Object     | `variables`             |
 
-| OAS Version | Identifying Object | Identifying Field | Object of Identifier Use |
-| ----------- | ------------------ | ----------------- | ------------------------ |
-| 3.x         | Components Object  | Schema name       | Discriminator Object     |
-| 3.x         | Components Object  | Security Scheme name | Security Requirement Object |
-| 3.x         | Tag Object         | `name`            | Operation Object |
-| 3.x         | Operation Object   | `operationId`     | Link Object |
-| 3.x         | Server Object      | n/a               | Paths Object |
+Due to ambiguities in the current (3.0.3 and 3.1.0) specifications, it is not always clear how to handle identifiers that are present in a _document_ that has been referenced, but are not present in the _exact JSON object_ targeted by any single reference.
+
+For example, if you have a document called `components.yaml` that just contains schemas in a Components Object like this:
+
+```YAML
+openapi: 3.1.0
+info:
+  # omitted for brevity
+components:
+  schemas:
+    pet:
+      type: object
+      required: [species]
+      properties:
+        species:
+          type: string
+          enum: [dog, cat]
+      discriminator:
+        propertyName: species
+    dog:
+      allOf:
+      - $ref: "#/components/schemas/pet"
+      properties:
+        species:
+          const: dog
+    cat:
+      allOf:
+      - $ref: "#/components/schemas/pet"
+      properties:
+        species:
+          const: cat
+```
+
+If your _only_ reference into this document is `$ref: "components.yaml#/components/schemas/pet"`, it is not clear from the specification whether the Discriminator Object will actually work as it looks like it should because the `dog` and `cat` schemas are never directly referenced themselves.  And even if they were, a reference to the schemas would not include the name of the schema in the Components Object.
+
+Since it is not possible to reference the whole Components Object, some tools interpret the specification to mean that only the Components Object in the entry document can be used to resolve things like schema names for the Discriminator Object.  With that interpretation, this arrangement cannot work, and the Discriminator Object would need to be rewritten to use the `mapping` field with URI-references instead of component names.
+
+Clarifying this sort of scenario is currently an active topic of discussion for consideration in the next patch releases of the specification.
 
 ## JSON Schema referencing and identification in OAS 3.1
 
-In OAS 3.1, JSON Schema combines some of the concerns of referencing and non-reference linkage.  This is because in JSON Schema draft 2020-12 as included in OAS 3.1, the dialect can be set within the OAD, or through the `"$schema"` keyword in a parent Schema Object.  Schemas can also be referenced by URIs declared in-schema by certain keywords.  These can be URIs that cannot be used as URLs as they are not hosted separately from the containing document, or plain-name fragments that, unlike JSON Pointer fragments, can only be resolved if their delcaring keyword has been parsed.
+In OAS 3.1, JSON Schema combines some of the concerns of referencing and non-reference linkage.  This is because in JSON Schema draft 2020-12 as included in OAS 3.1, the dialect can be set within the OAD, or through the `"$schema"` keyword in a parent Schema Object.  Schemas can also be referenced by URIs declared in-schema by the keywords `"$id"`, `"$anchor"`, and/or `"$dynamicAnchor"`.  These can be URIs that cannot be used as URLs as they are not hosted separately from the containing document, or plain-name fragments that, unlike JSON Pointer fragments, can only be resolved if their declaring keyword has been parsed.
 
 | Identifier Purpose | Identifying Object | Identifying Field |
 | ------------------ | ------------------ | ----------------- |

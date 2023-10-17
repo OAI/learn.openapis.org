@@ -23,7 +23,7 @@ Then your use of references is simple enough that your references will do what y
 
 In general, no.  But in many common cases, yes, and tools exist that will attempt this.
 
-There are two types of reasons why de-referenceing might not be possible:
+There are two types of reasons why de-referencing might not be possible:
 
 * Technical reasons:
    * Cyclic references are allowed in Schema Objects, and are used to describe recursive tree structures.  JSON Schema itself is a recursive tree structure, so the JSON Schema metaschemas cannot be fully de-referenced (see draft-07 or earlier for how this works with `"$ref"`; draft 2020-12 uses a different technique)
@@ -66,7 +66,7 @@ While plain JSON documents form a [tree](https://en.wikipedia.org/wiki/Tree_%28d
 
 ## Do I need to understand dynamic references?
 
-This guide does **not** cover OAS 3.1 / JSON Schema draft 2020-12's dynamic references (`"$dynamicRef"` and `"$dynamicAnchor"`).  Dynamic references seve a different purpose than  discussed here.  The following JSON Schema Blog posts explain some uses of dynamic references and anchors:
+This guide does **not** cover OAS 3.1 / JSON Schema draft 2020-12's dynamic references (`"$dynamicRef"` and `"$dynamicAnchor"`).  Dynamic references serve a different purpose than  discussed here.  The following JSON Schema Blog posts explain some uses of dynamic references and anchors:
 
 * [Using Dynamic References to Support Generic Types](https://json-schema.org/blog/posts/dynamicref-and-generics#using-dynamic-references-to-support-generic-types)
 * [Validating OpenAPI and JSON Schema](https://json-schema.org/blog/posts/validating-openapi-and-json-schema)
