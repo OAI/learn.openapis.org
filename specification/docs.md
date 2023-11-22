@@ -142,7 +142,7 @@ A fenced code block
 ![Alt text](Image URL)
 ```
 
-## The Examples Object
+## Adding Examples
 
 Finally, some OpenAPI objects can list examples explicitly instead of having them embedded in the `description` field, enabling automated processing by tools.
 
