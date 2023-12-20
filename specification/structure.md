@@ -107,7 +107,7 @@ This API is not very useful because it **defines no operations** (it has no endp
 This page has shown that:
 
 * The syntax (language) used to write OpenAPI Descriptions can be **JSON**, **YAML** or **both**.
-* An OpenAPI Descriptions is a JSON object including the fields described in the [OpenAPI Specification](https://spec.openapis.org/oas/v3.1.0).
+* An OpenAPI Description is a JSON object including the fields described in the [OpenAPI Specification](https://spec.openapis.org/oas/v3.1.0).
 * Every OpenAPI Descriptions must contain an OpenAPI Object with at least the fields `openapi`, and `info`,  and either `paths`, `components` or `webhooks`.
 
 [The following page](paths) describes the contents of the `paths` field so endpoints can be added to the above minimal snippet.
