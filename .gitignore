@@ -1,3 +1,5 @@
 .jekyll-cache/
 _site/
 *.swp
+.jekyll-metadata
+.ruby-version
