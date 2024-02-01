@@ -12,4 +12,4 @@ Read our [Getting Started](https://learn.openapis.org/) page first.
 
 To run this website locally you'll need to use Jekyll.
 
-Please follow the official [Quickstart](https://jekyllrb.com/docs/) guide for more information.
+Please follow the official [Quickstart](https://jekyllrb.com/docs/) guide for more information if you are starting from scratch, and then follow the instructions in the [Contributing Guide](./CONTRIBUTING.md).
