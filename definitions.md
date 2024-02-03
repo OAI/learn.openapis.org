@@ -9,7 +9,7 @@ nav_order: 3
 - **document**: A local file, network resource, or other distinct entity in a particular format such as JSON or YAML
 - **entry document**: The document in an OAD where processing begins, starting with an OpenAPI Object ([3.0](https://spec.openapis.org/oas/v3.0.3#openapi-object), [3.1](https://spec.openapis.org/oas/v3.1.0#openapi-object))
 - **OpenAPI Description** (**OAD**): One or more documents written according to a specific version of the OpenAPI Specification, that together describe an API
-- **OpenAPI Initiative** (**OAI**): The standards body responsible for the development of the OpenAPI Specification _(not to be confused with the unrelated and more recent "OpenAI")_
+- **OpenAPI Initiative** (**OAI**): The organization responsible for the development of the OpenAPI Specification _(not to be confused with the unrelated and more recent "OpenAI")_
 - **OpenAPI Specification** (**OAS**): The formal requirements for the OpenAPI format, which exists in several versions (e.g. 3.0.3, 3.1.0)
 - **reference**: A connection from one location in an OAD to another in which the reference target is identified by a URI; the `"$ref"` and `"operationRef"` keywords implement references in the OAS
 - **reference removal**: The process of replacing references with their targets; not all references can be removed
