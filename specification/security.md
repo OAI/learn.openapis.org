@@ -18,7 +18,7 @@ OpenAPI provides the [Security Scheme Object](https://spec.openapis.org/oas/late
 
 A Security Requirement declared for a given Operation takes precedence over global Security Requirements. A number of security mechanisms are supported. Each mechanism is indicated using the `type` property, which is shown in the examples below.
 
-There is currently five supported security types, namely:
+There are currently five supported security types, namely:
 
 - API Keys
 - HTTP Authentication
