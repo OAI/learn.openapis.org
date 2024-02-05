@@ -210,7 +210,7 @@ components:
   securitySchemes:
     openIdConnect:
       type: openIdConnect
-      openIdConnectUrl: https://learn.openapis.org/.well-known/openid-profile
+      openIdConnectUrl: https://learn.openapis.org/.well-known/openid-configuration
 ```
 
 The neat trick here is that **_you do not need to declare scopes in your OpenAPI document_**. You can specify scopes in your discovery endpoint, and then use them in your OpenAPI document with the expectation that compatible tooling will have parsed and read them:
