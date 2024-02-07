@@ -63,13 +63,15 @@ paths:
         defaultApiKey: []
 ```
 
-This method of referencing Security Scheme objects is valid for all types. The array shown as the value of `defaultApiKey` above is populated for OAuth Flow and OpenID Connect objects, which have some additional features that are discussed below. In all other cases an empty array is provided.
+This method of referencing Security Scheme objects is valid for all types. The array shown as the value of `defaultApiKey` above is populated for OAuth Flow and OpenID Connect objects, which have some additional features that are discussed below. An empty array is provided in all other cases.
+
+> Please note that correctly resolving Security Requirements may be impacted when merging multiple OpenAPI documents. You should check your tooling provider's method before assuming a specific resolution approach.
 
 ## HTTP Authentication
 
 OpenAPI supports HTTP Authentication as defined in RFC7235, which implements the [`Authorization`](https://httpwg.org/specs/rfc7235.html#header.authorization) header as the means to send both the authorization scheme identifier and the parameter in the format `Authorization: Basic b3BlbmFwaTppc2dyZWF0`. The authorization scheme _should_ be defined in the [IANA registry for HTTP Authentication](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml), but API providers can extend this to use custom values if required.
 
-The example below shows a Security Scheme object that specifies both Basic Authentication and Bearer tokens. The Bearer token example includes an additional hint, the `bearerFormat` property, that gives the API consumer additional information on format of the token (in this case a [JSON Web Token](https://datatracker.ietf.org/doc/html/rfc7519) or JWT).
+The example below shows a Security Scheme object that specifies both Basic Authentication and Bearer tokens. The Bearer token example includes an additional hint, the `bearerFormat` property, that gives the API consumer additional information on the format of the token (in this case a [JSON Web Token](https://datatracker.ietf.org/doc/html/rfc7519) or JWT).
 
 ```yaml
 components:
