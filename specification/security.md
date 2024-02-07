@@ -65,7 +65,7 @@ paths:
 
 This method of referencing Security Scheme objects is valid for all types. The array shown as the value of `defaultApiKey` above is populated for OAuth Flow and OpenID Connect objects, which have some additional features that are discussed below. An empty array is provided in all other cases.
 
-> Please note that correctly resolving Security Requirements may be impacted when merging multiple OpenAPI documents. You should check your tooling provider's method before assuming a specific resolution approach.
+> Please note that correctly resolving Security Requirements may be impacted when combining multiple OpenAPI documents. You should check your tooling provider's method before assuming a specific resolution approach.
 
 ## HTTP Authentication
 
