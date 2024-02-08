@@ -32,7 +32,7 @@ These acronyms are commonly used in OpenAPI discussions, and are defined in the 
 - **Outreach Committee**: The group of volunteers dedicated to furthering the reach and impact of the OAS ([repository](https://github.com/OAI/Outreach))
 - **Overlay Specification**: A proposed specification from the overlays SIG ([repository](https://github.com/OAI/Overlay-Specification))
 - **Special Interest Group** (SIG): OpenAPI working groups focused on [specific topics](https://github.com/OAI/OpenAPI-Specification/blob/main/SPECIAL_INTEREST_GROUPS.md) related to the OAS or possible additional companion specifications
-- **Technical Developer Community** (TDC): The community of developers and specification-writers who work on and provide feedback to OpenAPI projects ([weekly Zoom calls](https://github.com/OAI/OpenAPI-Specification/issues?q=is%3Aissue+is%3Aopen+%22Open+Community+%28TDC%29+Meeting%22) are at 9AM US-Pacific)
+- **Technical Developer Community** (TDC): The community of developers and specification-writers who work on and provide feedback to OpenAPI projects ([weekly Zoom calls](https://github.com/OAI/OpenAPI-Specification/issues?q=is%3Aissue+is%3Aopen+%22Open+Community+%28TDC%29+Meeting%22) are on Thursdays from 9-10 AM US-Pacific)
 - **Technical Steering Committee** (TSC): The [group of people](https://github.com/OAI/OpenAPI-Specification/blob/main/MAINTAINERS.md) charged with stewarding the OAI's specification work, as described in the [OAI Charter](https://www.openapis.org/participate/how-to-contribute/governance)
 - **Workflows Specification**: A proposed specification from the workflows SIG ([repository](https://github.com/OAI/sig-workflows))
 
