@@ -15,10 +15,10 @@ The short answer is "no", but there are many cases where it is possible to do su
 
 * Cyclic references in JSON Schema ***cannot*** be removed, although if the references cross documents, it is possible to reduce them to same-document references in a single document
 * While dynamic references in OAS 3.1 Schema Objects technically can be converted to static references, it can [grow the schema size exponentially](https://dl.acm.org/doi/10.1145/3632891) ([pdf](https://dl.acm.org/doi/pdf/10.1145/3632891))
-* OAS 3.1 Schema Objects, OAS 3.0 Reference Objects, and both OAS 3.0 and 3.1 Path Item Objects all allow keywords alongsidea`"$ref"`, each with slightly different semantics; generic reference removal tools, particularly ones that predate OAS 3.1, may fail to preserve the behavior while removing references
+* OAS 3.1 Schema Objects, OAS 3.0 Reference Objects, and both OAS 3.0 and 3.1 Path Item Objects all allow keywords alongside a`"$ref"`, each with slightly different semantics; generic reference removal tools, particularly ones that predate OAS 3.1, may fail to preserve the behavior while removing references
 * In OAS 3.1 Schema Objects that use `"$id"`, reference removal tools that are not aware of `"$id"` will resolve references impacted by the `"$id"` incorrectly
 * The Link Object's `"operationRef"` cannot be replaced with an inline Operation Object (although if the target Operation Object has a unique-within-the-OAD `"operationId"`, then the `"operationRef"` can be replaced by the `"operationId"`)
-* The Discriminator Object's `"mapping"` field forbids inline Schema Objects; URI-reference values can be replaced with names from the `"schemas"` section of the Components Object, but when the Discriminator Object is in a referenced document, there are ambiguities involvied in how to resolve those names
+* The Discriminator Object's `"mapping"` field forbids inline Schema Objects; URI-reference values can be replaced with names from the `"schemas"` section of the Components Object, but when the Discriminator Object is in a referenced document, there are ambiguities involved in how to resolve those names
 * When using components published by 3rd parties such as standards organizations, tools might rely on reference URIs to identify standard components; while this usage is currently uncommon, it may become more common as OpenAPI is more broadly adopted by standards bodies
 
 If your OAD does not run afoul of any of the above difficulties, you _can_ produce a reference-less single-document OAD, and there are [tools](https://tools.openapis.org) that will do so (but see the caveats in the next section).
@@ -53,7 +53,7 @@ A reference is said to be _resolved_ within a tool if:
 
 A reference is said to be _removed_ if it has been replaced by its (possibly modified) target.
 
-Reference resolution usually preserves the referencing information such as the URI used to identify the target, while reference removal usually discards it.  In many cases this is not significant, except that not knowing how the parsed OAD relates to the refernces in your JSON or YAML document may make debugging more difficult.
+Reference resolution usually preserves the referencing information such as the URI used to identify the target, while reference removal usually discards it.  In many cases this is not significant, except that not knowing how the parsed OAD relates to the references in your JSON or YAML document may make debugging more difficult.
 
 While plain JSON documents form a [tree](https://en.wikipedia.org/wiki/Tree_%28data_structure%29) structure, an OpenAPI Description with resolved references is not _necessarily_ a tree, but a [graph](https://en.wikipedia.org/wiki/Graph_%28abstract_data_type%29).
 
@@ -63,7 +63,7 @@ Tools that resolve references in-memory and work with the graph structure can pr
 
 Yes!
 
-The [Moonwalk project](https://github.com/OAI/sig-moonwalk/discussions) is considering a different approach that imports complete documents, associates them with namespaces, and only supports referencing by component name (not `"$ref"`).  A small example can be seen in the [Moonwalk deployments proposal](https://github.com/OAI/sig-moonwalk/blob/main/Deployments.md), and there are discussions around an [initial draft proposal for imports](https://github.com/OAI/sig-moonwalk/discussions/72) and a few ideas on [how tomanage interactions with JSON Schema referencing](https://github.com/OAI/sig-moonwalk/discussions/73).
+The [Moonwalk project](https://github.com/OAI/sig-moonwalk/discussions) is considering a different approach that imports complete documents, associates them with namespaces, and only supports referencing by component name (not `"$ref"`).  A small example can be seen in the [Moonwalk deployments proposal](https://github.com/OAI/sig-moonwalk/blob/main/Deployments.md), and there are discussions around an [initial draft proposal for imports](https://github.com/OAI/sig-moonwalk/discussions/72) and a few ideas on [how to manage interactions with JSON Schema referencing](https://github.com/OAI/sig-moonwalk/discussions/73).
 
 The [proposed Workflows Specification](https://github.com/OAI/sig-workflows/blob/main/versions/1.0.0.md) is already using a `"sourceDescription"` field that is not unlike the Moonwalk proposal.
 
