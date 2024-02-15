@@ -1,0 +1,110 @@
+digraph componentsObject {
+  node [shape = none; fontname = monospace; tooltip = "Click to jump to the specification of this object";];
+  rankdir = LR;
+  bgcolor = white;
+  
+  openapiObject [URL = "https://spec.openapis.org/oas/v3.1.0#oasObject";target = "_blank";label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#94d60a"><font face="arial"><b>OpenAPI Object</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6ca437">openapi</td></tr>
+    <tr><td border="1" bgcolor="#6ca437">info</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="components">components</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="security">security</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="paths">paths</td></tr>
+    <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>;];
+  
+  pathsObject [URL = "https://spec.openapis.org/oas/v3.1.0#pathsObject";target = "_blank";label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>Paths Object</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="endpoint1">/endpoint1</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="endpoint2">/endpoint2</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="endpoint3">/endpoint3</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr></table>>;];
+  
+  pathItemObject [URL = "https://spec.openapis.org/oas/v3.1.0#pathItemObject";target = "_blank";label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>Path Item Object</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="delete">delete</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="get">get</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="patch">patch</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="post">post</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="put">put</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr></table>>;];
+  
+  operationObject [URL = "https://spec.openapis.org/oas/v3.1.0#operationObject";target = "_blank";label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Operation Object</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="security">security</td></tr>
+    <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>;];
+  
+  securityRequirementObject [URL = "https://spec.openapis.org/oas/v3.1.0#securityRequirementObject";target = "_blank";label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Security Requirement Object</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="name">name</td></tr></table>>;];
+  
+  componentsObject [URL = "https://spec.openapis.org/oas/v3.1.0#componentsObject";target = "_blank";label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Components Object</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="schemas">schemas</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="responses">responses</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="parameters">parameters</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="securitySchemes">securitySchemes</td></tr>
+    <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>;];
+  
+  securitySchemesMap [URL = "https://spec.openapis.org/oas/v3.1.0#securitySchemeObject";target = "_blank";label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Security Schemes Map</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="securityScheme1">securityScheme1</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="securityScheme2">securityScheme2</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="securityScheme3">securityScheme3</td></tr>
+    <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>;];
+  
+  securitySchemeObject [URL = "https://spec.openapis.org/oas/v3.1.0#securitySchemeObject";target = "_blank";label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Security Scheme Object</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6ca437">type</td></tr>
+    <tr><td border="1" bgcolor="#6ca437">description</td></tr>
+    <tr><td border="1" bgcolor="#6ca437">name</td></tr>
+    <tr><td border="1" bgcolor="#6ca437">in</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="flows">flows</td></tr>
+    <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>;];
+  
+  oauthFlowsObject [URL = "https://spec.openapis.org/oas/v3.1.0#oauthFlowsObject";target = "_blank";label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>OAuth Flows Object</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="implicit">implicit</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="password">password</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="clientCredentials">clientCredentials</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="authorizationCode">authorizationCode</td></tr></table>>;];
+  
+  oauthFlowObject [URL = "https://spec.openapis.org/oas/v3.1.0#oauthFlowObject";target = "_blank";label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>OAuth Flow Object</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6ca437">authorizationUrl</td></tr>
+    <tr><td border="1" bgcolor="#6ca437">tokenUrl</td></tr>
+    <tr><td border="1" bgcolor="#6ca437">refreshUrl</td></tr>
+    <tr><td border="1" bgcolor="#6ca437">scopes</td></tr></table>>;];
+  
+  
+  openapiObject:components -> componentsObject:header;
+  openapiObject:security -> securityRequirementObject:name;
+  
+  openapiObject:paths -> pathsObject:header;
+  
+  pathsObject:endpoint1 -> pathItemObject:header;
+  pathsObject:endpoint2 -> pathItemObject:header;
+  pathsObject:endpoint3 -> pathItemObject:header;
+  
+  pathItemObject:delete -> operationObject:header;
+  pathItemObject:get -> operationObject:header;
+  pathItemObject:patch -> operationObject:header;
+  pathItemObject:post -> operationObject:header;
+  pathItemObject:put -> operationObject:header;
+  
+  
+  operationObject:security -> securityRequirementObject:name;
+  securityRequirementObject:name -> securitySchemesMap:header;
+  
+  componentsObject:securitySchemes -> securitySchemesMap:header;
+  
+  securitySchemesMap:securityScheme1 -> securitySchemeObject:header;
+  securitySchemesMap:securityScheme2 -> securitySchemeObject:header;
+  securitySchemesMap:securityScheme3 -> securitySchemeObject:header;
+  
+  securitySchemeObject:flows -> oauthFlowsObject:header;
+  
+  oauthFlowsObject:implicit -> oauthFlowObject:header;
+  oauthFlowsObject:password -> oauthFlowObject:header;
+  oauthFlowsObject:clientCredentials -> oauthFlowObject:header;
+  oauthFlowsObject:authorizationCode -> oauthFlowObject:header;
+}

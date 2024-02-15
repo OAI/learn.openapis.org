@@ -4,8 +4,12 @@
 
 Are you new to the OpenAPI Specification?
 
-Read our [Getting started](https://learn.openapis.org/) page first.
-
-
+Read our [Getting Started](https://learn.openapis.org/) page first.
 
 <p>Original site customized based on a theme by Patrick Marsceill, distributed by an <a href="https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt">MIT license.</a></p>
+
+## Development
+
+To run this website locally you'll need to use Jekyll.
+
+Please follow the official [Quickstart](https://jekyllrb.com/docs/) guide for more information if you are starting from scratch, and then follow the instructions in the [Contributing Guide](./CONTRIBUTING.md).

@@ -23,6 +23,10 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/status"
+      security:
+        apiKey: []
+        app2AppOauth:
+        - board:read
 
   # Single square operations
   /board/{row}/{column}:
@@ -49,6 +53,10 @@ paths:
               schema:
                 $ref: "#/components/schemas/errorMessage"
               example: "Illegal coordinates"
+      security:
+        bearerHttpAuthentication: []
+        user2AppOauth:
+        - board:read
     put:
       summary: Set a single board square
       description: Places a mark on the board and retrieves the whole board and the winner (if any).
@@ -81,6 +89,10 @@ paths:
                   value: "Square is not empty."
                 invalidMark:
                   value: "Invalid Mark (X or O)."
+      security:
+        bearerHttpAuthentication: []
+        user2AppOauth:
+        - board:write
 
 components:
   parameters:
@@ -135,3 +147,36 @@ components:
           $ref: "#/components/schemas/winner"
         board:
           $ref: "#/components/schemas/board"
+  securitySchemes:
+    defaultApiKey:
+      description: API key provided in console
+      type: apiKey
+      name: api-key
+      in: header
+    basicHttpAuthentication:
+      description: Basic HTTP Authentication
+      type: http
+      scheme: Basic
+    bearerHttpAuthentication:
+      description: Bearer token using a JWT
+      type: http
+      scheme: Bearer
+      bearerFormat: JWT
+    app2AppOauth:
+      type: oauth2
+      flows:
+        clientCredentials:
+          tokenUrl: https://learn.openapis.org/oauth/2.0/token
+          scopes:
+            # Only reading the board allow with delegated access
+            board:read: Read the board
+    user2AppOauth:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://learn.openapis.org/oauth/2.0/auth
+          tokenUrl: https://learn.openapis.org/oauth/2.0/token
+          scopes:
+            # Reads and writes permitted via authorization code flow
+            board:read: Read the board
+            board:write: Write to the board

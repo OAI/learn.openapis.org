@@ -8,7 +8,7 @@ footer_content: "\xA9 2023 OpenAPI Initiative. <a rel=\"license\" href=\"http://
   ><img alt=\"Creative Commons License\" style=\"border-width:0\" src=\"https://i.creativecommons.org/l/by/4.0/80x15.png\"\
   \ /></a><br />This work is licensed under a <a rel=\"license\" href=\"http://creativecommons.org/licenses/by/4.0/\"\
   >Creative Commons Attribution 4.0 International License</a>. The documentation is\
-  \ maintained in <a href=\"https://github.com/OAI/Documentation/\">https://github.com/OAI/Documentation/</a>."
+  \ maintained in <a href=\"https://github.com/OAI/learn.openapis.org/\">https://github.com/OAI/learn.openapis.org/</a>."
 color_scheme: oai
 highlighter: rouge
 plugins:
