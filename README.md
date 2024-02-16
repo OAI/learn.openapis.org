@@ -6,7 +6,7 @@ Are you new to the OpenAPI Specification?
 
 Read our [Getting Started](https://learn.openapis.org/) page first.
 
-<p>Original site customized based on a theme based on theme by Patrick Marsceill, distributed by an <a href="https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt">MIT license.</a></p>
+<p>Original site customized based on a theme by Patrick Marsceill, distributed by an <a href="https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt">MIT license.</a></p>
 
 ## Development
 
