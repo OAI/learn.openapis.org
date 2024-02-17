@@ -24,9 +24,9 @@ paths:
               schema:
                 $ref: "#/components/schemas/status"
       security:
-        - bearerHttpAuthentication: []
-        - user2AppOauth:
-          - board:write
+        - apiKey: []
+        - app2AppOauth:
+          - board:read
 
   # Single square operations
   /board/{row}/{column}:
@@ -56,7 +56,7 @@ paths:
       security:
         - bearerHttpAuthentication: []
         - user2AppOauth:
-          - board:write
+          - board:read
     put:
       summary: Set a single board square
       description: Places a mark on the board and retrieves the whole board and the winner (if any).
