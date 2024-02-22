@@ -17,6 +17,7 @@ These acronyms are commonly used in OpenAPI discussions, and are defined in the 
 - **SIG**: Special Interest Group
 - **TDC**: Technical Developer Community
 - **TSC**: Technical Steering Committee
+- **TOB**: Technical Oversight Board
 
 # Definitions
 
