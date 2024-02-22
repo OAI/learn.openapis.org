@@ -28,7 +28,7 @@ These acronyms are commonly used in OpenAPI discussions, and are defined in the 
 - **Moonwalk**: Codename and SIG for the next (post-3.x) major release of the OAS ([announcement](https://www.openapis.org/blog/2023/12/06/openapi-moonwalk-2024), [repository](https://github.com/OAI/sig-moonwalk))
 - **OpenAPI Description** (OAD): One or more documents written according to a specific version of the OpenAPI Specification, that together describe an API
 - **OpenAPI Initiative** (OAI): The organization responsible for the development of the OpenAPI Specification _(not to be confused with the unrelated and more recent "OpenAI")_, [website](https://openapis.org/)
-- **OpenAPI Specification** (OAS): The formal requirements for the OpenAPI format, which exists in several versions (e.g. 3.0.3, 3.1.0) ([repository](https://github.com/OAI/OpenAPI-Specification))
+- **OpenAPI Specification** (OAS): The formal requirements for the OpenAPI format, which exists in several versions (e.g., 3.0.3, 3.1.0) ([repository](https://github.com/OAI/OpenAPI-Specification))
 - **Outreach Committee**: The group of volunteers dedicated to furthering the reach and impact of the OAS ([repository](https://github.com/OAI/Outreach))
 - **Overlay Specification**: A proposed specification from the overlays SIG ([repository](https://github.com/OAI/Overlay-Specification))
 - **Special Interest Group** (SIG): OpenAPI working groups focused on [specific topics](https://github.com/OAI/OpenAPI-Specification/blob/main/SPECIAL_INTEREST_GROUPS.md) related to the OAS or possible additional companion specifications
