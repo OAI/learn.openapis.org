@@ -1,7 +1,7 @@
 ---
 layout: default
-title: What Are References?
-nav_order: 2
+title: References Overview
+nav_order: 1
 parent: Using References
 ---
 
