@@ -47,7 +47,7 @@ content:
 
 The [Schema Object](https://spec.openapis.org/oas/v3.1.0#schema-object) defines a data type which can be a primitive (integer, string, ...), an array or an object depending on its `type` field.
 
-`type` is a string and its possible values are: `number`, `string`, `boolean`, `array` and `object`. Depending on the selected type a number of other fields are available to further specify the data format.
+`type` is a string and its possible values are: `number`, `integer`, `string`, `boolean`, `array` and `object`. Depending on the selected type a number of other fields are available to further specify the data format.
 
 For example, for `string` types the length of the string can be limited with `minLength` and `maxLength`. Similarly, `integer` types, accept `minimum` and `maximum` values. No matter the type, if the amount of options for the data is limited to a certain set, it can be specified with the `enum` array. All these properties are listed in the [Schema Object](https://spec.openapis.org/oas/v3.1.0#schema-object) specification.
 
