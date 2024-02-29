@@ -32,9 +32,9 @@ content:
 
 ## The Media Type Object
 
-The [Media Type Object](https://spec.openapis.org/oas/v3.1.0#media-type-object) describes the structure of the content and provides examples for documentation and mocking purposes (examples are dealt with in the [Documentation page](docs)).
+The [Media Type Object](https://spec.openapis.org/oas/v3.1.0#media-type-object) describes how the content will be represented when using a specific media type, and provides examples for documentation and mocking purposes. Examples are dealt with in the [Documentation page](docs).
 
-The structure is described in the `schema` field explained next.
+The structure is described in the `schema` field, explained in the next section.
 
 ```yaml
 content:
@@ -43,13 +43,15 @@ content:
       ...
 ```
 
-## The Schema Object
+## The Schema Field
 
-The [Schema Object](https://spec.openapis.org/oas/v3.1.0#schema-object) defines a data type which can be a primitive (integer, string, ...), an array or an object depending on its `type` field.
+The schema field holds a [Schema Object](https://spec.openapis.org/oas/v3.1.0#schema-object).
 
-`type` is a string and its possible values are: `number`, `integer`, `string`, `boolean`, `array` and `object`. Depending on the selected type a number of other fields are available to further specify the data format.
+Schema objects describe the structure of data, and may be nested to describe complex arrays and objects. They are most often used to describe JSON data.
 
-For example, for `string` types the length of the string can be limited with `minLength` and `maxLength`. Similarly, `integer` types, accept `minimum` and `maximum` values. No matter the type, if the amount of options for the data is limited to a certain set, it can be specified with the `enum` array. All these properties are listed in the [Schema Object](https://spec.openapis.org/oas/v3.1.0#schema-object) specification.
+Each schema object has a field called `type`, which defines the type of data expected. Six of the seven possible values for `type` correspond directly to JSON's types as defined in [RFC 8259](https://datatracker.ietf.org/doc/html/rfc8259): `string`, `number`, `boolean`, `null`, `object`, and `array`. However, OpenAPI defines an additional type called `integer`, which indicates a JSON number without a fraction or exponent part. In other words, if your schema object is of type `integer`, it tells your users to expect a JSON number that looks like `123`, `-123`, or `0`, but not `1.0` or `1.0e-2`.
+
+Depending on the selected type, a number of other fields are available to further specify the data format. For example, for `string` types, the length of the string can be limited with `minLength` and `maxLength`. Similarly, `integer` types accept `minimum` and `maximum` values. No matter the type, if the amount of options for the data is limited to a certain set, it can be specified with the `enum` array. All these properties are listed in the [Schema Object](https://spec.openapis.org/oas/v3.1.0#schema-object) specification.
 
 
 Example integer with limited range:
