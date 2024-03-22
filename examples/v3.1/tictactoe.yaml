@@ -26,7 +26,8 @@ paths:
       security:
         - defaultApiKey: []
         - app2AppOauth:
-            - board:read
+          - board:read
+
   # Single square operations
   /board/{row}/{column}:
     parameters:
@@ -55,7 +56,7 @@ paths:
       security:
         - bearerHttpAuthentication: []
         - user2AppOauth:
-            - board:read
+          - board:read
     put:
       summary: Set a single board square
       description: Places a mark on the board and retrieves the whole board and the winner (if any).
@@ -74,8 +75,15 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/status'
-        '400':
+                $ref: "#/components/schemas/status"
+        "202":
+          description: Mark operation has not completed. Use callback to check for progress
+          headers:
+            Location:
+              description: Callback URL
+              schema:
+                type: string
+        "400":
           description: The provided parameters are incorrect
           content:
             text/html:
@@ -91,7 +99,29 @@ paths:
       security:
         - bearerHttpAuthentication: []
         - user2AppOauth:
-            - board:write
+          - board:write
+      callbacks:
+        statusCallback:
+          '{$response.header.Location}':
+            get:
+              summary: Status of mark operation
+              description: Provides the status of the ongoing mark operation
+              operationId: markOperationCallback
+              responses:
+                "200":
+                  description: Mark operation has completed successfully
+                  content:
+                    application/json:
+                      schema:
+                        $ref: "#/components/schemas/status"
+                "202":
+                  description: Mark operation has not completed
+                default:
+                  description: Error returning information on mark operation progress
+                  content:
+                    application/json:
+                      schema:
+                        $ref: '#/components/schemas/errorMessage'
 components:
   parameters:
     rowParam:
@@ -184,3 +214,16 @@ components:
             # Reads and writes permitted via authorization code flow
             board:read: Read the board
             board:write: Write to the board
+webhooks:
+  markStatus:
+    post:
+      summary: Status of mark operation
+      description: Provides the status of the mark operation on completion
+      operationId: markOperationWebhook
+      responses:
+        "200":
+          description: Mark operation has completed successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/status"
