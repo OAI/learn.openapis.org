@@ -46,6 +46,13 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/mark"
+          links:
+            markSquare:
+              description: Operation to use if the mark value returned indicates the square is empty
+              operationId: put-square
+              parameters:
+                row: $request.path.row
+                column: $request.path.column
         "400":
           description: The provided parameters are incorrect
           content:

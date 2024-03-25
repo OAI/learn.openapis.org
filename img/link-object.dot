@@ -1,0 +1,79 @@
+digraph componentsObject {
+  node [shape = none; fontname = monospace; tooltip = "Click to jump to the specification of this object";];
+  rankdir = LR;
+  bgcolor = white;
+  
+  openapiObject [URL = "https://spec.openapis.org/oas/v3.1.0#oasObject";target = "_blank";label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#94d60a"><font face="arial"><b>OpenAPI Object</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6ca437">openapi</td></tr>
+    <tr><td border="1" bgcolor="#6ca437">info</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="components">components</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="security">security</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="paths">paths</td></tr>
+    <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>;];
+  
+  componentsObject [URL = "https://spec.openapis.org/oas/v3.1.0#componentsObject";target = "_blank";label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Components Object</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="links">links</td></tr>
+    <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>;];
+  
+  pathsObject [URL = "https://spec.openapis.org/oas/v3.1.0#pathsObject";target = "_blank";label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>Paths Object</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="endpoint1">/endpoint1</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="endpoint2">/endpoint2</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="endpoint3">/endpoint3</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr></table>>;];
+  
+  pathItemObject [URL = "https://spec.openapis.org/oas/v3.1.0#pathItemObject";target = "_blank";label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>Path Item Object</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="delete">delete</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="get">get</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="patch">patch</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="post">post</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="put">put</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr></table>>;];
+  
+  operationObject [URL = "https://spec.openapis.org/oas/v3.1.0#operationObject";target = "_blank";label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>Operation Object</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="responses">responses</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr></table>>;];
+  
+  responsesObject [URL = "https://spec.openapis.org/oas/v3.1.0#responsesObject";target = "_blank";label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>Responses Object</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="all">*</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr></table>>;];
+  
+  responseObject [URL = "https://spec.openapis.org/oas/v3.1.0#responseObject";target = "_blank";label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Response Object</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="links">links</td></tr>
+    <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>;];
+  
+  linkObject [URL = "https://spec.openapis.org/oas/v3.1.0#linkObject";target = "_blank";label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Link Object</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="operationRef">operationRef</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="operationId">operationId</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="parameters">parameters</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="requestBody">requestBody</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="description">description</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="server">server</td></tr></table>>;];
+  
+  openapiObject:components -> componentsObject:header;
+  
+  componentsObject:links -> linkObject:header;
+  
+  openapiObject:paths -> pathsObject:header;
+  
+  pathsObject:endpoint1 -> pathItemObject:header;
+  pathsObject:endpoint2 -> pathItemObject:header;
+  pathsObject:endpoint3 -> pathItemObject:header;
+  
+  pathItemObject:delete -> operationObject:header;
+  pathItemObject:get -> operationObject:header;
+  pathItemObject:patch -> operationObject:header;
+  pathItemObject:post -> operationObject:header;
+  pathItemObject:put -> operationObject:header;
+  
+  operationObject:responses -> responsesObject:header;
+  responsesObject:all -> responseObject:header;
+  responseObject:links -> linkObject:header;
+}
