@@ -9,7 +9,7 @@ nav_order: 10
 
 As the API economy has grown the number of ways to indicate a relationship between one-or-more operations has grown with it. Most approaches equate to something loosely resembling the REST constraint of hypermedia as the engine of state (HATEOAS), and this has been replayed in many standards-based approaches like HAL and `json:api`.
 
-There has, however, always been a need to _describe_ how the relationships are manifested and how to process such information. This is because the promise of dynamically consuming links returned from an API has rarely been born out in the practicalities of both publishing APIs and software development for API consumers. The Link Object is a feature of OAS that attempts to address this, as Links are designed to describe a relationship between two operations _at design time_.
+There has, however, always been a need to _describe_ how the relationships are manifested and how to process such information. This is because the promise of dynamically consuming links returned from an API has rarely been born out in the practicalities of both publishing APIs and software development for API consumers. The Link Object is a feature of OAS that attempts to address this. Links are designed to describe a relationship between two operations _at design time_.
 
 <figure style="text-align:center">
   <object type="image/svg+xml" data="{{site.baseurl}}/img/link-object.svg"></object>
