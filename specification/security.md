@@ -16,7 +16,7 @@ OpenAPI provides the [Security Scheme Object](https://spec.openapis.org/oas/late
   <figcaption>Security Scheme objects are referenced as Security Requirements, either <a href="structure.html#minimal-openapi-description-structure">globally</a> or by an <a href="paths.html#the-operation-object">Operation</a>.</figcaption>
 </figure>
 
-A Security Requirement declared for a given Operation takes precedence over global Security Requirements. A number of security mechanisms are supported. Each mechanism is indicated using the `type` property, which is shown in the examples below.
+A Security Requirement declared for a given Operation takes precedence over global Security Requirements. Several security mechanisms are supported. Each mechanism is indicated using the `type` property, which is shown in the examples below.
 
 There are currently five supported security types, namely:
 
@@ -146,7 +146,7 @@ paths:
   /board:
     get:
       security:
-        oauth2Profiles: []
+        - oauth2Profiles: []
 ```
 
 Note that if you want to segregate grant types - where, for example, Client Credentials is only supported for a specific Operation - you'll need to create a separate Security Scheme object that can be applied individually. This is also true if you want to differentiate the available scopes, for example:
@@ -185,15 +185,15 @@ paths:
   /board:
     get:
       security:
-        app2AppOauth:
-        - board:read
+        - app2AppOauth:
+          - board:read
       ...
   /board/{row}/{column}:
     put:
       security:
-        user2AppOauth:
-        - board:read
-        - board:write
+        - user2AppOauth:
+          - board:read
+          - board:write
       ...
 ```
 
@@ -203,7 +203,7 @@ paths:
 
 The final Security Scheme type is OpenID Connect, which provides information for [OpenID Connect Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html).
 
-OpenID Connect Core is obviously an OAuth 2.0 profile and is supported by some of properties the OAuth Flow Object. However, OpenID Connect is generally more complex than plain OAuth 2.0 and given OpenID Connect Discovery provides a machine-readable format at the discovery endpoint it makes sense to outsource this functionality entirely.
+OpenID Connect Core is obviously an OAuth 2.0 profile and is supported by some of the properties of the OAuth Flow Object. However, OpenID Connect is generally more complex than plain OAuth 2.0 and given OpenID Connect Discovery provides a machine-readable format at the discovery endpoint it makes sense to outsource this functionality entirely.
 
 Specifying OpenID Connect is therefore straightforward in that you provide the discovery endpoint in the property `openIdConnectUrl`:
 
@@ -226,16 +226,16 @@ info:
     and requesting the state of the board or of individual squares.
   version: 1.0.0
 security:
-  openIdConnect:
-    - board:read
-    - board:write
+  - openIdConnect:
+      - board:read
+      - board:write
 ```
 
 This approach allows OpenAPI to provide _just enough_ information for humans and tooling, whilst ensuring that OpenID Connect Discovery provides the system-or-record for security-related information.
 
 ## Summary
 
-In this page we've learnt that:
+In this page we've learned that:
 
 - API security can be described in OpenAPI.
 - Security properties must be described using a Security Scheme object.

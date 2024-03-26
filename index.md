@@ -5,6 +5,7 @@ nav_order: 1
 ---
 
 # Getting started
+
 ## Intended Audience
 
 This guide is directed at **HTTP-based API** designers and writers wishing to benefit from having their API formalized in an **OpenAPI Description** (**OAD**).
@@ -29,7 +30,7 @@ Having your API formally described in a machine-readable format allows automated
 - **Documentation Generation**: Create traditional human-readable documentation based on the machine-readable description, which always stays up-to-date.
 - **Code Generation**: Create both server and client code in any programming language, freeing developers from having to perform data validation or write SDK glue code, for example.
 - **Graphical Editors**: Allow easy creation of description files using a GUI instead of typing them by hand.
-- **Mock Servers**: Create fake servers providing example responses which you and your customers can start testing with before you write a single line of code.
+- **Mock Servers**: Create fake servers providing example responses that you and your customers can start testing with before you write a single line of code.
 - **Security Analysis**: Discover possible vulnerabilities at the API design stage instead of much, much later.
 
 On top of this, the **OpenAPI Specification** also provides you with:
