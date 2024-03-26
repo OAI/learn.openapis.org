@@ -70,6 +70,13 @@ paths:
       tags:
         - Gameplay
       operationId: put-square
+      parameters:
+        - name: progressUrl
+          in: header
+          description: Progress URL that should be called if asynchronous response is returned
+          required: false
+          schema:
+            type: string
       requestBody:
         required: true
         content:
@@ -109,26 +116,19 @@ paths:
           - board:write
       callbacks:
         statusCallback:
-          '{$response.header.Location}':
-            get:
+          '{$request.header.progressUrl}':
+            post:
               summary: Status of mark operation
-              description: Provides the status of the ongoing mark operation
+              description: Provides the status of the mark operation
               operationId: markOperationCallback
+              requestBody:
+                content:
+                  application/json:
+                    schema:
+                      $ref: "#/components/schemas/status"
               responses:
                 "200":
-                  description: Mark operation has completed successfully
-                  content:
-                    application/json:
-                      schema:
-                        $ref: "#/components/schemas/status"
-                "202":
-                  description: Mark operation has not completed
-                default:
-                  description: Error returning information on mark operation progress
-                  content:
-                    application/json:
-                      schema:
-                        $ref: '#/components/schemas/errorMessage'
+                  description: Mark operation status received
 components:
   parameters:
     rowParam:
