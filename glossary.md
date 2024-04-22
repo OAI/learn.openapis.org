@@ -43,6 +43,6 @@ An OpenAPI Description, or OAD, can be structured as one or more documents, conn
 
 ## A note on the history of "document", "definition", and "description"
 
-Up through OAS 3.0.3 and 3.1.0, the OAS contained a section titled "OpenAPI Document", with differing definintions depending the OAS version.  The terms "OpenAPI Definition", "OpenAPI Description", and other variations and combinations were also used within the specification and/or the [learn.openapips.org](learn.openapis.org) site.
+Up through OAS 3.0.3 and 3.1.0, the OAS contained a section titled "OpenAPI Document", with differing definitions depending the OAS version.  The terms "OpenAPI Definition", "OpenAPI Description", and other variations and combinations were also used within the specification and/or the [learn.openapips.org](learn.openapis.org) site.
 
 In September 2023, the OAI Technical Steering Committee (TSC) agreed to standardize on "OpenAPI Description" for the complete logical entity that describes an API, and to reserve the term "document" (lower-cased) for its common meaning.  Resolving the debate between "OpenAPI Description" and "OpenAPI Definition" hinged on the observation that while "definition" is appropriate when the API code is generated from the OAD, it is not accurate when an OAD is written for an existing API.  The term "description" is accurate in both cases.
