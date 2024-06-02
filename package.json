@@ -27,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/OAI/learn.openapis.org/issues"
   },
-  "homepage": "https://learn.openapis.org"
+  "homepage": "https://learn.openapis.org",
+  "dependencies": {
+    "vitest": "^1.6.0"
+  }
 }
