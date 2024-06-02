@@ -1,0 +1,31 @@
+{
+  "name": "learn.openapis.org",
+  "version": "1.0.0",
+  "description": "A guide directed at HTTP-based API designers and writers wishing to benefit from having their API formalized in an OpenAPI Description (OAD)",
+  "scripts": {
+    "test": "vitest --watch=false"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OAI/learn.openapis.org.git"
+  },
+  "keywords": [
+    "OpenAPI",
+    "OAS",
+    "Swagger",
+    "schema",
+    "API",
+    "Guide",
+    "Examples"
+  ],
+  "author": {
+    "name": "OpenAPI Initiative TSC",
+    "email": "tsc@openapis.org",
+    "url": "https://openapis.org/"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/OAI/learn.openapis.org/issues"
+  },
+  "homepage": "https://learn.openapis.org"
+}
