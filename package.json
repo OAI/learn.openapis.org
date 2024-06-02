@@ -29,6 +29,8 @@
   },
   "homepage": "https://learn.openapis.org",
   "dependencies": {
-    "vitest": "^1.6.0"
+    "@hyperjump/json-schema": "^1.9.2",
+    "vitest": "^1.6.0",
+    "yaml": "^2.4.3"
   }
 }
