@@ -197,7 +197,7 @@ paths:
       ...
 ```
 
-> Please refer to our [example OpenAPI document](../examples/tictactoe.yaml) for the complete example.
+> Please refer to our [example OpenAPI document](../examples/v3.1/tictactoe.yaml) for the complete example.
 
 ## OpenID Connect
 
