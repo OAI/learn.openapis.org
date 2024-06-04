@@ -157,7 +157,7 @@ The Request Body Object also has a `description` string and a `required` boolean
 
 ## Tic Tac Toe Example
 
-The [Tic Tac Toe sample API](/examples/tictactoe.yaml) contains two endpoints, one without parameters or request body (`/board`) and another one with both (`/board/{row}/{column}`). The relevant code snippet for the second endpoint is shown below and it should be easy to understand after reading this page.
+The [Tic Tac Toe sample API](/examples/v3.1/tictactoe.yaml) contains two endpoints, one without parameters or request body (`/board`) and another one with both (`/board/{row}/{column}`). The relevant code snippet for the second endpoint is shown below and it should be easy to understand after reading this page.
 
 ```yaml
 paths:
@@ -199,7 +199,7 @@ paths:
 - The parameters are two integers, named `row` and `column` which are located in the path of the operation. This matches the path name which contains `{row}` and `{column}`.
 - The `put` operation, additionally, must provide a request body which must be one of the three provided strings: `.`, `X` and `O`.
 
-The complete [Tic Tac Toe sample API](/examples/tictactoe.yaml) does not look exactly like the above snippet because it reuses portions of the description to remove redundancy. This technique is explained in the [Reusing Descriptions](components) page.
+The complete [Tic Tac Toe sample API](/examples/v3.1/tictactoe.yaml) does not look exactly like the above snippet because it reuses portions of the description to remove redundancy. This technique is explained in the [Reusing Descriptions](components) page.
 
 ## Summary
 

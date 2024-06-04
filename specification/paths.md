@@ -22,7 +22,7 @@ Every field in the [Paths Object](https://spec.openapis.org/oas/v3.1.0#paths-obj
 
 Paths **must start with a forward slash** `/` since they are directly appended to the server URL (described in the [API Servers](servers) page) to construct the full endpoint URL.
 
-The [Tic Tac Toe sample API](/examples/tictactoe.yaml) is used in this guide to exemplify each concept and it is built piece by piece as the guide progresses. Here's the first snippet already containing a single endpoint:
+The [Tic Tac Toe sample API](/examples/v3.1/tictactoe.yaml) is used in this guide to exemplify each concept and it is built piece by piece as the guide progresses. Here's the first snippet already containing a single endpoint:
 
 ```yaml
 openapi: 3.1.0
@@ -127,7 +127,7 @@ paths:
             ...
 ```
 
-The complete OpenAPI Description can be found in the [Tic Tac Toe sample API](/examples/tictactoe.yaml).
+The complete OpenAPI Description can be found in the [Tic Tac Toe sample API](/examples/v3.1/tictactoe.yaml).
 
 ## Summary
 

@@ -3,3 +3,5 @@ _site/
 *.swp
 .jekyll-metadata
 .ruby-version
+node_modules
+tests/**/schema.json
