@@ -18,7 +18,7 @@ API providers still need to define the shape of a given webhook, however. They c
   <figcaption>Webhooks are implemented at the root of the OpenAPI object</figcaption>
 </figure>
 
-A webhook is, in fact, simply a Path Item Object and can support one or more Operation objects. The key difference is that Webhooks are not encapsulated by a Paths Object, as the expectation is that an API consumer will host the webhook at a URL of their choosing. Webhooks therefore define a template, expressed as a Path Item, for API consumers to follow in how they implement the webhook and validate incoming events.
+A webhook is, in fact, simply a Path Item Object and can support one or more Operation objects. The key difference is that Webhooks are not encapsulated by a Paths Object, as the API consumer registers (via an out-of-band mechanism) to receive the webhook at a URL of their choosing. Webhooks therefore describe a template, expressed as a Path Item, for API consumers to follow in how they implement the webhook and validate incoming events.
 
 Our Tic Tac Toe example includes a webhook that communicates the status of the board. This is not linked to a specific Operation, but given asynchronous behaviors are supported it is implied that this may be received as a result of the API consumer receiving a 202 HTTP return code:
 
