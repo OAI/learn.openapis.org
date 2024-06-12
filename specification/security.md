@@ -203,7 +203,7 @@ paths:
 
 The final Security Scheme type is OpenID Connect, which provides information for [OpenID Connect Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html).
 
-OpenID Connect Core is obviously an OAuth 2.0 profile and is supported by some of the properties of the OAuth Flow Object. However, OpenID Connect is generally more complex than plain OAuth 2.0 and given OpenID Connect Discovery provides a machine-readable format at the discovery endpoint it makes sense to outsource this functionality entirely.
+OpenID Connect Core is an OAuth 2.0 profile and is supported by some of the properties of the OAuth Flow Object. However, OpenID Connect is generally more complex than plain OAuth 2.0 and given OpenID Connect Discovery provides a machine-readable format at the discovery endpoint it makes sense to outsource this functionality entirely.
 
 Specifying OpenID Connect is therefore straightforward in that you provide the discovery endpoint in the property `openIdConnectUrl`:
 
