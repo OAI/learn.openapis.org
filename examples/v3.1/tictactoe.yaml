@@ -26,7 +26,7 @@ paths:
       security:
         - apiKey: []
         - app2AppOauth:
-          - board:read
+            - board:read
 
   # Single square operations
   /board/{row}/{column}:
@@ -56,7 +56,7 @@ paths:
       security:
         - bearerHttpAuthentication: []
         - user2AppOauth:
-          - board:read
+            - board:read
     put:
       summary: Set a single board square
       description: Places a mark on the board and retrieves the whole board and the winner (if any).
@@ -92,7 +92,7 @@ paths:
       security:
         - bearerHttpAuthentication: []
         - user2AppOauth:
-          - board:write
+            - board:write
 
 components:
   parameters:
