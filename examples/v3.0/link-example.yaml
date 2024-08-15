@@ -13,15 +13,15 @@ paths:
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: The User
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/user"
+                $ref: '#/components/schemas/user'
           links:
             userRepositories:
-              $ref: "#/components/links/UserRepositories"
+              $ref: '#/components/links/UserRepositories'
   /2.0/repositories/{username}:
     get:
       operationId: getRepositoriesByOwner
@@ -32,17 +32,17 @@ paths:
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: repositories owned by the supplied user
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/repository"
+                  $ref: '#/components/schemas/repository'
           links:
             userRepository:
-              $ref: "#/components/links/UserRepository"
+              $ref: '#/components/links/UserRepository'
   /2.0/repositories/{username}/{slug}:
     get:
       operationId: getRepository
@@ -58,15 +58,15 @@ paths:
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: The repository
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/repository"
+                $ref: '#/components/schemas/repository'
           links:
             repositoryPullRequests:
-              $ref: "#/components/links/RepositoryPullRequests"
+              $ref: '#/components/links/RepositoryPullRequests'
   /2.0/repositories/{username}/{slug}/pullrequests:
     get:
       operationId: getPullRequestsByRepository
@@ -90,14 +90,14 @@ paths:
               - merged
               - declined
       responses:
-        "200":
+        '200':
           description: an array of pull request objects
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: "#/components/schemas/pullrequest"
+                  $ref: '#/components/schemas/pullrequest'
   /2.0/repositories/{username}/{slug}/pullrequests/{pid}:
     get:
       operationId: getPullRequestsById
@@ -118,15 +118,15 @@ paths:
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: a pull request object
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/pullrequest"
+                $ref: '#/components/schemas/pullrequest'
           links:
             pullRequestMerge:
-              $ref: "#/components/links/PullRequestMerge"
+              $ref: '#/components/links/PullRequestMerge'
   /2.0/repositories/{username}/{slug}/pullrequests/{pid}/merge:
     post:
       operationId: mergePullRequest
@@ -147,7 +147,7 @@ paths:
           schema:
             type: string
       responses:
-        "204":
+        '204':
           description: the PR was successfully merged
 components:
   links:
@@ -189,7 +189,7 @@ components:
         slug:
           type: string
         owner:
-          $ref: "#/components/schemas/user"
+          $ref: '#/components/schemas/user'
     pullrequest:
       type: object
       properties:
@@ -198,6 +198,6 @@ components:
         title:
           type: string
         repository:
-          $ref: "#/components/schemas/repository"
+          $ref: '#/components/schemas/repository'
         author:
-          $ref: "#/components/schemas/user"
+          $ref: '#/components/schemas/user'

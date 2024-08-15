@@ -1,4 +1,4 @@
-openapi: "3.0.0"
+openapi: '3.0.0'
 info:
   version: 1.0.0
   title: Swagger Petstore
@@ -23,7 +23,7 @@ paths:
             maximum: 100
             format: int32
       responses:
-        "200":
+        '200':
           description: A paged array of pets
           headers:
             x-next:
@@ -33,13 +33,13 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Pets"
+                $ref: '#/components/schemas/Pets'
         default:
           description: unexpected error
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Error"
+                $ref: '#/components/schemas/Error'
     post:
       summary: Create a pet
       operationId: createPets
@@ -49,17 +49,17 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/Pet"
+              $ref: '#/components/schemas/Pet'
         required: true
       responses:
-        "201":
+        '201':
           description: Null response
         default:
           description: unexpected error
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Error"
+                $ref: '#/components/schemas/Error'
   /pets/{petId}:
     get:
       summary: Info for a specific pet
@@ -74,18 +74,18 @@ paths:
           schema:
             type: string
       responses:
-        "200":
+        '200':
           description: Expected response to a valid request
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Pet"
+                $ref: '#/components/schemas/Pet'
         default:
           description: unexpected error
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/Error"
+                $ref: '#/components/schemas/Error'
 components:
   schemas:
     Pet:
@@ -105,7 +105,7 @@ components:
       type: array
       maxItems: 100
       items:
-        $ref: "#/components/schemas/Pet"
+        $ref: '#/components/schemas/Pet'
     Error:
       type: object
       required:
