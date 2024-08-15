@@ -9,10 +9,7 @@
       "get": {
         "security": [
           {
-            "bearerAuth": [
-              "read:users",
-              "public"
-            ]
+            "bearerAuth": ["read:users", "public"]
           }
         ]
       }
