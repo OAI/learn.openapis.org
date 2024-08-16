@@ -8,7 +8,7 @@ paths:
       operationId: listVersionsv2
       summary: List API versions
       responses:
-        "200":
+        '200':
           description: 200 response
           content:
             application/json:
@@ -44,7 +44,7 @@ paths:
                           }
                         ]
                     }
-        "300":
+        '300':
           description: 300 response
           content:
             application/json:
@@ -133,7 +133,7 @@ paths:
                             ]
                         }
                     }
-        "203":
+        '203':
           description: 203 response
           content:
             application/json:
