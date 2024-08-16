@@ -59,8 +59,8 @@ paths:
                       "apiVersionNumber": "v1",
                       "apiUrl": "https://developer.uspto.gov/ds-api/cancer_moonshot/v1/fields",
                       "apiDocumentationUrl": "https://developer.uspto.gov/ds-api-docs/index.html?url=https://developer.uspto.gov/ds-api/swagger/docs/cancer_moonshot.json"
-                    },
-                  ],
+                    }
+                  ]
                 }
   /{dataset}/{version}/fields:
     get:
