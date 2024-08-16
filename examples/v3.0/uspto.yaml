@@ -52,13 +52,13 @@ paths:
                       "apiKey": "oa_citations",
                       "apiVersionNumber": "v1",
                       "apiUrl": "https://developer.uspto.gov/ds-api/oa_citations/v1/fields",
-                      "apiDocumentationUrl": "https://developer.uspto.gov/ds-api-docs/index.html?url=https://developer.uspto.gov/ds-api/swagger/docs/oa_citations.json",
+                      "apiDocumentationUrl": "https://developer.uspto.gov/ds-api-docs/index.html?url=https://developer.uspto.gov/ds-api/swagger/docs/oa_citations.json"
                     },
                     {
                       "apiKey": "cancer_moonshot",
                       "apiVersionNumber": "v1",
                       "apiUrl": "https://developer.uspto.gov/ds-api/cancer_moonshot/v1/fields",
-                      "apiDocumentationUrl": "https://developer.uspto.gov/ds-api-docs/index.html?url=https://developer.uspto.gov/ds-api/swagger/docs/cancer_moonshot.json",
+                      "apiDocumentationUrl": "https://developer.uspto.gov/ds-api-docs/index.html?url=https://developer.uspto.gov/ds-api/swagger/docs/cancer_moonshot.json"
                     },
                   ],
                 }
@@ -173,7 +173,11 @@ paths:
                   type: integer
                   default: 0
                 rows:
-                  description: Specify number of rows to be returned. If you run the search with default values, in the response you will see 'numFound' attribute which will tell the number of records available in the dataset.
+                  description: >-
+                    Specify number of rows to be returned. If you run the search
+                    with default values, in the response you will see 'numFound'
+                    attribute which will tell the number of records available in
+                    the dataset.
                   type: integer
                   default: 100
               required:
