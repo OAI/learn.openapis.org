@@ -1,23 +1,23 @@
 openapi: 3.0.0
-info: 
+info:
   title: Link Example
   version: 1.0.0
-paths: 
-  /2.0/users/{username}: 
-    get: 
+paths:
+  /2.0/users/{username}:
+    get:
       operationId: getUserByName
-      parameters: 
-      - name: username
-        in: path
-        required: true
-        schema:
-          type: string
-      responses: 
+      parameters:
+        - name: username
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
         '200':
           description: The User
           content:
             application/json:
-              schema: 
+              schema:
                 $ref: '#/components/schemas/user'
           links:
             userRepositories:
@@ -34,7 +34,7 @@ paths:
       responses:
         '200':
           description: repositories owned by the supplied user
-          content: 
+          content:
             application/json:
               schema:
                 type: array
@@ -43,10 +43,10 @@ paths:
           links:
             userRepository:
               $ref: '#/components/links/UserRepository'
-  /2.0/repositories/{username}/{slug}: 
-    get: 
+  /2.0/repositories/{username}/{slug}:
+    get:
       operationId: getRepository
-      parameters: 
+      parameters:
         - name: username
           in: path
           required: true
@@ -57,96 +57,96 @@ paths:
           required: true
           schema:
             type: string
-      responses: 
+      responses:
         '200':
           description: The repository
           content:
-              application/json: 
-                schema: 
-                  $ref: '#/components/schemas/repository'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/repository'
           links:
             repositoryPullRequests:
               $ref: '#/components/links/RepositoryPullRequests'
-  /2.0/repositories/{username}/{slug}/pullrequests: 
-    get: 
+  /2.0/repositories/{username}/{slug}/pullrequests:
+    get:
       operationId: getPullRequestsByRepository
-      parameters: 
-      - name: username
-        in: path
-        required: true
-        schema:
-          type: string
-      - name: slug
-        in: path
-        required: true
-        schema:
-          type: string
-      - name: state
-        in: query
-        schema:
-          type: string
-          enum: 
-            - open
-            - merged
-            - declined
-      responses: 
+      parameters:
+        - name: username
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: state
+          in: query
+          schema:
+            type: string
+            enum:
+              - open
+              - merged
+              - declined
+      responses:
         '200':
           description: an array of pull request objects
           content:
-            application/json: 
-              schema: 
+            application/json:
+              schema:
                 type: array
-                items: 
+                items:
                   $ref: '#/components/schemas/pullrequest'
-  /2.0/repositories/{username}/{slug}/pullrequests/{pid}: 
-    get: 
+  /2.0/repositories/{username}/{slug}/pullrequests/{pid}:
+    get:
       operationId: getPullRequestsById
-      parameters: 
-      - name: username
-        in: path
-        required: true
-        schema:
-          type: string
-      - name: slug
-        in: path
-        required: true
-        schema:
-          type: string
-      - name: pid
-        in: path
-        required: true
-        schema:
-          type: string
-      responses: 
+      parameters:
+        - name: username
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: pid
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
         '200':
           description: a pull request object
           content:
-            application/json: 
-              schema: 
+            application/json:
+              schema:
                 $ref: '#/components/schemas/pullrequest'
           links:
             pullRequestMerge:
               $ref: '#/components/links/PullRequestMerge'
-  /2.0/repositories/{username}/{slug}/pullrequests/{pid}/merge: 
-    post: 
+  /2.0/repositories/{username}/{slug}/pullrequests/{pid}/merge:
+    post:
       operationId: mergePullRequest
-      parameters: 
-      - name: username
-        in: path
-        required: true
-        schema:
-          type: string
-      - name: slug
-        in: path
-        required: true
-        schema:
-          type: string
-      - name: pid
-        in: path
-        required: true
-        schema:
-          type: string
-      responses: 
+      parameters:
+        - name: username
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: slug
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: pid
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
         '204':
           description: the PR was successfully merged
 components:
@@ -165,9 +165,9 @@ components:
     RepositoryPullRequests:
       # returns '#/components/schemas/pullrequest'
       operationId: getPullRequestsByRepository
-      parameters: 
-          username: $response.body#/owner/username
-          slug: $response.body#/slug
+      parameters:
+        username: $response.body#/owner/username
+        slug: $response.body#/slug
     PullRequestMerge:
       # executes /2.0/repositories/{username}/{slug}/pullrequests/{pid}/merge
       operationId: mergePullRequest
@@ -175,29 +175,29 @@ components:
         username: $response.body#/author/username
         slug: $response.body#/repository/slug
         pid: $response.body#/id
-  schemas: 
-    user: 
+  schemas:
+    user:
       type: object
-      properties: 
-        username: 
+      properties:
+        username:
           type: string
-        uuid: 
+        uuid:
           type: string
-    repository: 
+    repository:
       type: object
-      properties: 
-        slug: 
+      properties:
+        slug:
           type: string
-        owner: 
+        owner:
           $ref: '#/components/schemas/user'
-    pullrequest: 
+    pullrequest:
       type: object
-      properties: 
-        id: 
+      properties:
+        id:
           type: integer
-        title: 
+        title:
           type: string
-        repository: 
+        repository:
           $ref: '#/components/schemas/repository'
-        author: 
+        author:
           $ref: '#/components/schemas/user'

@@ -3,11 +3,11 @@ servers:
   - url: '{scheme}://developer.uspto.gov/ds-api'
     variables:
       scheme:
-        description: 'The Data Set API is accessible via https and http'
+        description: The Data Set API is accessible via https and http
         enum:
-          - 'https'
-          - 'http'
-        default: 'https'
+          - https
+          - http
+        default: https
 info:
   description: >-
     The Data Set API (DSAPI) allows the public users to discover and search
@@ -23,7 +23,7 @@ info:
   title: USPTO Data Set API
   contact:
     name: Open Data Portal
-    url: 'https://developer.uspto.gov'
+    url: https://developer.uspto.gov
     email: developer@uspto.gov
 tags:
   - name: metadata
@@ -78,16 +78,16 @@ paths:
       parameters:
         - name: dataset
           in: path
-          description: 'Name of the dataset.'
+          description: Name of the dataset.
           required: true
-          example: "oa_citations"
+          example: oa_citations
           schema:
             type: string
         - name: version
           in: path
           description: Version of the dataset.
           required: true
-          example: "v1"
+          example: v1
           schema:
             type: string
       responses:
@@ -134,7 +134,7 @@ paths:
             default: v1
         - name: dataset
           in: path
-          description: 'Name of the dataset. In this case, the default value is oa_citations'
+          description: Name of the dataset. In this case, the default value is oa_citations
           required: true
           schema:
             type: string
@@ -203,7 +203,7 @@ components:
               apiUrl:
                 type: string
                 format: uriref
-                description: "The URL describing the dataset's fields"
+                description: The URL describing the dataset's fields
               apiDocumentationUrl:
                 type: string
                 format: uriref

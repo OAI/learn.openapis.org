@@ -7,8 +7,8 @@ paths:
     get:
       security:
         - bearerAuth:
-            - 'read:users'
-            - 'public'
+            - read:users
+            - public
 components:
   securitySchemes:
     bearerAuth:
@@ -16,4 +16,3 @@ components:
       scheme: bearer
       bearerFormat: jwt
       description: 'note: non-oauth scopes are not defined at the securityScheme level'
-

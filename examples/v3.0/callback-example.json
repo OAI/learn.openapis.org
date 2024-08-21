@@ -28,9 +28,7 @@
               "application/json": {
                 "schema": {
                   "description": "subscription information",
-                  "required": [
-                    "subscriptionId"
-                  ],
+                  "required": ["subscriptionId"],
                   "properties": {
                     "subscriptionId": {
                       "description": "this unique identifier allows management of the subscription",

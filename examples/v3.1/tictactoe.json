@@ -15,9 +15,7 @@
       "get": {
         "summary": "Get the whole board",
         "description": "Retrieves the current state of the board and the winner.",
-        "tags": [
-          "Gameplay"
-        ],
+        "tags": ["Gameplay"],
         "operationId": "get-board",
         "responses": {
           "200": {
@@ -36,9 +34,7 @@
             "apiKey": []
           },
           {
-            "app2AppOauth": [
-              "board:read"
-            ]
+            "app2AppOauth": ["board:read"]
           }
         ]
       }
@@ -55,9 +51,7 @@
       "get": {
         "summary": "Get a single board square",
         "description": "Retrieves the requested square.",
-        "tags": [
-          "Gameplay"
-        ],
+        "tags": ["Gameplay"],
         "operationId": "get-square",
         "responses": {
           "200": {
@@ -87,18 +81,14 @@
             "bearerHttpAuthentication": []
           },
           {
-            "user2AppOauth": [
-              "board:read"
-            ]
+            "user2AppOauth": ["board:read"]
           }
         ]
       },
       "put": {
         "summary": "Set a single board square",
         "description": "Places a mark on the board and retrieves the whole board and the winner (if any).",
-        "tags": [
-          "Gameplay"
-        ],
+        "tags": ["Gameplay"],
         "operationId": "put-square",
         "requestBody": {
           "required": true,
@@ -148,9 +138,7 @@
             "bearerHttpAuthentication": []
           },
           {
-            "user2AppOauth": [
-              "board:write"
-            ]
+            "user2AppOauth": ["board:write"]
           }
         ]
       }
@@ -191,11 +179,7 @@
       },
       "mark": {
         "type": "string",
-        "enum": [
-          ".",
-          "X",
-          "O"
-        ],
+        "enum": [".", "X", "O"],
         "description": "Possible values for a board square. `.` means empty square.",
         "example": "."
       },
@@ -214,11 +198,7 @@
       },
       "winner": {
         "type": "string",
-        "enum": [
-          ".",
-          "X",
-          "O"
-        ],
+        "enum": [".", "X", "O"],
         "description": "Winner of the game. `.` means nobody has won yet.",
         "example": "."
       },

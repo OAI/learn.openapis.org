@@ -1,4 +1,4 @@
-openapi: "3.0.0"
+openapi: 3.0.0
 info:
   version: 1.0.0
   title: Swagger Petstore
@@ -129,22 +129,20 @@ components:
         - $ref: '#/components/schemas/NewPet'
         - type: object
           required:
-          - id
+            - id
           properties:
             id:
               type: integer
               format: int64
-
     NewPet:
       type: object
       required:
-        - name  
+        - name
       properties:
         name:
           type: string
         tag:
-          type: string    
-
+          type: string
     Error:
       type: object
       required:
