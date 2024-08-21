@@ -30,6 +30,7 @@
   "homepage": "https://learn.openapis.org",
   "dependencies": {
     "@hyperjump/json-schema": "^1.9.2",
+    "prettier": "^3.3.3",
     "vitest": "^1.6.0",
     "yaml": "^2.4.3"
   }

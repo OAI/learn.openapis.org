@@ -36,6 +36,9 @@ jobs:
     - name: convert YAML examples to JSON
       run: find examples/v3* -type f -name "*.yaml" | xargs node scripts/yaml2json/yaml2json.js
 
+    - name: pretty-print JSON examples
+      run: npx prettier --write examples/**/*.json
+
     - name: git diff
       run: |
         git add examples/**/*.json
