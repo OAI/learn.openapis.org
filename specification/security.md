@@ -55,7 +55,7 @@ info:
     and requesting the state of the board or of individual squares.
   version: 1.0.0
 security:
-  defaultApiKey: []
+  - defaultApiKey: []
 paths:
   /board:
     get:
@@ -139,13 +139,13 @@ info:
     and requesting the state of the board or of individual squares.
   version: 1.0.0
 security:
-  oauth2Profiles:
+  - oauth2Profiles:
     - board:read
     - board:write
 paths:
   /board:
     get:
-      security:
+      - security:
         - oauth2Profiles: []
 ```
 
@@ -185,8 +185,8 @@ paths:
   /board:
     get:
       security:
-        app2AppOauth:
-        - board:read
+        - app2AppOauth:
+          - board:read
       ...
   /board/{row}/{column}:
     put:
