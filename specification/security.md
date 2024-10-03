@@ -60,7 +60,7 @@ paths:
   /board:
     get:
       security:
-        defaultApiKey: []
+        - defaultApiKey: []
 ```
 
 This method of referencing Security Scheme objects is valid for all types. The array shown as the value of `defaultApiKey` above is populated for OAuth Flow and OpenID Connect objects, which have some additional features that are discussed below. An empty array is provided in all other cases.
@@ -146,7 +146,7 @@ paths:
   /board:
     get:
       security:
-        oauth2Profiles: []
+        - oauth2Profiles: []
 ```
 
 Note that if you want to segregate grant types - where, for example, Client Credentials is only supported for a specific Operation - you'll need to create a separate Security Scheme object that can be applied individually. This is also true if you want to differentiate the available scopes, for example:
@@ -191,9 +191,9 @@ paths:
   /board/{row}/{column}:
     put:
       security:
-        user2AppOauth:
-        - board:read
-        - board:write
+        - user2AppOauth:
+          - board:read
+          - board:write
       ...
 ```
 
@@ -226,7 +226,7 @@ info:
     and requesting the state of the board or of individual squares.
   version: 1.0.0
 security:
-  openIdConnect:
+  - openIdConnect:
     - board:read
     - board:write
 ```
