@@ -145,7 +145,7 @@ security:
 paths:
   /board:
     get:
-      - security:
+      security:
         - oauth2Profiles: []
 ```
 
