@@ -9,7 +9,7 @@ has_toc: false
 # Introduction to OpenAPI Overlay Specification
 
 The [Overlay Specification](https://spec.openapis.org/overlay/latest.html) defines a document format for information that transforms an existing OpenAPI description yet remains separate from the OpenAPI description's source document(s).
-The goal of the Overlay Specification is to provide a mechanism for providing consistent, deterministic updates to a given OpenAPI description, as an aid to automation throughout the API lifecycle.
+The Overlay Specification defines a mechanism for providing consistent, deterministic updates to a given OpenAPI description, as an aid to automation throughout the API lifecycle.
 
 An Overlay can be applied to an OpenAPI description, resulting in an updated OpenAPI description.
 

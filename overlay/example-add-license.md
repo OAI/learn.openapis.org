@@ -11,7 +11,7 @@ has_toc: false
 Every API needs a license so people know they can use it, but what if your OpenAPI descriptions don't have a license?
 This example shows an Overlay that adds a license to an OpenAPI description.
 
-Here's here's the overlay file, with just one action to add or change the `info.license` fields:
+Here's the Overlay file, with just one action to add or change the `info.license` fields:
 
 ```yaml
 overlay: 1.0.0

@@ -38,7 +38,7 @@ actions:
       - x-filters-added
 ```
 
-You can adjust the target expression to apply only to certain paths or methods, or use another approach to identify which operations should be used.
+You can adjust the target expression to apply only to certain paths or methods, or use another approach to identify which operations should be updated.
 
 It might be more elegant to first update the `components.parameters` section of an OpenAPI description to add the parameters there, and then refer to those new entries when updating the existing operations.
 The Overlay Specification requires that each action is processed in the order it is seen in the Overlay document.
