@@ -12,7 +12,7 @@ const parseYamlFromFile = (filePath) => {
 setMetaSchemaOutputFormat(BASIC);
 
 // validate() expects a local file path, so we need to download the schema first.
-const schema = await fetch('https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/schemas/v3.1/schema.json');
+const schema = await fetch('https://spec.openapis.org/oas/3.1/schema/2024-11-14');
 writeFileSync('./tests/v3.1/schema.json', await schema.text());
 
 const validateOpenApi = await validate("./tests/v3.1/schema.json");
