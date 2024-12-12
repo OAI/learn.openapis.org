@@ -14,10 +14,12 @@ on:
     paths:
       - "examples/**"
       - "tests/**"
+      - ".github/workflows/examples-tests.yaml"
   pull_request:
     paths:
       - "examples/**"
       - "tests/**"
+      - ".github/workflows/examples-tests.yaml"
   workflow_dispatch: {}
 
 jobs:
