@@ -13,9 +13,11 @@ on:
   push:
     paths:
       - 'examples/**'
+      - 'tests/**'
   pull_request:
     paths:
       - 'examples/**'
+      - 'tests/**'
   workflow_dispatch: {}
 
 jobs:
@@ -30,8 +32,8 @@ jobs:
     - uses: actions/setup-node@v4 # setup Node.js
       with:
         node-version: '20.x'
-    - name: Install dependencies from main
-      run: npm ci
+    - name: Install dependencies
+      run: npm install
     - name: Run tests
-      run: npm run test
+      run: npm test
 
