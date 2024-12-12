@@ -17,6 +17,7 @@ on:
   pull_request:
     paths:
       - 'examples/**'
+      - 'tests/**'
   workflow_dispatch: {}
 
 jobs:
