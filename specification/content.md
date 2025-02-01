@@ -153,7 +153,7 @@ paths:
   ...
 ```
 
-The response contains an object is JSON format with two fields:
+The response contains an object in JSON format with two fields:
 
 - `winner` is a string with only three possible values: `.`, `X` and `O`.
 - `board` is a 3-element array where each item is another 3-element array, effectively building a 3x3 square matrix. Each element in the matrix is a string with only three possible values: `.`, `X` and `O`.
