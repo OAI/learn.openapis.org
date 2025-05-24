@@ -11,6 +11,13 @@ Besides machine-readable descriptions, an OpenAPI Description (OAD) can also inc
 
 This page shows how to take full advantage of special documentation capabilities in OpenAPI like markdown syntax or example objects.
 
+## Summary vs Description
+
+Many objects support both `summary` and `description` fields, and this is especially useful where documentation or other tools might show items in either list or detail view.
+
+ - `summary` is used for list view, and should be kept short. A single-sentence summary works well.
+ - `description` is shown when the item is being viewed in detail. The descriptions support markup and give you space to include as much information for your users as you want to. Don't be afraid to add paragraph breaks, links, or even bullet lists in these fields.
+
 ## The Description Field
 
 Almost every object in the OpenAPI Specification accepts a `description` field which can provide additional information for developers, beyond what can be automatically generated from the API descriptions.
