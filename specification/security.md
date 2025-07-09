@@ -159,6 +159,7 @@ components:
       flows:
         clientCredentials:
           tokenUrl: https://learn.openapis.org/oauth/2.0/token
+          scopes:
             # Only reading the board allow with delegated access
             board:read: Read the board
     user2AppOauth:
