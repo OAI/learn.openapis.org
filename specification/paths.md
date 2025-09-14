@@ -39,7 +39,7 @@ paths:
 
 ## The Path Item Object
 
-The [Path Item Object](https://spec.openapis.org/oas/v3.1.0#path-item-object) describes the HTTP operations that can be performed on a path with a separate [Operation Object](https://spec.openapis.org/oas/v3.1.0#operation-object) for each one. Allowed operations match HTTP method names like `get`, `put` or `delete`, to list the most common (find the complete list in the [Path Item Object](https://spec.openapis.org/oas/v3.1.0#path-item-object) specification).
+The [Path Item Object](https://spec.openapis.org/oas/v3.1.0#path-item-object) describes the HTTP operations that can be performed on a path with a separate [Operation Object](https://spec.openapis.org/oas/v3.1.0#operation-object) for each one. Allowed operations match HTTP method names like `get`, `put` or `delete`, to list the most common. For complete details about HTTP methods in OpenAPI, see the [HTTP Methods](http-methods) page.
 
 This object also accepts common properties for all operations on the path like `summary` or `description`. The details of each operation are given in each child Operation object.
 

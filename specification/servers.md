@@ -30,6 +30,33 @@ servers:
   description: Server located in Shenzhen
 ```
 
+## Enhanced Server Fields
+{: .d-inline-block }
+OpenAPI 3.2+
+{: .label .label-green }
+
+OpenAPI 3.2 adds a `name` field to Server Objects for easier identification and reference:
+
+```yaml
+servers:
+- name: Production
+  url: https://api.example.com/v1
+  description: Production server for live traffic
+- name: Staging
+  url: https://staging-api.example.com/v1
+  description: Staging environment for testing
+- name: Development
+  url: http://localhost:3000/v1
+  description: Local development server
+```
+
+The `name` field is particularly useful for:
+- **Tool integration** - Development tools can reference servers by name
+- **Documentation clarity** - Clear identification in API documentation
+- **Environment switching** - Easy server selection in API clients
+- **Configuration management** - Named references in deployment scripts
+
+
 Individual API endpoints (as specified in the [Paths Object](https://spec.openapis.org/oas/v3.1.0#paths-object)) are then appended to this URL to construct the full endpoint URL. For example:
 
 ```yaml
