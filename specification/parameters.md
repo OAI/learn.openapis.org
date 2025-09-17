@@ -73,7 +73,7 @@ Parameters can reside in different locations, indicated by the `in` field. The m
   > **NOTE**:
   > If any parameters are `in: query`, then `in: querystring` cannot be used.
 
-- `querystring` (OpenAPI 3.2+): The entire query string is treated as a single parameter with complex structure:
+- `querystring` (OpenAPI 3.2+): The entire query string is treated as a single parameter with complex structure, meaning that combinations of query parameters can be expressed using a well-defined Schema object:
 
   ```yaml
   paths:
