@@ -100,7 +100,7 @@ Parameters can reside in different locations, indicated by the `in` field. The m
 
 - `header`: The parameter is sent in a custom HTTP header as part of the request. Header names are **case-insensitive**.
 
-- `cookie`: The parameter is sent in a cookie header as part of the request.
+- `cookie`: The parameter is sent in a Cookie header as part of the request.
 
 ### Parameter Type
 
