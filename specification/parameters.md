@@ -70,7 +70,37 @@ Parameters can reside in different locations, indicated by the `in` field. The m
           in: query
   ```
 
+  > **NOTE**:
+  > If any parameters are `in: query`, then `in: querystring` cannot be used.
+
+- `querystring` (OpenAPI 3.2+): The entire query string is treated as a single parameter with complex structure, meaning that combinations of query parameters can be expressed using a well-defined Schema object:
+
+  ```yaml
+  paths:
+    /search:
+      get:
+        parameters:
+        - name: advancedQuery
+          in: querystring
+          content:
+            application/x-www-form-urlencoded:
+              schema:
+                type: object
+                properties:
+                  filters:
+                    type: object
+                  sorting:
+                    type: array
+                    items:
+                      type: string
+  ```
+
+  > **NOTE**:
+  > `in: querystring` cannot be combined with `in:query`.
+
 - `header`: The parameter is sent in a custom HTTP header as part of the request. Header names are **case-insensitive**.
+
+- `cookie`: The parameter is sent in a Cookie header as part of the request.
 
 ### Parameter Type
 
@@ -96,6 +126,24 @@ In more advanced scenarios the `content` field can be used instead. It provides 
 ### Parameter Serialization Control
 
 The `style` field describes how a parameter is to be serialized and its effect depends on the **type** of the parameter. The resulting matrix is therefore rather complex and can be consulted in the [Parameter Object](https://spec.openapis.org/oas/v3.1.0#style-examples) specification page.
+
+OpenAPI 3.2 adds the `cookie` style for more accurate cookie parameter descriptions:
+
+```yaml
+# OpenAPI 3.2
+paths:
+  /dashboard:
+    get:
+      parameters:
+        - name: preferences
+          in: cookie
+          style: cookie  # New in 3.2
+          schema:
+            type: object
+            properties:
+              theme: { type: string }
+              language: { type: string }
+```
 
 The tables given below exemplify the most common styles `simple`, `form`, `label`, and `matrix`:
 
