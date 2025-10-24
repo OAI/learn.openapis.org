@@ -80,6 +80,7 @@ The OAS structure is long and complex so this section just describes the minimal
 The root object in any OpenAPI Description is the [OpenAPI Object](https://spec.openapis.org/oas/v3.1.0#openapi-object), and only two of its fields are mandatory: `openapi` and `info`. Additionally, at least one of `paths`, `components` and `webhooks` is required.
 
 * `openapi` (**string**): This indicates the version of the OAS this OAD is using, e.g. "3.1.0". Using this field tools can check that the description correctly adheres to the specification.
+* `$self` (**string**, OpenAPI 3.2+): Provides the canonical URI for the document itself, used as the base URI for resolving relative references. This field is optional.
 * `info` ([Info Object](https://spec.openapis.org/oas/v3.1.0#info-object)): This provides general information about the API (like its description, author and contact information) but the only mandatory fields are `title` and `version`.
   * `title` (**string**): A human-readable name for the API, like "GitHub REST API", useful to keep API collections organized.
   * `version` (**string**): Indicates the version **of the API description** (not to be confused with the OAS version above). Tools can use this field to generate code that ensures that clients and servers are interacting through the same version of the API, for example.
