@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A guide directed at HTTP-based API designers and writers wishing to benefit from having their API formalized in an OpenAPI Description (OAD)",
   "scripts": {
+    "serve": "bundle exec jekyll serve --livereload",
     "test": "vitest --watch=false"
   },
   "repository": {
