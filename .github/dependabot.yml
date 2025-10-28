@@ -1,0 +1,26 @@
+version: 2
+updates:
+  # GitHub Actions updates
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 10
+
+  # npm updates with vitest grouping
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 10
+    groups:
+      vitest:
+        patterns:
+          - "*vitest*"
+
+  # Bundler (gem) updates
+  - package-ecosystem: "bundler"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 10
