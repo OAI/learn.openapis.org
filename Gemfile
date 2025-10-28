@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 gem "jekyll", "~> 4.4"
 gem "just-the-docs", "~> 0.3.3"
-gem "webrick", "~> 1.7"
+gem "webrick", "~> 1.9"
 gem "jekyll-remote-theme"
 
 group :jekyll_plugins do
