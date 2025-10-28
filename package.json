@@ -32,7 +32,7 @@
   "dependencies": {
     "@hyperjump/json-schema": "^1.9.9",
     "prettier": "^3.4.1",
-    "vitest": "^2.1.6",
+    "vitest": "^4.0.4",
     "yaml": "^2.6.1"
   }
 }
