@@ -12,7 +12,7 @@ bundle install
 With all the gems (dependencies) installed, you can launch the jekyll server.
 
 ``` bash
-bundle exec jekyll serve
+bundle exec jekyll serve --livereload
 ```
 
 It will show output like this, and you can grab the Server address and open it in your browser.
