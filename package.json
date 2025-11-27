@@ -31,7 +31,7 @@
   "homepage": "https://learn.openapis.org",
   "dependencies": {
     "@hyperjump/json-schema": "^1.16.5",
-    "prettier": "^3.6.2",
+    "prettier": "^3.7.1",
     "vitest": "^4.0.4",
     "yaml": "^2.8.1"
   }
