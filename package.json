@@ -33,6 +33,6 @@
     "@hyperjump/json-schema": "^1.16.5",
     "prettier": "^3.6.2",
     "vitest": "^4.0.4",
-    "yaml": "^2.8.1"
+    "yaml": "^2.8.2"
   }
 }
