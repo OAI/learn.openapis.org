@@ -51,13 +51,13 @@ You might want to rename your overlay documents to end with `.overlay.yaml|json`
 This example JSONPath query expression:
 
 ```jsonpath
-$.paths.*.get.parameters[?(@.name=='filter' && @.in=='query)']
+$.paths.*.get[?(@.x-oai-traits[?(@ == 'paged')])]
 ```
 
 Should in fact be:
 
 ```jsonpath
-$.paths.*.get.parameters[?@.name=='filter' && @.in=='query']
+$.paths.*.get[?(@['x-oai-traits'][?(@ == 'paged')])]
 ```
 
 ## Removing/Updating primitive values is now fully supported
