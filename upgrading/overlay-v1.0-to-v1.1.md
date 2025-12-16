@@ -48,7 +48,9 @@ You might want to rename your overlay documents to end with `.overlay.yaml|json`
 
 ## Ensure your JSONPath are RFC 9535 for better interoperability
 
-This example JSONPath query expression:
+### Missing square brackets around property names
+
+This example JSONPath query expression, which filters path items based on an OpenAPI extension property:
 
 ```jsonpath
 $.paths.*.get[?(@.x-oai-traits[?(@ == 'paged')])]
@@ -59,6 +61,24 @@ Should in fact be:
 ```jsonpath
 $.paths.*.get[?(@['x-oai-traits'][?(@ == 'paged')])]
 ```
+
+Because square brackets are required for property selection.
+
+### Use of the undefined `in` keyword
+
+This example JSONPath query expression, which selects tags matching *Enterprise-Only*:
+
+```jsonpath
+$.paths..[?('Enterprise-Only' in @.tags)]
+```
+
+Should instead be:
+
+```jsonpath
+$.paths..[?(@.tags[?(@ == 'Enterprise-Only')])]
+```
+
+Since the `in` keyword is undefined in the RFC.
 
 ## Removing/Updating primitive values is now fully supported
 
