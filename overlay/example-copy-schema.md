@@ -24,3 +24,5 @@ actions:
     copy: '$.components.schemas['Foo']'
     description: Copy the Foo Schema to Bar
 ```
+
+If the target OpenAPI document contains a Foo component schema, it'll be duplicated as a Bar component schema. You may also combine these two actions with a third remove action to perform a rename of the component schema instead of a copy.
