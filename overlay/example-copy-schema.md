@@ -1,7 +1,7 @@
 ---
 layout: default
 parent: Overlays
-nav_order: 2
+nav_order: 6
 title: 'Example: copy a schema'
 has_toc: false
 ---
