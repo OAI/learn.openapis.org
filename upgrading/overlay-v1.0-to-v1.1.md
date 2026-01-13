@@ -7,7 +7,7 @@ nav_order: 1
 
 # Overlay - Upgrading Between Versions 1.0 and 1.1
 
-Overlay 1.1 introduces significant new functionality and improvements. This guide covers the changes required to migrate your Overlay 1.0 descriptions to version 1.1.
+Overlay 1.1 adds powerful new copy features, and upgrading from 1.0 is as simple as updating the version number. This guide walks you through that quick transition.
 
 ## Getting started
 
