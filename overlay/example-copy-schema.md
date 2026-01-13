@@ -8,7 +8,7 @@ has_toc: false
 
 # Example: copy a schema
 
-Ever needed to copy a schema so you don't need to maintain a copy which could become stale in your overlay document? This example copies the Foo component schema as a new Bar component schema.
+Copying a schema helps you avoid maintaining a duplicate that could become stale in your overlay document. This example shows how the Foo component schema is duplicated to create a new Bar component schema.
 
 ```yaml
 overlay: 1.0.0
