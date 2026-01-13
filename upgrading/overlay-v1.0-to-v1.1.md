@@ -98,6 +98,8 @@ Before it used to require updating the parent object.
 
 ## Add a description to your overlay document
 
+The Overlay information section now supports a new description field. Adding a detailed description to your overlay documents is a great way to convey the purpose and nature of your documents.
+
 ```yaml
 overlay: 1.1.0
 info:
