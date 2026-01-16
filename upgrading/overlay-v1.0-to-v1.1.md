@@ -28,7 +28,7 @@ overlay: 1.1.0
 The following example illustrates how you can now use the copy action to update a target node with a value from the document being processed. Saving you from having duplicate definitions in your overlay document.
 
 ```yaml
-overlay: 1.0.0
+overlay: 1.1.0
 info:
   title: Copy a schema component
   version: 1.1.0
