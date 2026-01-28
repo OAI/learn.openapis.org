@@ -38,7 +38,7 @@ The type of the parameters, their format and their serialization can be specifie
 
 ### Parameter Location
 
-Parameters can reside in different locations, indicated by the `in` field. The most common ones are:
+Parameters can reside in different locations, indicated by the `in` field. The different locations are:
 
 - `path`: The parameter is part of the route of this operation (and hence of its URL). The parameter's name **must** appear in the path as a [template expression](https://spec.openapis.org/oas/v3.1.0#path-templating), i.e., delimited by curly braces `{}`.
 
@@ -71,7 +71,7 @@ Parameters can reside in different locations, indicated by the `in` field. The m
   ```
 
   > **NOTE**:
-  > If any parameters are `in: query`, then `in: querystring` cannot be used.
+  > If any parameters are `in: query`, then `in: querystring` cannot be used in the same endpoint.
 
 - `querystring` (OpenAPI 3.2+): The entire query string is treated as a single parameter with complex structure, meaning that combinations of query parameters can be expressed using a well-defined Schema object:
 
@@ -96,7 +96,7 @@ Parameters can reside in different locations, indicated by the `in` field. The m
   ```
 
   > **NOTE**:
-  > `in: querystring` cannot be combined with `in:query`.
+  > `in: querystring` cannot be combined with `in:query` in the same endpoint.
 
 - `header`: The parameter is sent in a custom HTTP header as part of the request. Header names are **case-insensitive**.
 
