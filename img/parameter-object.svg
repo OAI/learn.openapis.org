@@ -12,7 +12,7 @@
 <!-- pathItemObject -->
 <g id="node1" class="node">
 <title>pathItemObject</title>
-<g id="a_node1"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#pathItemObject" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node1"><a xlink:href="https://spec.openapis.org/oas/latest#pathItemObject" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#939598" stroke="transparent" points="8,-405 8,-426 128,-426 128,-405 8,-405"/>
 <polygon fill="none" stroke="black" points="8,-405 8,-426 128,-426 128,-405 8,-405"/>
 <text text-anchor="start" x="11" y="-412.8" font-family="arial" font-weight="bold" font-size="14.00">Path Item Object</text>
@@ -40,7 +40,7 @@
 <!-- operationObject -->
 <g id="node2" class="node">
 <title>operationObject</title>
-<g id="a_node2"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#operationObject" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node2"><a xlink:href="https://spec.openapis.org/oas/latest#operationObject" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#939598" stroke="transparent" points="181,-494 181,-515 305,-515 305,-494 181,-494"/>
 <polygon fill="none" stroke="black" points="181,-494 181,-515 305,-515 305,-494 181,-494"/>
 <text text-anchor="start" x="184" y="-501.8" font-family="arial" font-weight="bold" font-size="14.00">Operation Object</text>
@@ -95,7 +95,7 @@
 <!-- parameterObject -->
 <g id="node5" class="node">
 <title>parameterObject</title>
-<g id="a_node5"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#parameterObject" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node5"><a xlink:href="https://spec.openapis.org/oas/latest#parameterObject" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#94d60a" stroke="transparent" points="377.5,-299 377.5,-320 504.5,-320 504.5,-299 377.5,-299"/>
 <polygon fill="none" stroke="black" points="377.5,-299 377.5,-320 504.5,-320 504.5,-299 377.5,-299"/>
 <text text-anchor="start" x="380.5" y="-306.8" font-family="arial" font-weight="bold" font-size="14.00">Parameter Object</text>
@@ -136,7 +136,7 @@
 <!-- requestBodyObject -->
 <g id="node3" class="node">
 <title>requestBodyObject</title>
-<g id="a_node3"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#requestBodyObject" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node3"><a xlink:href="https://spec.openapis.org/oas/latest#requestBodyObject" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#94d60a" stroke="transparent" points="364.5,-431 364.5,-452 517.5,-452 517.5,-431 364.5,-431"/>
 <polygon fill="none" stroke="black" points="364.5,-431 364.5,-452 517.5,-452 517.5,-431 364.5,-431"/>
 <text text-anchor="start" x="367.5" y="-438.8" font-family="arial" font-weight="bold" font-size="14.00">Request Body Object</text>
@@ -168,7 +168,7 @@
 <!-- requestMediaMap -->
 <g id="node4" class="node">
 <title>requestMediaMap</title>
-<g id="a_node4"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#requestBodyContent" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node4"><a xlink:href="https://spec.openapis.org/oas/latest#requestBodyContent" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#939598" stroke="transparent" points="590.5,-388 590.5,-409 696.5,-409 696.5,-388 590.5,-388"/>
 <polygon fill="none" stroke="black" points="590.5,-388 590.5,-409 696.5,-409 696.5,-388 590.5,-388"/>
 <text text-anchor="start" x="605.5" y="-395.8" font-family="arial" font-weight="bold" font-size="14.00">Media Map</text>
@@ -196,7 +196,7 @@
 <!-- mediaTypeObject -->
 <g id="node8" class="node">
 <title>mediaTypeObject</title>
-<g id="a_node8"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#mediaTypeObject" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node8"><a xlink:href="https://spec.openapis.org/oas/latest#mediaTypeObject" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#939598" stroke="transparent" points="770,-324 770,-345 906,-345 906,-324 770,-324"/>
 <polygon fill="none" stroke="black" points="770,-324 770,-345 906,-345 906,-324 770,-324"/>
 <text text-anchor="start" x="773" y="-331.8" font-family="arial" font-weight="bold" font-size="14.00">Media Type Object</text>
@@ -230,7 +230,7 @@
 <!-- schemaObject -->
 <g id="node6" class="node">
 <title>schemaObject</title>
-<g id="a_node6"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#schemaObject" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node6"><a xlink:href="https://spec.openapis.org/oas/latest#schemaObject" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#939598" stroke="transparent" points="959,-151 959,-172 1071,-172 1071,-151 959,-151"/>
 <polygon fill="none" stroke="black" points="959,-151 959,-172 1071,-172 1071,-151 959,-151"/>
 <text text-anchor="start" x="962" y="-158.8" font-family="arial" font-weight="bold" font-size="14.00">Schema Object</text>
@@ -267,7 +267,7 @@
 <!-- paramMediaMap -->
 <g id="node7" class="node">
 <title>paramMediaMap</title>
-<g id="a_node7"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#parameterContent" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node7"><a xlink:href="https://spec.openapis.org/oas/latest#parameterContent" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#939598" stroke="transparent" points="570.5,-236 570.5,-257 717.5,-257 717.5,-236 570.5,-236"/>
 <polygon fill="none" stroke="black" points="570.5,-236 570.5,-257 717.5,-257 717.5,-236 570.5,-236"/>
 <text text-anchor="start" x="606" y="-243.8" font-family="arial" font-weight="bold" font-size="14.00">Media Map</text>

@@ -12,7 +12,7 @@
 <!-- openapiObject -->
 <g id="node1" class="node">
 <title>openapiObject</title>
-<g id="a_node1"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#oasObject" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node1"><a xlink:href="https://spec.openapis.org/oas/latest#oasObject" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#94d60a" stroke="none" points="8,-341 8,-362.75 118.25,-362.75 118.25,-341 8,-341"/>
 <polygon fill="none" stroke="black" points="8,-341 8,-362.75 118.25,-362.75 118.25,-341 8,-341"/>
 <text text-anchor="start" x="11" y="-347.45" font-family="arial" font-weight="bold" font-size="14.00">OpenAPI Object</text>
@@ -40,7 +40,7 @@
 <!-- pathsObject -->
 <g id="node2" class="node">
 <title>pathsObject</title>
-<g id="a_node2"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#pathsObject" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node2"><a xlink:href="https://spec.openapis.org/oas/latest#pathsObject" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#939598" stroke="none" points="170.25,-214 170.25,-235.75 259.5,-235.75 259.5,-214 170.25,-214"/>
 <polygon fill="none" stroke="black" points="170.25,-214 170.25,-235.75 259.5,-235.75 259.5,-214 170.25,-214"/>
 <text text-anchor="start" x="173.25" y="-220.45" font-family="arial" font-weight="bold" font-size="14.00">Paths Object</text>
@@ -68,7 +68,7 @@
 <!-- securityRequirementObject -->
 <g id="node5" class="node">
 <title>securityRequirementObject</title>
-<g id="a_node5"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#securityRequirementObject" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node5"><a xlink:href="https://spec.openapis.org/oas/latest#securityRequirementObject" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#94d60a" stroke="none" points="668.25,-277.5 668.25,-299.25 861,-299.25 861,-277.5 668.25,-277.5"/>
 <polygon fill="none" stroke="black" points="668.25,-277.5 668.25,-299.25 861,-299.25 861,-277.5 668.25,-277.5"/>
 <text text-anchor="start" x="671.25" y="-283.95" font-family="arial" font-weight="bold" font-size="14.00">Security Requirement Object</text>
@@ -87,7 +87,7 @@
 <!-- componentsObject -->
 <g id="node6" class="node">
 <title>componentsObject</title>
-<g id="a_node6"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#componentsObject" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node6"><a xlink:href="https://spec.openapis.org/oas/latest#componentsObject" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#94d60a" stroke="none" points="311.5,-404.5 311.5,-426.25 447.25,-426.25 447.25,-404.5 311.5,-404.5"/>
 <polygon fill="none" stroke="black" points="311.5,-404.5 311.5,-426.25 447.25,-426.25 447.25,-404.5 311.5,-404.5"/>
 <text text-anchor="start" x="314.5" y="-410.95" font-family="arial" font-weight="bold" font-size="14.00">Components Object</text>
@@ -118,7 +118,7 @@
 <!-- pathItemObject -->
 <g id="node3" class="node">
 <title>pathItemObject</title>
-<g id="a_node3"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#pathItemObject" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node3"><a xlink:href="https://spec.openapis.org/oas/latest#pathItemObject" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#939598" stroke="none" points="322.38,-183 322.38,-204.75 436.38,-204.75 436.38,-183 322.38,-183"/>
 <polygon fill="none" stroke="black" points="322.38,-183 322.38,-204.75 436.38,-204.75 436.38,-183 322.38,-183"/>
 <text text-anchor="start" x="325.38" y="-189.45" font-family="arial" font-weight="bold" font-size="14.00">Path Item Object</text>
@@ -164,7 +164,7 @@
 <!-- operationObject -->
 <g id="node4" class="node">
 <title>operationObject</title>
-<g id="a_node4"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#operationObject" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node4"><a xlink:href="https://spec.openapis.org/oas/latest#operationObject" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#94d60a" stroke="none" points="499.25,-131 499.25,-152.75 616.25,-152.75 616.25,-131 499.25,-131"/>
 <polygon fill="none" stroke="black" points="499.25,-131 499.25,-152.75 616.25,-152.75 616.25,-131 499.25,-131"/>
 <text text-anchor="start" x="502.25" y="-137.45" font-family="arial" font-weight="bold" font-size="14.00">Operation Object</text>
@@ -216,7 +216,7 @@
 <!-- securitySchemesMap -->
 <g id="node7" class="node">
 <title>securitySchemesMap</title>
-<g id="a_node7"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#securitySchemeObject" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node7"><a xlink:href="https://spec.openapis.org/oas/latest#securitySchemeObject" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#94d60a" stroke="none" points="913,-288 913,-309.75 1067.5,-309.75 1067.5,-288 913,-288"/>
 <polygon fill="none" stroke="black" points="913,-288 913,-309.75 1067.5,-309.75 1067.5,-288 913,-288"/>
 <text text-anchor="start" x="916" y="-294.45" font-family="arial" font-weight="bold" font-size="14.00">Security Schemes Map</text>
@@ -250,7 +250,7 @@
 <!-- securitySchemeObject -->
 <g id="node8" class="node">
 <title>securitySchemeObject</title>
-<g id="a_node8"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#securitySchemeObject" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node8"><a xlink:href="https://spec.openapis.org/oas/latest#securitySchemeObject" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#94d60a" stroke="none" points="1119.5,-246 1119.5,-267.75 1281.5,-267.75 1281.5,-246 1119.5,-246"/>
 <polygon fill="none" stroke="black" points="1119.5,-246 1119.5,-267.75 1281.5,-267.75 1281.5,-246 1119.5,-246"/>
 <text text-anchor="start" x="1122.5" y="-252.45" font-family="arial" font-weight="bold" font-size="14.00">Security Scheme Object</text>
@@ -296,7 +296,7 @@
 <!-- oauthFlowsObject -->
 <g id="node9" class="node">
 <title>oauthFlowsObject</title>
-<g id="a_node9"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#oauthFlowsObject" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node9"><a xlink:href="https://spec.openapis.org/oas/latest#oauthFlowsObject" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#94d60a" stroke="none" points="1333.5,-141 1333.5,-162.75 1479.75,-162.75 1479.75,-141 1333.5,-141"/>
 <polygon fill="none" stroke="black" points="1333.5,-141 1333.5,-162.75 1479.75,-162.75 1479.75,-141 1333.5,-141"/>
 <text text-anchor="start" x="1341" y="-147.45" font-family="arial" font-weight="bold" font-size="14.00">OAuth Flows Object</text>
@@ -324,7 +324,7 @@
 <!-- oauthFlowObject -->
 <g id="node10" class="node">
 <title>oauthFlowObject</title>
-<g id="a_node10"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#oauthFlowObject" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node10"><a xlink:href="https://spec.openapis.org/oas/latest#oauthFlowObject" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#94d60a" stroke="none" points="1531.75,-88 1531.75,-109.75 1669.75,-109.75 1669.75,-88 1531.75,-88"/>
 <polygon fill="none" stroke="black" points="1531.75,-88 1531.75,-109.75 1669.75,-109.75 1669.75,-88 1531.75,-88"/>
 <text text-anchor="start" x="1538.88" y="-94.45" font-family="arial" font-weight="bold" font-size="14.00">OAuth Flow Object</text>

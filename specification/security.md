@@ -9,7 +9,7 @@ nav_order: 8
 
 One feature of OpenAPI that can prove useful to API providers and consumers is the means to describe API security. Providing information about the security that protects a given API and its Operations is useful to humans, as they can understand security restrictions and account for them in their implementation, and for tooling that can generate code or provide features that facilitate submitting authorization parameters.
 
-OpenAPI provides the [Security Scheme Object](https://spec.openapis.org/oas/latest.html#security-scheme-object), which contains security definitions that can be referenced either globally or per [Operation](https://spec.openapis.org/oas/v3.1.0#operation-object). Unlike other Component objects, Security Scheme objects are referenced by name using a [Security Requirement Object](https://spec.openapis.org/oas/latest.html#security-requirement-object). A security description for a given API or Operation therefore **must** be defined as a Security Scheme Object as they cannot be declared inline.
+OpenAPI provides the [Security Scheme Object](https://spec.openapis.org/oas/latest.html#security-scheme-object), which contains security definitions that can be referenced either globally or per [Operation](https://spec.openapis.org/oas/latest#operation-object). Unlike other Component objects, Security Scheme objects are referenced by name using a [Security Requirement Object](https://spec.openapis.org/oas/latest.html#security-requirement-object). A security description for a given API or Operation therefore **must** be defined as a Security Scheme Object as they cannot be declared inline.
 
 <figure style="text-align:center">
   <object type="image/svg+xml" data="{{site.baseurl}}/img/security-object.svg"></object>

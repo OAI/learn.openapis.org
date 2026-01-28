@@ -12,7 +12,7 @@
 <!-- responseObject -->
 <g id="node1" class="node">
 <title>responseObject</title>
-<g id="a_node1"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#responseObject" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node1"><a xlink:href="https://spec.openapis.org/oas/latest#responseObject" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#939598" stroke="transparent" points="22.5,-279.5 22.5,-300.5 147.5,-300.5 147.5,-279.5 22.5,-279.5"/>
 <polygon fill="none" stroke="black" points="22.5,-279.5 22.5,-300.5 147.5,-300.5 147.5,-279.5 22.5,-279.5"/>
 <text text-anchor="start" x="25.5" y="-287.3" font-family="arial" font-weight="bold" font-size="14.00">Response Object</text>
@@ -31,7 +31,7 @@
 <!-- mediaMap -->
 <g id="node3" class="node">
 <title>mediaMap</title>
-<g id="a_node3"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#responseObject" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node3"><a xlink:href="https://spec.openapis.org/oas/latest#responseObject" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#94d60a" stroke="transparent" points="213,-236.5 213,-257.5 319,-257.5 319,-236.5 213,-236.5"/>
 <polygon fill="none" stroke="black" points="213,-236.5 213,-257.5 319,-257.5 319,-236.5 213,-236.5"/>
 <text text-anchor="start" x="228" y="-244.3" font-family="arial" font-weight="bold" font-size="14.00">Media Map</text>
@@ -59,7 +59,7 @@
 <!-- requestBodyObject -->
 <g id="node2" class="node">
 <title>requestBodyObject</title>
-<g id="a_node2"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#requestBodyObject" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node2"><a xlink:href="https://spec.openapis.org/oas/latest#requestBodyObject" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#939598" stroke="transparent" points="8.5,-169.5 8.5,-190.5 161.5,-190.5 161.5,-169.5 8.5,-169.5"/>
 <polygon fill="none" stroke="black" points="8.5,-169.5 8.5,-190.5 161.5,-190.5 161.5,-169.5 8.5,-169.5"/>
 <text text-anchor="start" x="11.5" y="-177.3" font-family="arial" font-weight="bold" font-size="14.00">Request Body Object</text>
@@ -84,7 +84,7 @@
 <!-- mediaTypeObject -->
 <g id="node4" class="node">
 <title>mediaTypeObject</title>
-<g id="a_node4"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#mediaTypeObject" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node4"><a xlink:href="https://spec.openapis.org/oas/latest#mediaTypeObject" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#94d60a" stroke="transparent" points="371,-215.5 371,-236.5 507,-236.5 507,-215.5 371,-215.5"/>
 <polygon fill="none" stroke="black" points="371,-215.5 371,-236.5 507,-236.5 507,-215.5 371,-215.5"/>
 <text text-anchor="start" x="374" y="-223.3" font-family="arial" font-weight="bold" font-size="14.00">Media Type Object</text>
@@ -118,7 +118,7 @@
 <!-- schemaObject -->
 <g id="node5" class="node">
 <title>schemaObject</title>
-<g id="a_node5"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#schemaObject" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node5"><a xlink:href="https://spec.openapis.org/oas/latest#schemaObject" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#94d60a" stroke="transparent" points="559,-193.5 559,-214.5 671,-214.5 671,-193.5 559,-193.5"/>
 <polygon fill="none" stroke="black" points="559,-193.5 559,-214.5 671,-214.5 671,-193.5 559,-193.5"/>
 <text text-anchor="start" x="562" y="-201.3" font-family="arial" font-weight="bold" font-size="14.00">Schema Object</text>
@@ -161,7 +161,7 @@
 <!-- propertiesMap -->
 <g id="node6" class="node">
 <title>propertiesMap</title>
-<g id="a_node6"><a xlink:href="https://spec.openapis.org/oas/v3.1.0#schemaObject" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node6"><a xlink:href="https://spec.openapis.org/oas/latest#schemaObject" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#94d60a" stroke="transparent" points="723.5,-87.5 723.5,-108.5 836.5,-108.5 836.5,-87.5 723.5,-87.5"/>
 <polygon fill="none" stroke="black" points="723.5,-87.5 723.5,-108.5 836.5,-108.5 836.5,-87.5 723.5,-87.5"/>
 <text text-anchor="start" x="726.5" y="-95.3" font-family="arial" font-weight="bold" font-size="14.00">Properties Map</text>

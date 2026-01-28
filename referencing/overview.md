@@ -13,14 +13,14 @@ External references are how multiple documents are linked into a single OpenAPI 
 
 ## A taxonomy of references
 
-References exist in several variations in the OpenAPI Specification (OAS) versions 3.0 and 3.1, as shown in the following table.  Note that an *adjacent keyword* is a keyword in the same JSON Object (whether it is written in JSON or YAML) as the reference keyword.
+References exist in several variations in the OpenAPI Specification (OAS) versions 3.0 and 3.1 (and beyond), as shown in the following table.  Note that an *adjacent keyword* is a keyword in the same JSON Object (whether it is written in JSON or YAML) as the reference keyword.
 
 | OAS Version | Object | Reference Keyword | Adjacent Keywords | Behavior |
 | ----------- | ------ | ----------------- | ----------------- | -------- |
 | 3.0         | Reference Object | `"$ref"`       | ignored           | logically replace the Reference Object with the reference target |
-| 3.1         | Reference Object | `"$ref"`       | `"summary"` and `"description"` allowed; others ignored | logically replace the Reference Object with a copy of the target, overwriting the target's `"summary"` and/or `"description"` fields with those of the Reference Object if they are present |
+| 3.1+        | Reference Object | `"$ref"`       | `"summary"` and `"description"` allowed; others ignored | logically replace the Reference Object with a copy of the target, overwriting the target's `"summary"` and/or `"description"` fields with those of the Reference Object if they are present |
 | 3.x         | Path Item Object | `"$ref"`       | allowed under some circumstances | logically replace the Path Item Object containing the `"$ref"` with a Path Item Object that combines the fields of the target Path Item Object with the non-`"$ref"` fields of the Path Item Object containing the `"$ref"`, as long as none of those fields conflict |
-| 3.1         | Schema Object | `"$ref"`   | allowed | Apply the target Schema Object to the same instance location as the Schema Object containing the `"$ref"`, and combine the results with the results of other keywords in the Schema Object containing the `"$ref"` just as you would any other keyword results; this is more-or-less equivalent to using a one-element `"allOf"` |
+| 3.1+        | Schema Object | `"$ref"`   | allowed | Apply the target Schema Object to the same instance location as the Schema Object containing the `"$ref"`, and combine the results with the results of other keywords in the Schema Object containing the `"$ref"` just as you would any other keyword results; this is more-or-less equivalent to using a one-element `"allOf"` |
 | 3.x         | Link Object   | `"operationRef"` | allowed, except `"operationId"` | treat the reference target as the target of the link described by the Link Object |
 | 3.x         | Discriminator Object | `"mapping"` | n/a | for each name under `"mapping"`, if the value is not the name of a Schema Object under the Components Object, treat it as a reference to the schema to use when the discriminator field matches the mapping name |
 
