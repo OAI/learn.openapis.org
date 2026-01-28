@@ -44,7 +44,7 @@ paths:
               ...
 ```
 
-Additionally, the [Path Item](https://spec.openapis.org/oas/v3.1.0#path-item-object), [Operation](https://spec.openapis.org/oas/v3.1.0#operation-object) and [Example](https://spec.openapis.org/oas/v3.1.0#example-object) objects, which usually have long descriptions, accept a `summary` field providing a short description. Documentation generators can use this field in the full list of paths, or in page headers, for example.
+Additionally, the [Path Item](https://spec.openapis.org/oas/latest#path-item-object), [Operation](https://spec.openapis.org/oas/latest#operation-object) and [Example](https://spec.openapis.org/oas/latest#example-object) objects, which usually have long descriptions, accept a `summary` field providing a short description. Documentation generators can use this field in the full list of paths, or in page headers, for example.
 
 ## Providing Long Descriptions in YAML
 
@@ -160,7 +160,7 @@ This allows, among other things:
 
 Two different fields provide this functionality: `example` allows one sample whereas `examples` allows multiple. **Only one of the two fields can be present in each object**.
 
-The content of the `example` field (found in [Parameter](https://spec.openapis.org/oas/v3.1.0#parameterExample), [Media Type](https://spec.openapis.org/oas/v3.1.0#mediaTypeExample) and [Schema](https://spec.openapis.org/oas/v3.1.0#schemaExample) Objects) must match the format of its parent object:
+The content of the `example` field (found in [Parameter](https://spec.openapis.org/oas/latest#parameterExample), [Media Type](https://spec.openapis.org/oas/latest#mediaTypeExample) and [Schema](https://spec.openapis.org/oas/latest#schemaExample) Objects) must match the format of its parent object:
 
 ```yaml
 schema:
@@ -171,7 +171,7 @@ schema:
     example: 1
 ```
 
-On the other hand, the `examples` field (found in [Parameter](https://spec.openapis.org/oas/v3.1.0#parameterExample) and [Media Type](https://spec.openapis.org/oas/v3.1.0#mediaTypeExample) Objects) is a map pairing an example name with an [Example Object](https://spec.openapis.org/oas/v3.1.0#example-object). This object provides a `summary` and a `description` for the example along with the actual code (inside the `value` field or as an external reference in the `externalValue` field, but not both).
+On the other hand, the `examples` field (found in [Parameter](https://spec.openapis.org/oas/latest#parameterExample) and [Media Type](https://spec.openapis.org/oas/latest#mediaTypeExample) Objects) is a map pairing an example name with an [Example Object](https://spec.openapis.org/oas/latest#example-object). This object provides a `summary` and a `description` for the example along with the actual code (inside the `value` field or as an external reference in the `externalValue` field, but not both).
 
 This is a snippet from the [Tic Tac Toe sample API](/examples/v3.1/tictactoe.yaml):
 

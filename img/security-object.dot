@@ -3,7 +3,7 @@ digraph componentsObject {
   rankdir = LR;
   bgcolor = white;
   
-  openapiObject [URL = "https://spec.openapis.org/oas/v3.1.0#oasObject";target = "_blank";label = <<table border="0" cellspacing="0">
+  openapiObject [URL = "https://spec.openapis.org/oas/latest#oasObject";target = "_blank";label = <<table border="0" cellspacing="0">
     <tr><td border="1" bgcolor="#94d60a"><font face="arial"><b>OpenAPI Object</b></font></td></tr>
     <tr><td border="1" bgcolor="#6ca437">openapi</td></tr>
     <tr><td border="1" bgcolor="#6ca437">info</td></tr>
@@ -12,14 +12,14 @@ digraph componentsObject {
     <tr><td border="1" bgcolor="#6ca437" port="paths">paths</td></tr>
     <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>;];
   
-  pathsObject [URL = "https://spec.openapis.org/oas/v3.1.0#pathsObject";target = "_blank";label = <<table border="0" cellspacing="0">
+  pathsObject [URL = "https://spec.openapis.org/oas/latest#pathsObject";target = "_blank";label = <<table border="0" cellspacing="0">
     <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>Paths Object</b></font></td></tr>
     <tr><td border="1" bgcolor="#6d6e71" port="endpoint1">/endpoint1</td></tr>
     <tr><td border="1" bgcolor="#6d6e71" port="endpoint2">/endpoint2</td></tr>
     <tr><td border="1" bgcolor="#6d6e71" port="endpoint3">/endpoint3</td></tr>
     <tr><td border="1" bgcolor="#6d6e71">…</td></tr></table>>;];
   
-  pathItemObject [URL = "https://spec.openapis.org/oas/v3.1.0#pathItemObject";target = "_blank";label = <<table border="0" cellspacing="0">
+  pathItemObject [URL = "https://spec.openapis.org/oas/latest#pathItemObject";target = "_blank";label = <<table border="0" cellspacing="0">
     <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>Path Item Object</b></font></td></tr>
     <tr><td border="1" bgcolor="#6d6e71" port="delete">delete</td></tr>
     <tr><td border="1" bgcolor="#6d6e71" port="get">get</td></tr>
@@ -28,16 +28,16 @@ digraph componentsObject {
     <tr><td border="1" bgcolor="#6d6e71" port="put">put</td></tr>
     <tr><td border="1" bgcolor="#6d6e71">…</td></tr></table>>;];
   
-  operationObject [URL = "https://spec.openapis.org/oas/v3.1.0#operationObject";target = "_blank";label = <<table border="0" cellspacing="0">
+  operationObject [URL = "https://spec.openapis.org/oas/latest#operationObject";target = "_blank";label = <<table border="0" cellspacing="0">
     <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Operation Object</b></font></td></tr>
     <tr><td border="1" bgcolor="#6ca437" port="security">security</td></tr>
     <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>;];
   
-  securityRequirementObject [URL = "https://spec.openapis.org/oas/v3.1.0#securityRequirementObject";target = "_blank";label = <<table border="0" cellspacing="0">
+  securityRequirementObject [URL = "https://spec.openapis.org/oas/latest#securityRequirementObject";target = "_blank";label = <<table border="0" cellspacing="0">
     <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Security Requirement Object</b></font></td></tr>
     <tr><td border="1" bgcolor="#6ca437" port="name">name</td></tr></table>>;];
   
-  componentsObject [URL = "https://spec.openapis.org/oas/v3.1.0#componentsObject";target = "_blank";label = <<table border="0" cellspacing="0">
+  componentsObject [URL = "https://spec.openapis.org/oas/latest#componentsObject";target = "_blank";label = <<table border="0" cellspacing="0">
     <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Components Object</b></font></td></tr>
     <tr><td border="1" bgcolor="#6ca437" port="schemas">schemas</td></tr>
     <tr><td border="1" bgcolor="#6ca437" port="responses">responses</td></tr>
@@ -45,14 +45,14 @@ digraph componentsObject {
     <tr><td border="1" bgcolor="#6ca437" port="securitySchemes">securitySchemes</td></tr>
     <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>;];
   
-  securitySchemesMap [URL = "https://spec.openapis.org/oas/v3.1.0#securitySchemeObject";target = "_blank";label = <<table border="0" cellspacing="0">
+  securitySchemesMap [URL = "https://spec.openapis.org/oas/latest#securitySchemeObject";target = "_blank";label = <<table border="0" cellspacing="0">
     <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Security Schemes Map</b></font></td></tr>
     <tr><td border="1" bgcolor="#6ca437" port="securityScheme1">securityScheme1</td></tr>
     <tr><td border="1" bgcolor="#6ca437" port="securityScheme2">securityScheme2</td></tr>
     <tr><td border="1" bgcolor="#6ca437" port="securityScheme3">securityScheme3</td></tr>
     <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>;];
   
-  securitySchemeObject [URL = "https://spec.openapis.org/oas/v3.1.0#securitySchemeObject";target = "_blank";label = <<table border="0" cellspacing="0">
+  securitySchemeObject [URL = "https://spec.openapis.org/oas/latest#securitySchemeObject";target = "_blank";label = <<table border="0" cellspacing="0">
     <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>Security Scheme Object</b></font></td></tr>
     <tr><td border="1" bgcolor="#6ca437">type</td></tr>
     <tr><td border="1" bgcolor="#6ca437">description</td></tr>
@@ -61,14 +61,14 @@ digraph componentsObject {
     <tr><td border="1" bgcolor="#6ca437" port="flows">flows</td></tr>
     <tr><td border="1" bgcolor="#6ca437">…</td></tr></table>>;];
   
-  oauthFlowsObject [URL = "https://spec.openapis.org/oas/v3.1.0#oauthFlowsObject";target = "_blank";label = <<table border="0" cellspacing="0">
+  oauthFlowsObject [URL = "https://spec.openapis.org/oas/latest#oauthFlowsObject";target = "_blank";label = <<table border="0" cellspacing="0">
     <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>OAuth Flows Object</b></font></td></tr>
     <tr><td border="1" bgcolor="#6ca437" port="implicit">implicit</td></tr>
     <tr><td border="1" bgcolor="#6ca437" port="password">password</td></tr>
     <tr><td border="1" bgcolor="#6ca437" port="clientCredentials">clientCredentials</td></tr>
     <tr><td border="1" bgcolor="#6ca437" port="authorizationCode">authorizationCode</td></tr></table>>;];
   
-  oauthFlowObject [URL = "https://spec.openapis.org/oas/v3.1.0#oauthFlowObject";target = "_blank";label = <<table border="0" cellspacing="0">
+  oauthFlowObject [URL = "https://spec.openapis.org/oas/latest#oauthFlowObject";target = "_blank";label = <<table border="0" cellspacing="0">
     <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>OAuth Flow Object</b></font></td></tr>
     <tr><td border="1" bgcolor="#6ca437">authorizationUrl</td></tr>
     <tr><td border="1" bgcolor="#6ca437">tokenUrl</td></tr>

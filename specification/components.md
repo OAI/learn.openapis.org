@@ -11,8 +11,8 @@ As is often the case, the example built through the previous pages has grown too
 
 ## The Components Object
 
-The [Components Object](https://spec.openapis.org/oas/v3.1.0#components-object),
-accessible through the `components` field in the root [OpenAPI Object](https://spec.openapis.org/oas/v3.1.0#openapi-object), contains definitions for objects to be reused in other parts of the description.
+The [Components Object](https://spec.openapis.org/oas/latest#components-object),
+accessible through the `components` field in the root [OpenAPI Object](https://spec.openapis.org/oas/latest#openapi-object), contains definitions for objects to be reused in other parts of the description.
 
 <figure style="text-align:center">
    <object type="image/svg+xml" data="{{site.baseurl}}/img/components-object.svg"></object>
@@ -21,9 +21,9 @@ accessible through the `components` field in the root [OpenAPI Object](https://s
 
 Most objects in an OAD can be replaced by a **reference** to a **component**, drastically reducing the OAD's size and maintenance cost (just like methods do in programming languages).
 
-Not all objects can be referenced, though, only those listed as fields of the [Components Object](https://spec.openapis.org/oas/v3.1.0#components-object) like `schemas`, `responses` and `parameters` to name a few.
+Not all objects can be referenced, though, only those listed as fields of the [Components Object](https://spec.openapis.org/oas/latest#components-object) like `schemas`, `responses` and `parameters` to name a few.
 
-Each field in the [Components Object](https://spec.openapis.org/oas/v3.1.0#components-object) is a map pairing component names with objects to be reused. The type of these objects must match the parent field, e.g. objects in the `schemas` map must be [Schema Objects](https://spec.openapis.org/oas/v3.1.0#schema-object).
+Each field in the [Components Object](https://spec.openapis.org/oas/latest#components-object) is a map pairing component names with objects to be reused. The type of these objects must match the parent field, e.g. objects in the `schemas` map must be [Schema Objects](https://spec.openapis.org/oas/latest#schema-object).
 
 ```yaml
 components:
@@ -41,16 +41,16 @@ components:
 
 The above example defines two components:
 
-- `coordinate` is a schema component, usable wherever a [Schema Object](https://spec.openapis.org/oas/v3.1.0#schema-object) is expected.
-- `rowParam` is a parameter component, usable wherever a [Parameter Object](https://spec.openapis.org/oas/v3.1.0#parameter-object) is expected.
+- `coordinate` is a schema component, usable wherever a [Schema Object](https://spec.openapis.org/oas/latest#schema-object) is expected.
+- `rowParam` is a parameter component, usable wherever a [Parameter Object](https://spec.openapis.org/oas/latest#parameter-object) is expected.
 
 The next section explains how to reference these components.
 
 ## The Reference Object
 
-Any OpenAPI object of the types supported by the [Components Object](https://spec.openapis.org/oas/v3.1.0#components-object) can be replaced by a [Reference Object](https://spec.openapis.org/oas/v3.1.0#reference-object) pointing to a component.
+Any OpenAPI object of the types supported by the [Components Object](https://spec.openapis.org/oas/latest#components-object) can be replaced by a [Reference Object](https://spec.openapis.org/oas/latest#reference-object) pointing to a component.
 
-[Reference Objects](https://spec.openapis.org/oas/v3.1.0#reference-object) are actually [JSON References](https://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03): they contain a single field named `$ref` and its string value is a URI pointing to the referenced object:
+[Reference Objects](https://spec.openapis.org/oas/latest#reference-object) are actually [JSON References](https://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03): they contain a single field named `$ref` and its string value is a URI pointing to the referenced object:
 
 ```yaml
   $ref: 'https://gigantic-server.com/schemas/Monster/schema.yaml'
@@ -103,11 +103,11 @@ The complete [Tic Tac Toe sample API](/examples/v3.1/tictactoe.yaml) (not includ
 
 Whenever the same piece of JSON or YAML is repeated in an OAD, it is probably worth converting it into a component and referencing it everywhere else.
 
-Furthermore, [Reference Objects](https://spec.openapis.org/oas/v3.1.0#reference-object) allow splitting a description into several documents to keep them organized and their individual size manageable.
+Furthermore, [Reference Objects](https://spec.openapis.org/oas/latest#reference-object) allow splitting a description into several documents to keep them organized and their individual size manageable.
 
 This page has shown that:
 
-- Reusable [Components Objects](https://spec.openapis.org/oas/v3.1.0#components-object) can be defined by using the `components` field of the root [OpenAPI Object](https://spec.openapis.org/oas/v3.1.0#openapi-object).
+- Reusable [Components Objects](https://spec.openapis.org/oas/latest#components-object) can be defined by using the `components` field of the root [OpenAPI Object](https://spec.openapis.org/oas/latest#openapi-object).
 - Components can be referenced from any place where an object of the same type is expected using `$ref`.
 - References are actually URIs so they are very flexible.
 
