@@ -11,7 +11,7 @@ An OpenAPI Description (OAD) describes an HTTP-like API in one or more machine-r
 
 ## OpenAPI Description Syntax
 
-OpenAPI Descriptions are written as one or more text documents. Each document represents a [JSON](https://en.wikipedia.org/wiki/JSON) object, in either JSON or [YAML](https://en.wikipedia.org/wiki/YAML) format.  **References** are used to link parts of the JSON object(s) to each other, and this linked structure is the complete OpenAPI Description.  Parsing begins with an [OpenAPI Object](https://spec.openapis.org/oas/v3.1.0#openapi-object), and the document containing that object is known as the **entry document**, commonly called `openapi.json` or `openapi.yaml`.
+OpenAPI Descriptions are written as one or more text documents. Each document represents a [JSON](https://en.wikipedia.org/wiki/JSON) object, in either JSON or [YAML](https://en.wikipedia.org/wiki/YAML) format.  **References** are used to link parts of the JSON object(s) to each other, and this linked structure is the complete OpenAPI Description.  Parsing begins with an [OpenAPI Object](https://spec.openapis.org/oas/latest#openapi-object), and the document containing that object is known as the **entry document**, commonly called `openapi.json` or `openapi.yaml`.
 
 This section very briefly describes and compares the JSON and YAML data formats.
 
@@ -73,18 +73,18 @@ Finally, object field names are case-sensitive: `openapi` is not the same thing 
 
 ## Minimal OpenAPI Description Structure
 
-To be entirely precise, a minimal OpenAPI Description (OAD) is a single JSON object containing fields adhering to the structure defined in the [OpenAPI Specification](https://spec.openapis.org/oas/v3.1.0) (OAS).
+To be entirely precise, a minimal OpenAPI Description (OAD) is a single JSON object containing fields adhering to the structure defined in the [OpenAPI Specification](https://spec.openapis.org/oas/latest) (OAS).
 
 The OAS structure is long and complex so this section just describes the minimal set of fields it must contain, while following pages give more details about specific objects. The [OpenAPI Map](https://openapi-map.apihandyman.io/) is a nice visual tool that can help familiarize the reader with this long specification.
 
-The root object in any OpenAPI Description is the [OpenAPI Object](https://spec.openapis.org/oas/v3.1.0#openapi-object), and only two of its fields are mandatory: `openapi` and `info`. Additionally, at least one of `paths`, `components` and `webhooks` is required.
+The root object in any OpenAPI Description is the [OpenAPI Object](https://spec.openapis.org/oas/latest#openapi-object), and only two of its fields are mandatory: `openapi` and `info`. Additionally, at least one of `paths`, `components` and `webhooks` is required.
 
 * `openapi` (**string**): This indicates the version of the OAS this OAD is using, e.g. "3.1.0". Using this field tools can check that the description correctly adheres to the specification.
 * `$self` (**string**, OpenAPI 3.2+): Provides the canonical URI for the document itself, used as the base URI for resolving relative references. This field is optional.
-* `info` ([Info Object](https://spec.openapis.org/oas/v3.1.0#info-object)): This provides general information about the API (like its description, author and contact information) but the only mandatory fields are `title` and `version`.
+* `info` ([Info Object](https://spec.openapis.org/oas/latest#info-object)): This provides general information about the API (like its description, author and contact information) but the only mandatory fields are `title` and `version`.
   * `title` (**string**): A human-readable name for the API, like "GitHub REST API", useful to keep API collections organized.
   * `version` (**string**): Indicates the version **of the API description** (not to be confused with the OAS version above). Tools can use this field to generate code that ensures that clients and servers are interacting through the same version of the API, for example.
-* `paths` ([Paths Object](https://spec.openapis.org/oas/v3.1.0#paths-object)): This describes all the **endpoints** of the API, including their parameters and all possible server responses. Server and client code can be generated from this description, along with its documentation.
+* `paths` ([Paths Object](https://spec.openapis.org/oas/latest#paths-object)): This describes all the **endpoints** of the API, including their parameters and all possible server responses. Server and client code can be generated from this description, along with its documentation.
 
 <figure style="text-align:center">
   <object type="image/svg+xml" data="{{site.baseurl}}/img/openapi-object.svg"></object>
@@ -108,7 +108,7 @@ This API is not very useful because it **defines no operations** (it has no endp
 This page has shown that:
 
 * The syntax (language) used to write OpenAPI Descriptions can be **JSON**, **YAML** or **both**.
-* An OpenAPI Description is a JSON object including the fields described in the [OpenAPI Specification](https://spec.openapis.org/oas/v3.1.0).
+* An OpenAPI Description is a JSON object including the fields described in the [OpenAPI Specification](https://spec.openapis.org/oas/latest).
 * Every OpenAPI Descriptions must contain an OpenAPI Object with at least the fields `openapi`, and `info`,  and either `paths`, `components` or `webhooks`.
 
 [The following page](paths) describes the contents of the `paths` field so endpoints can be added to the above minimal snippet.

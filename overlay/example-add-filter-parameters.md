@@ -43,5 +43,5 @@ You can adjust the target expression to apply only to certain paths or methods, 
 It might be more elegant to first update the `components.parameters` section of an OpenAPI description to add the parameters there, and then refer to those new entries when updating the existing operations.
 The Overlay Specification requires that each action is processed in the order it is seen in the Overlay document.
 
-The 1.0 specification has a [traits example](https://spec.openapis.org/overlay/v1.0.0.html#traits-example) that uses the `x-oas-traits` [Specification Extension](https://spec.openapis.org/oas/v3.1.1.html#specification-extensions).
+The 1.0 specification has a [traits example](https://spec.openapis.org/overlay/latest#traits-example) that uses the `x-oas-traits` [Specification Extension](https://spec.openapis.org/oas/latest#specification-extensions).
 This extension is a useful convention to consider when you use a pattern like the one described here.

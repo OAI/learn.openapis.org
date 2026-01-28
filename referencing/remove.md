@@ -29,7 +29,7 @@ If your OAD does not run afoul of any of the above difficulties, you _can_ produ
 
 It is possible to convert a multi-document OAD into a single document even if not all references can be removed.  However, depending on exactly how your multi-document OAD is structured, this may be more complex than just removing references.  Sadly, the reasons have to do with [painfully obscure and technical ambiguities](https://github.com/OAI/oascomply/blob/main/reports/processing-model-summary.md) regarding how multi-document OADs are intended to be parsed.  The OpenAPI Initiative hopes to clarify this in future versions of the specification.
 
-* It is possible for a Link Object's `"operationId"` to point to an Operation Object in a Path Item Object that is never referenced; it is unclear how this case should handle it, which is one reason the OAS itself [advises against](https://spec.openapis.org/oas/v3.1.0#fixed-fields-16) using `"operationId"` in  multi-document OADs
+* It is possible for a Link Object's `"operationId"` to point to an Operation Object in a Path Item Object that is never referenced; it is unclear how this case should handle it, which is one reason the OAS itself [advises against](https://spec.openapis.org/oas/latest#fixed-fields-16) using `"operationId"` in  multi-document OADs
 * Security Scheme Objects are never referenced, only named in Security Requirement Objects, and must be taken into account
 * There is no standard place to put referenced Path Item Objects in OAS 3.0
 * The resolution of server configuration and security settings can be unclear in multi-document OADs
