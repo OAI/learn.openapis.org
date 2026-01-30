@@ -12,7 +12,7 @@
 <!-- openapiObject -->
 <g id="node1" class="node">
 <title>openapiObject</title>
-<g id="a_node1"><a xlink:href="https://spec.openapis.org/oas/latest#oas-object" xlink:title="Click to jump to the specification of this object" target="_blank">
+<g id="a_node1"><a xlink:href="https://spec.openapis.org/oas/latest#openapi-object" xlink:title="Click to jump to the specification of this object" target="_blank">
 <polygon fill="#94d60a" stroke="transparent" points="8,-110 8,-131 124,-131 124,-110 8,-110"/>
 <polygon fill="none" stroke="black" points="8,-110 8,-131 124,-131 124,-110 8,-110"/>
 <text text-anchor="start" x="11" y="-117.8" font-family="arial" font-weight="bold" font-size="14.00">OpenAPI Object</text>
