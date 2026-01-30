@@ -104,7 +104,7 @@ Parameters can reside in different locations, indicated by the `in` field. The m
 
 ### Parameter Type
 
-Most of the time a parameter's type can be specified by using a [Schema Object](https://spec.openapis.org/oas/latest#schemaObject) in the `schema` field. Schema objects allow defining primitive or complex types (like arrays or objects) and impose additional restrictions on them. For example:
+Most of the time a parameter's type can be specified by using a [Schema Object](https://spec.openapis.org/oas/latest#schema-object) in the `schema` field. Schema objects allow defining primitive or complex types (like arrays or objects) and impose additional restrictions on them. For example:
 
 ```yaml
 parameters:
@@ -177,7 +177,7 @@ For more serialization options see the [Parameter Object](https://spec.openapis.
 
 When updating a record on a database, the parameters are typically used to identify the record whereas the message body provides its new content.
 
-The message body of a request is specified through the `requestBody` field in the [Operation Object](https://spec.openapis.org/oas/latest#operationRequestBody), which is a [Request Body Object](https://spec.openapis.org/oas/latest#request-body-object).
+The message body of a request is specified through the `requestBody` field in the [Operation Object](https://spec.openapis.org/oas/latest#operation-request-body), which is a [Request Body Object](https://spec.openapis.org/oas/latest#request-body-object).
 
 ```yaml
 paths:

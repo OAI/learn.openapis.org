@@ -137,7 +137,7 @@ servers:
 This page has shown that:
 
 - Server lists can be provided through the `servers` array.
-- This array is present at different levels ([OpenAPI Object](https://spec.openapis.org/oas/latest#oasServers), [Path Item Object](https://spec.openapis.org/oas/latest#pathItemServers) and  [Operation Object](https://spec.openapis.org/oas/latest#operationServers)) and only the innermost one is used.
+- This array is present at different levels ([OpenAPI Object](https://spec.openapis.org/oas/latest#oas-servers), [Path Item Object](https://spec.openapis.org/oas/latest#pathItemServers) and  [Operation Object](https://spec.openapis.org/oas/latest#operationServers)) and only the innermost one is used.
 - Server URLs can contain `variables` for further customization like `https://{username}.server.com:{port}/{version}`
 
 The [next page](security) shows how to describe API security.
