@@ -177,3 +177,5 @@ paths:
 5. **Consider your audience** - use audience-specific tags when serving multiple user types
 
 Enhanced tags in OpenAPI 3.2 provide powerful tools for creating well-organized, navigable API documentation that scales with your API's complexity.
+
+The [next page](http-methods) shows how to define standard HTTP methods.

@@ -242,3 +242,5 @@ In this page we've learnt that:
 - Security properties must be described using a Security Scheme object.
 - A Security Scheme object is referenced either globally or for a given Operation using a Security Requirement.
 - OpenAPI supports a number of built-in security types, with different properties dependent on the type.
+
+The [next page](tags) shows how to use enhanced tags.

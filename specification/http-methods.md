@@ -117,3 +117,5 @@ paths:
 ```
 
 This approach makes it easier to adopt new methods as the HTTP landscape evolves.
+
+The [next page](media-types) shows how to define sequential and streaming media types.
