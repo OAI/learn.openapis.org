@@ -29,7 +29,7 @@ Find and follow/chat with us in one of these places:
 
 Being a member of OpenAPI Initiative gives your organization a voice within the project, as well as supporting our activities.
 
-- [View the list of members](https://www.openapis.org/membership/members)
+- [View the list of members](https://www.openapis.org/membershipmembers)
 - [Learn more about membership](https://www.openapis.org/membership/join)
 
 ## Participate in Working Groups
