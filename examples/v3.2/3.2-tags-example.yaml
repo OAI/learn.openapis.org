@@ -29,18 +29,22 @@ tags:
 paths:
   /flights:
     get:
-      tags: [flights]
+      tags: 
+        - flights
       summary: List all flights
   /flights/international:
     get:
-      tags: [international]
+      tags: 
+        - international
       summary: List international flights
   /flights/domestic:
     get:
-      tags: [domestic]
+      tags: 
+        - domestic
       summary: List domestic flights
   /flights/delayed:
     get:
-      tags: [delays]
+      tags: 
+        - delays
       summary: Get delayed flights
 
