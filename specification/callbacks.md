@@ -7,7 +7,8 @@ nav_order: 11
 
 # Providing Callbacks
 
-Callbacks are a feature of OAS that provides a relationship between a given [Operation](https://spec.openapis.org/oas/v3.1.0#operation-object) and a [Path Item](https://spec.openapis.org/oas/v3.1.0#path-item-object) that can be implemented by an API consumer. A callback allows an API provider to describe this relationship at design time, indicating that they can call an API consumer at a given URL based on the definition of both the Callback and dynamic values received during a given Operation. These are described as "out-of-band" by the specification as the expectation is the API provider can call such URLs independently of the Operation in which they are defined.
+Callbacks describe an asynchronous request pattern where the API consumer makes a request to the API provider and includes a URL where the response should be sent. The API provider sends an immediate acknowledgement, then when the result is ready, sends it as a request to the URL the consumer supplied.
+The server can use the contents of the Callback and the dynamic values received during a given Operation to make the followup call back to the client (hence the name "callback") at the URL provided.
 
 <figure style="text-align:center">
   <object type="image/svg+xml" data="{{site.baseurl}}/img/callback-object.svg"></object>
