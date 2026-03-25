@@ -2,7 +2,7 @@
 layout: default
 title: Enhanced Tags
 parent: The OpenAPI Specification Explained
-nav_order: 9
+nav_order: 10
 ---
 
 # Enhanced Tags

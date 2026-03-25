@@ -2,7 +2,7 @@
 layout: default
 title: Implementing Links
 parent: The OpenAPI Specification Explained
-nav_order: 10
+nav_order: 13
 ---
 
 # Implementing Links

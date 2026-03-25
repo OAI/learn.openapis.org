@@ -2,7 +2,7 @@
 layout: default
 title: Parameters and Payload of an Operation
 parent: The OpenAPI Specification Explained
-nav_order: 4
+nav_order: 5
 ---
 
 # Parameters and Payload of an Operation

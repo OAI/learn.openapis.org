@@ -14,12 +14,15 @@ The following pages introduce the syntax and structure of an OpenAPI Description
 
 - [Structure of an OpenAPI Description](structure): JSON, YAML, `openapi`, and `info`.
 - [API Endpoints](paths): `paths` and `responses`.
+- [HTTP Methods](http-methods): standard and custom HTTP methods.
 - [Content of Message Bodies](content): `content` and `schema`.
 - [Parameters and Payload of an Operation](parameters): `parameters` and `requestBody`.
 - [Reusing Descriptions](components): `components` and `$ref`.
 - [Providing Documentation and Examples](docs): `summary`, `description` and `example`/`examples`.
 - [API Servers](servers): `servers`.
 - [Describing API Security](security): `securitySchemes` and `security`.
+- [Enhanced Tags](tags): `tags`.
 - [Providing Callbacks](callbacks): `callbacks`.
 - [Providing Webhooks](webhooks): `webhooks`.
 - [Implementing Links](links): `links`.
+- [Sequential Media Types](media-types): `itemSchema` and streaming media types.
