@@ -2,7 +2,7 @@
 layout: default
 title: Content of Message Bodies
 parent: The OpenAPI Specification Explained
-nav_order: 3
+nav_order: 4
 ---
 
 # Content of Message Bodies

@@ -2,7 +2,7 @@
 layout: default
 title: Reusing Description
 parent: The OpenAPI Specification Explained
-nav_order: 5
+nav_order: 6
 ---
 
 # Reusing Descriptions
