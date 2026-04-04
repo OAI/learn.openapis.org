@@ -2,7 +2,7 @@
 layout: default
 title: Providing Documentation and Examples
 parent: The OpenAPI Specification Explained
-nav_order: 6
+nav_order: 7
 ---
 
 # Providing Documentation and Examples

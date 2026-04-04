@@ -2,7 +2,7 @@
 layout: default
 title: Sequential Media Types
 parent: The OpenAPI Specification Explained
-nav_order: 11
+nav_order: 14
 ---
 
 # Sequential Media Types

@@ -2,7 +2,7 @@
 layout: default
 title: Describing API Security
 parent: The OpenAPI Specification Explained
-nav_order: 8
+nav_order: 9
 ---
 
 # Describing API Security
@@ -16,7 +16,7 @@ OpenAPI provides the [Security Scheme Object](https://spec.openapis.org/oas/late
   <figcaption>Security Scheme objects are referenced as Security Requirements, either <a href="structure.html#minimal-openapi-description-structure">globally</a> or by an <a href="paths.html#the-operation-object">Operation</a>.</figcaption>
 </figure>
 
-A Security Requirement declared for a given Operation takes precedence over global Security Requirements. A number of security mechanisms are supported. Each mechanism is indicated using the `type` property, which is shown in the examples below.
+A Security Requirement declared for a given Operation takes precedence over global Security Requirements. Several security mechanisms are supported. Each mechanism is indicated using the `type` property, which is shown in the examples below.
 
 There are currently five supported security types, namely:
 
@@ -204,7 +204,7 @@ paths:
 
 The final Security Scheme type is OpenID Connect, which provides information for [OpenID Connect Discovery](https://openid.net/specs/openid-connect-discovery-1_0.html).
 
-OpenID Connect Core is obviously an OAuth 2.0 profile and is supported by some of properties the OAuth Flow Object. However, OpenID Connect is generally more complex than plain OAuth 2.0 and given OpenID Connect Discovery provides a machine-readable format at the discovery endpoint it makes sense to outsource this functionality entirely.
+OpenID Connect Core is an OAuth 2.0 profile and is supported by some of the properties of the OAuth Flow Object. However, OpenID Connect is generally more complex than plain OAuth 2.0 and given OpenID Connect Discovery provides a machine-readable format at the discovery endpoint it makes sense to outsource this functionality entirely.
 
 Specifying OpenID Connect is therefore straightforward in that you provide the discovery endpoint in the property `openIdConnectUrl`:
 
@@ -236,7 +236,7 @@ This approach allows OpenAPI to provide _just enough_ information for humans and
 
 ## Summary
 
-In this page we've learnt that:
+In this page we've learned that:
 
 - API security can be described in OpenAPI.
 - Security properties must be described using a Security Scheme object.
