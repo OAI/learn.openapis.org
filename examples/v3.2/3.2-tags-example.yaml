@@ -4,7 +4,7 @@ info:
   version: 1.0.0
 
 # This example shows that OpenAPI 3.2’s enhanced tag object can express hierarchical 
-# navigation, UI intent, and documentation links directly in the spec: top‑level **flights** tags
+# navigation, UI intent, and documentation links directly in the spec: top‑level **flights** tag
 # group related **international** and **domestic** child tags via `parent`, `kind` distinguishes how tags 
 # should be treated in tooling (e.g., `nav` for navigation, `badge` to visually highlight **delays**), 
 # and `externalDocs` attaches rich, out‑of‑band documentation to a specific tag so clients and documentation 
