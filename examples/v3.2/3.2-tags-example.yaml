@@ -1,0 +1,57 @@
+openapi: 3.2.0
+info:
+  title: Flight API
+  version: 1.0.0
+
+# This example shows that OpenAPI 3.2’s enhanced tag object can express hierarchical 
+# navigation, UI intent, and documentation links directly in the spec: top‑level **flights** tag
+# groups related **international** and **domestic** child tags via `parent`, `kind` distinguishes how tags 
+# should be treated in tooling (e.g., `nav` for navigation, `badge` to visually highlight **delays**), 
+# and `externalDocs` attaches rich, out‑of‑band documentation to a specific tag so clients and documentation 
+# portals can surface deep links for particular functional areas.
+
+tags:
+  - name: flights
+    summary: Flights
+    description: Core flight operations
+    kind: nav
+  - name: international
+    summary: International
+    description: Flights that cross country borders
+    parent: flights
+    kind: nav
+  - name: domestic
+    summary: Domestic
+    description: Flights within a single country
+    parent: flights
+    kind: nav
+  - name: delays
+    summary: Delays
+    description: Information about flight delays
+    kind: badge
+    externalDocs:
+      description: Delay compensation policies
+      url: https://docs.example.com/delay-policies
+
+paths:
+  /flights:
+    get:
+      tags: 
+        - flights
+      summary: List all flights
+  /flights/international:
+    get:
+      tags: 
+        - international
+      summary: List international flights
+  /flights/domestic:
+    get:
+      tags: 
+        - domestic
+      summary: List domestic flights
+  /flights/delayed:
+    get:
+      tags: 
+        - delays
+      summary: Get delayed flights
+
