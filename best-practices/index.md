@@ -8,7 +8,7 @@ has_toc: false
 
 # Best Practices
 
-This page contains general pieces of advice which do not strictly belong to the [Specification Explained](specification) chapter because they are not directly tied to the OpenAPI Specification (OAS).
+This page contains general pieces of advice which do not strictly belong to the [Specification Explained](../specification) chapter because they are not directly tied to the OpenAPI Specification (OAS).
 
 However, they greatly simplify creating and maintaining OpenAPI Descriptions (OADs), so they are worth keeping in mind.
 
