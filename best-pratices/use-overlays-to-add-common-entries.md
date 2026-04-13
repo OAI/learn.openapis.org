@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Use Overlays for Global Information
+title: Use Overlays to Add Common Entries
 parent: Best Practices
 nav_order: 7
 ---

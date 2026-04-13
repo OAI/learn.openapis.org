@@ -20,5 +20,5 @@ This section is split into topic-specific pages:
 - [Make the OpenAPI Descriptions Available to the Users](make-the-openapi-descriptions-available-to-the-users)
 - [There is Seldom Need to Write OpenAPI Descriptions by Hand](there-is-seldom-need-to-write-openapi-descriptions-by-hand)
 - [Describing Large APIs](describing-large-apis)
-- [Use Overlays for Global Information](use-overlays-for-global-information)
+- [Use Overlays to Add Common Entries](use-overlays-to-add-common-entries)
 - [Links to External Best Practices](links-to-external-best-practices)
