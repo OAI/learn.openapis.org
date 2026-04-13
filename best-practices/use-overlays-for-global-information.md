@@ -5,7 +5,7 @@ parent: Best Practices
 nav_order: 7
 ---
 
-# Use Overlays for Global Information
+# Use Overlays to Add Common Entries
 
 When information or behavior should be applied across many operations, it is more maintainable to keep it in an [Overlay](../overlay) rather than repeating changes throughout the source OpenAPI description.
 
