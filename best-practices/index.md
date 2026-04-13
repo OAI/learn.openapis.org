@@ -14,11 +14,10 @@ However, they greatly simplify creating and maintaining OpenAPI Descriptions (OA
 
 This section is split into topic-specific pages:
 
-- [Use a Design-First Approach](use-a-design-first-approach)
-- [Keep a Single Source of Truth](keep-a-single-source-of-truth)
-- [Add OpenAPI Descriptions to Source Control](add-openapi-descriptions-to-source-control)
-- [Make the OpenAPI Descriptions Available to the Users](make-the-openapi-descriptions-available-to-the-users)
-- [There is Seldom Need to Write OpenAPI Descriptions by Hand](there-is-seldom-need-to-write-openapi-descriptions-by-hand)
-- [Describing Large APIs](describing-large-apis)
-- [Use Overlays to Add Common Entries](use-overlays-to-add-common-entries)
-- [Links to External Best Practices](links-to-external-best-practices)
+{% assign section_pages = site.pages
+	| where_exp: "p", "p.dir == page.dir and p.url != page.url and p.title"
+	| sort: "nav_order" %}
+
+{% for p in section_pages %}
+- [{{ p.title }}]({{ p.url | relative_url }})
+{% endfor %}
