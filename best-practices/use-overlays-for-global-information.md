@@ -7,7 +7,7 @@ nav_order: 7
 
 # Use Overlays for Global Information
 
-When information or behavior should be applied across many operations, it is often more maintainable to keep it in an [Overlay](../overlay) rather than repeating changes throughout the source OpenAPI description.
+When information or behavior should be applied across many operations, it is more maintainable to keep it in an [Overlay](../overlay) rather than repeating changes throughout the source OpenAPI description.
 
 This works especially well for cross-cutting concerns, such as:
 
