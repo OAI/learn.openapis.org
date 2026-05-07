@@ -62,6 +62,16 @@
                   "$ref": "#/components/schemas/mark"
                 }
               }
+            },
+            "links": {
+              "markSquare": {
+                "description": "Operation to use if the mark value returned indicates the square is empty",
+                "operationId": "put-square",
+                "parameters": {
+                  "row": "$request.path.row",
+                  "column": "$request.path.column"
+                }
+              }
             }
           },
           "400": {
@@ -90,6 +100,17 @@
         "description": "Places a mark on the board and retrieves the whole board and the winner (if any).",
         "tags": ["Gameplay"],
         "operationId": "put-square",
+        "parameters": [
+          {
+            "name": "progressUrl",
+            "in": "header",
+            "description": "Progress URL that should be called if asynchronous response is returned",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "requestBody": {
           "required": true,
           "content": {
@@ -107,6 +128,17 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/status"
+                }
+              }
+            }
+          },
+          "202": {
+            "description": "Mark operation has not completed. Use callback to check for progress",
+            "headers": {
+              "Location": {
+                "description": "Callback URL",
+                "schema": {
+                  "type": "string"
                 }
               }
             }
@@ -140,7 +172,32 @@
           {
             "user2AppOauth": ["board:write"]
           }
-        ]
+        ],
+        "callbacks": {
+          "statusCallback": {
+            "{$request.header.progressUrl}": {
+              "post": {
+                "summary": "Status of mark operation",
+                "description": "Provides the status of the mark operation",
+                "operationId": "markOperationCallback",
+                "requestBody": {
+                  "content": {
+                    "application/json": {
+                      "schema": {
+                        "$ref": "#/components/schemas/status"
+                      }
+                    }
+                  }
+                },
+                "responses": {
+                  "200": {
+                    "description": "Mark operation status received"
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   },
@@ -252,6 +309,27 @@
             "scopes": {
               "board:read": "Read the board",
               "board:write": "Write to the board"
+            }
+          }
+        }
+      }
+    }
+  },
+  "webhooks": {
+    "markStatus": {
+      "post": {
+        "summary": "Status of mark operation",
+        "description": "Provides the status of the mark operation on completion",
+        "operationId": "markOperationWebhook",
+        "responses": {
+          "200": {
+            "description": "Mark operation has completed successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/status"
+                }
+              }
             }
           }
         }
