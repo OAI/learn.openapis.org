@@ -54,7 +54,7 @@ paths:
 The following Overlay adds a `429` response to every operation and includes `Retry-After` plus `RateLimit-*` headers inspired by [draft-polli-ratelimit-headers-02](https://www.ietf.org/archive/id/draft-polli-ratelimit-headers-02.html):
 
 ```yaml
-overlay: 1.0.0
+overlay: 1.1.0
 info:
   title: Add global throttling response and rate limit headers
   version: 1.0.0
