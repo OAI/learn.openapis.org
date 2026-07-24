@@ -9,13 +9,13 @@ nav_order: 6
 
 This is a collection of small hints related to working with large OADs.
 
-- **Do not repeat yourself** (The DRY principle). If the same piece of YAML or JSON appears more than once in the document, it's time to move it to the `components` section and reference it from other places using `$ref` (See [Reusing Descriptions](../specification/components). Not only will the resulting document be smaller but it will also be much easier to maintain).
+- **Do not repeat yourself** (The DRY principle). If the same piece of YAML or JSON appears multiple times in the document, it's time to move it to the `components` section and reference it from other places using `$ref` (See [Reusing Descriptions](../specification/components). Not only will the resulting document be smaller but it will also be much easier to maintain).
 
   Components can be referenced from other documents, so you can even reuse them across different API descriptions!
 
 - **Split the description into several documents**: Smaller files are easier to navigate, but too many of them are equally taxing. The key lies somewhere in the middle.
 
-  A good rule of thumb is to use the natural hierarchy present in URLs to build your directory structure. For example, put all routes starting with `/users` (like `/users` and `/users/{id}`) in the same file (think of it as a "sub-API").
+  A good principle is to use the natural hierarchy present in URLs to build your directory structure. For example, put all routes starting with `/users` (like `/users` and `/users/{id}`) in the same file (think of it as a "sub-API").
 
   Bear in mind that some tools might have issues with large files, whereas some other tools might not handle too many files gracefully. The solution will have to take your toolkit into account.
 
