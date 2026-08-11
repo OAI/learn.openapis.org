@@ -9,7 +9,7 @@ nav_order: 2
 
 Overlay 1.2 adds reusable actions and clearer document identification rules. Most 1.1 documents can upgrade by updating the version number, but documents that use fragments in `extends` need a small adjustment because document-identifying fields now identify whole documents only.
 
-## Getting started
+## Update the version number
 
 Begin by updating the version number in your Overlay document. Locate this line in your JSON or YAML file:
 
@@ -32,7 +32,7 @@ Overlay 1.2 clarifies document identification and base URI behavior:
 - `extends` and `$self` must not contain URI fragments.
 - When the target OpenAPI description defines `$self`, the overlay's `extends` value should match that URI.
 
-If your 1.1 overlay used a fragment in `extends`, remove it and keep the specific location in `target`:
+If your 1.1 overlay used a fragment in `extends`, remove it:
 
 ```yaml
 # Before
@@ -103,10 +103,10 @@ components:
                     message:
                       type: string
 actions:
-  - $ref: '#/components/actions/errorResponse'
-    target: "$.paths['/items'].get.responses"
-  - $ref: '#/components/actions/errorResponse'
-    target: "$.paths['/some-items'].delete.responses"
+  - target: "$.paths['/items'].get.responses"
+    $ref: '#/components/actions/errorResponse'    
+  - target: "$.paths['/some-items'].delete.responses"
+    $ref: '#/components/actions/errorResponse'
 ```
 
 Reusable actions have a few important rules:
@@ -133,8 +133,8 @@ components:
           '404':
             description: Not Found
 actions:
-  - $ref: '#/components/actions/error-response~1v1~0beta'
-    target: '$.paths.*.get.responses'
+  - target: '$.paths.*.get.responses'
+    $ref: '#/components/actions/error-response~1v1~0beta'
 ```
 
 ## Keep one-off actions as they are
