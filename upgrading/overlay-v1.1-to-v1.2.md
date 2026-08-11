@@ -32,32 +32,6 @@ Overlay 1.2 clarifies document identification and base URI behavior:
 - `extends` and `$self` must not contain URI fragments.
 - When the target OpenAPI description defines `$self`, the overlay's `extends` value should match that URI.
 
-If your 1.1 overlay used a fragment in `extends`, remove it:
-
-```yaml
-# Before
-overlay: 1.1.0
-info:
-  title: Overlay targeting a path item
-  version: 1.0.0
-extends: https://api.example.com/openapi/petstore.yaml#/paths/~1pets
-actions:
-  - target: "$.paths['/pets']"
-    update:
-      x-reviewed: true
-
-# After
-overlay: 1.2.0
-info:
-  title: Overlay targeting a path item
-  version: 1.0.0
-extends: https://api.example.com/openapi/petstore.yaml
-actions:
-  - target: "$.paths['/pets']"
-    update:
-      x-reviewed: true
-```
-
 Add `$self` when the overlay needs portable relative references, such as when it may be copied between repositories or loaded from a system without a stable retrieval URL:
 
 ```yaml
