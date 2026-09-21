@@ -44,7 +44,7 @@ components:
       in: header
 ```
 
-The API provider can then use the name of this Scheme Scheme object to apply security either globally or for a given Operation (both are shown below for the sake of exemplar):
+The API provider can then use the name of this Security Scheme object to apply security either globally or for a given Operation (both are shown below for the sake of exemplar):
 
 ```yaml
 openapi: 3.1.0
