@@ -22,5 +22,6 @@ Each version upgrade guide covers:
 - [Upgrading from OpenAPI 3.0 to 3.1](v3.0-to-v3.1): Learn about the significant changes and how to migrate your API descriptions.
 - [Upgrading from OpenAPI 3.1 to 3.2](v3.1-to-v3.2): Discover the latest features and migration path for the newest version.
 - [Upgrading from Overlay 1.0 to 1.1](overlay-v1.0-to-v1.1): Discover the latest features and migration path for the newest version.
+- [Upgrading from Overlay 1.1 to 1.2](overlay-v1.1-to-v1.2): Learn about reusable actions and updated document identification rules.
 
 Choose the appropriate guide based on your current OpenAPI version and target version.
