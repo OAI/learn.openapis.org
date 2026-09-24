@@ -1,0 +1,52 @@
+# learn.openapis.org
+
+This is the source repository for [learn.openapis.org](https://learn.openapis.org), the official learning guide for the OpenAPI Specification (OAS). It is maintained by the [OpenAPI Initiative (OAI)](https://www.openapis.org), an open governance consortium under the Linux Foundation.
+
+## Purpose
+
+This site is a companion to the [OpenAPI Specification](https://spec.openapis.org/oas/latest). It helps API designers and developers learn how to write OpenAPI Descriptions (OADs) — machine-readable documents that describe HTTP-based APIs. It answers "how do I accomplish X?" and "what is the purpose of Y?" questions that are out of scope for the spec itself.
+
+## Site Structure
+
+- **Getting Started** (`index.md`): Entry point; intended audience, advantages of OpenAPI, and navigation guide.
+- **Introduction** (`introduction.md`): What APIs are, why machine-readable descriptions matter, history of OAS, and comparison with Swagger.
+- **Glossary** (`glossary.md`): Key acronyms (OAS, OAD, OAI, TDC, TSC, etc.) and definitions.
+- **The OpenAPI Specification Explained** (`specification/`): Step-by-step tutorials and reference by topic:
+  - `structure.md` — JSON/YAML syntax, entry documents, the OpenAPI Object
+  - `paths.md` — API endpoints, `paths`, `responses`
+  - `content.md` — Message body content, `schema`
+  - `parameters.md` — `parameters` and `requestBody`
+  - `components.md` — Reuse via `components` and `$ref`
+  - `docs.md` — Documentation: `summary`, `description`, `example`/`examples`
+  - `servers.md` — `servers` object
+  - `media-types.md` — Media types
+  - `http-methods.md` — HTTP methods
+  - `security.md` — Security schemes
+  - `tags.md` — Tags
+- **Best Practices** (`best-practices.md`): Design-first vs code-first, single source of truth, source control, tooling.
+- **Examples** (`examples/`): Annotated OAD examples in JSON and YAML for OAS v3.0 and v3.1, including:
+  - `tictactoe` — A full game API example
+  - `non-oauth-scopes` — Security scopes example
+  - `webhook-example` — Webhook usage example
+- **Community** (`community.md`): Links to OAI resources (GitHub, Slack, LinkedIn, Newsletter, membership).
+- **Upgrading** (`upgrading/`): Guides for migrating between OAS versions.
+- **Referencing** (`referencing/`): How to use `$ref` and multi-document OADs.
+- **Overlay** (`overlay/`): OpenAPI Overlay specification content.
+
+## Key Concepts
+
+- **OpenAPI Specification (OAS)**: Vendor-neutral, open format for describing HTTP-based remote APIs. Originally based on Swagger 2.0, donated by SmartBear in 2015.
+- **OpenAPI Description (OAD)**: One or more documents written to a specific OAS version that together describe an API. Can be JSON or YAML.
+- **Entry document**: The document where OAD processing begins, containing the root OpenAPI Object (commonly `openapi.json` or `openapi.yaml`).
+- **Design-first**: The OAI-recommended approach of writing the OAD before writing implementation code.
+
+## Technology
+
+The site is built with [Jekyll](https://jekyllrb.com/) using the Just the Docs theme. Content is authored in Markdown. Run locally with `bundle exec jekyll serve`.
+
+## Related Resources
+
+- Specification: https://spec.openapis.org
+- OAI GitHub: https://github.com/OAI/
+- OpenAPI Tooling: https://tools.openapis.org
+- This repo: https://github.com/OAI/learn.openapis.org
