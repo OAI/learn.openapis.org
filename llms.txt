@@ -1,0 +1,39 @@
+---
+layout: null
+sitemap: false
+---
+{%- comment -%}
+  Generated at build time from the site's pages (title, parent, nav_order).
+  Do not list pages by hand here: add or reorder pages through their front matter.
+  Format: https://llmstxt.org
+{%- endcomment -%}
+{%- assign base = "https://learn.openapis.org" -%}
+{%- assign all_pages = site.pages | where_exp: "p", "p.title and p.layout" -%}
+{%- assign top_pages = all_pages | where_exp: "p", "p.parent == nil" | sort: "nav_order" -%}
+# learn.openapis.org
+
+> The official learning guide for the OpenAPI Specification (OAS), maintained by the [OpenAPI Initiative](https://www.openapis.org) (OAI). It helps API designers and developers learn how to write OpenAPI Descriptions (OADs), machine-readable documents that describe HTTP-based APIs, and answers the "how do I accomplish X?" and "what is the purpose of Y?" questions that are out of scope for the specification itself.
+
+This site is a companion to the [OpenAPI Specification](https://spec.openapis.org/oas/latest). Content is authored in Markdown and built with Jekyll using the Just the Docs theme. Source: https://github.com/OAI/learn.openapis.org
+
+## Pages
+{% for p in top_pages %}
+- [{{ p.title }}]({{ base }}{{ p.url }})
+{%- endfor %}
+{% for section in top_pages %}{% if section.has_children %}
+## {{ section.title }}
+{% assign children = all_pages | where: "parent", section.title -%}
+{%- assign ordered = children | where_exp: "p", "p.nav_order" | sort: "nav_order" -%}
+{%- assign unordered = children | where_exp: "p", "p.nav_order == nil" | sort: "url" %}
+{% for p in ordered -%}
+- [{{ p.title }}]({{ base }}{{ p.url }})
+{% endfor -%}
+{%- for p in unordered -%}
+- [{{ p.title }}]({{ base }}{{ p.url }})
+{% endfor -%}
+{% endif %}{% endfor %}
+## Related resources
+
+- [OpenAPI Specification](https://spec.openapis.org)
+- [OpenAPI Initiative on GitHub](https://github.com/OAI/)
+- [OpenAPI tooling](https://tools.openapis.org)
