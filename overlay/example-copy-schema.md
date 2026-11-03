@@ -20,8 +20,8 @@ actions:
     description: Ensure the target schema is present
     update:
       Bar: {}
-  - target: '$.components.schemas['Bar']'
-    copy: '$.components.schemas['Foo']'
+  - target: "$.components.schemas['Bar']"
+    copy: "$.components.schemas['Foo']"
     description: Copy the Foo Schema to Bar
 ```
 
