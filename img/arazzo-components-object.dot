@@ -1,0 +1,74 @@
+digraph arazzoComponentsObject {
+  node [shape = none; fontname = monospace; tooltip = "Click to jump to the specification of this object";];
+  rankdir = LR;
+  bgcolor = white;
+
+  arazzoObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#arazzo-specification-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>&#160;Arazzo Specification Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="components">components</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr>
+    </table>>;];
+
+  componentsObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#components-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>&#160;Components Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="inputs">inputs</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="parameters">parameters</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="successActions">successActions</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="failureActions">failureActions</td></tr>
+    </table>>;];
+
+  reusableObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#reusable-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>&#160;Reusable Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="reference">reference</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="value">value</td></tr>
+    </table>>;];
+
+  workflowObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#workflow-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>&#160;Workflow Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="parameters">parameters</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="successActions">successActions</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="failureActions">failureActions</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr>
+    </table>>;];
+
+  stepObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#step-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>&#160;Step Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="parameters">parameters</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="onSuccess">onSuccess</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="onFailure">onFailure</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr>
+    </table>>;];
+
+  parameterObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#parameter-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>&#160;Parameter Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr>
+    </table>>;];
+
+  successObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#success-action-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>&#160;Success Action Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr>
+    </table>>;];
+
+  failureObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#failure-action-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>&#160;Failure Action Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr>
+    </table>>;];
+
+  jsonSchema [URL = "https://json-schema.org/draft/2020-12"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>&#160;JSON Schema&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr>
+    </table>>;];
+
+  arazzoObject:components -> componentsObject:header;
+  componentsObject:inputs -> jsonSchema:header;
+  componentsObject:parameters -> parameterObject:header;
+  componentsObject:successActions -> successObject:header;
+  componentsObject:failureActions -> failureObject:header;
+  workflowObject:parameters -> reusableObject:header;
+  workflowObject:successActions -> reusableObject:header;
+  workflowObject:failureActions -> reusableObject:header;
+  stepObject:parameters -> reusableObject:header;
+  stepObject:onSuccess -> reusableObject:header;
+  stepObject:onFailure -> reusableObject:header;
+  reusableObject:reference -> componentsObject:header;
+}

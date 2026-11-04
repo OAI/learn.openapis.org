@@ -1,0 +1,40 @@
+digraph arazzoCriterionObject {
+  node [shape = none; fontname = monospace; tooltip = "Click to jump to the specification of this object";];
+  rankdir = LR;
+  bgcolor = white;
+
+  stepObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#step-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>&#160;Step Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="successCriteria">successCriteria</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr>
+    </table>>;];
+
+  successObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#success-action-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>&#160;Success Action Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="criteria">criteria</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr>
+    </table>>;];
+
+  failureObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#failure-action-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>&#160;Failure Action Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="criteria">criteria</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr>
+    </table>>;];
+
+  criterionObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#criterion-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>&#160;Criterion Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="context">context</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="condition">condition</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="type">type</td></tr>
+    </table>>;];
+
+  expressionTypeObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#expression-type-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>&#160;Expression Type Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr>
+    </table>>;];
+
+  stepObject:successCriteria -> criterionObject:header;
+  successObject:criteria -> criterionObject:header;
+  failureObject:criteria -> criterionObject:header;
+  criterionObject:type -> expressionTypeObject:header;
+}

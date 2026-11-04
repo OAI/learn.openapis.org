@@ -1,0 +1,51 @@
+digraph arazzoParameterObject {
+  node [shape = none; fontname = monospace; tooltip = "Click to jump to the specification of this object";];
+  rankdir = LR;
+  bgcolor = white;
+
+  workflowObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#workflow-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>&#160;Workflow Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="parameters">parameters</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr>
+    </table>>;];
+
+  stepObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#step-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>&#160;Step Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="parameters">parameters</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="requestBody">requestBody</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr>
+    </table>>;];
+
+  parameterObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#parameter-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>&#160;Parameter Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="name">name</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="in">in</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="value">value</td></tr>
+    </table>>;];
+
+  requestBodyObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#request-body-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>&#160;Request Body Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="contentType">contentType</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="payload">payload</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="replacements">replacements</td></tr>
+    </table>>;];
+
+  replacementObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#payload-replacement-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>&#160;Payload Replacement Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="target">target</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="targetSelectorType">targetSelectorType</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="value">value</td></tr>
+    </table>>;];
+
+  selectorObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#selector-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>&#160;Selector Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr>
+    </table>>;];
+
+  workflowObject:parameters -> parameterObject:header;
+  stepObject:parameters -> parameterObject:header;
+  stepObject:requestBody -> requestBodyObject:header;
+  requestBodyObject:replacements -> replacementObject:header;
+  parameterObject:value -> selectorObject:header;
+  replacementObject:value -> selectorObject:header;
+}

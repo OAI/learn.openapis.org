@@ -1,0 +1,76 @@
+arazzo: 1.1.0
+info:
+  title: Tic Tac Toe Event Workflows
+  summary: Plays a move using messages and reads the result using the Tic Tac Toe API
+  version: 1.0.0
+sourceDescriptions:
+  - name: ticTacToe
+    url: ../../../v3.1/tictactoe.yaml
+    type: openapi
+  - name: ticTacToeEvents
+    url: asyncapi.yaml
+    type: asyncapi
+workflows:
+  - workflowId: playMoveByMessage
+    summary: Submit a move as a message and report the state of the game
+    inputs:
+      type: object
+      required:
+        - moveId
+        - row
+        - column
+        - mark
+        - apiKey
+      properties:
+        moveId:
+          type: string
+        row:
+          type: integer
+        column:
+          type: integer
+        mark:
+          type: string
+        apiKey:
+          type: string
+    steps:
+      - stepId: submitMove
+        description: Send a message containing the move
+        operationId: $sourceDescriptions.ticTacToeEvents.submitMove
+        action: send
+        parameters:
+          - name: moveId
+            in: header
+            value: $inputs.moveId
+        requestBody:
+          payload:
+            row: $inputs.row
+            column: $inputs.column
+            mark: $inputs.mark
+      - stepId: receiveResult
+        description: Wait for the message containing the result of the move
+        operationId: $sourceDescriptions.ticTacToeEvents.publishMoveResult
+        action: receive
+        correlationId: $inputs.moveId
+        timeout: 6000
+        dependsOn:
+          - submitMove
+        successCriteria:
+          - condition: $message.payload#/accepted == true
+        outputs:
+          winner: $message.payload#/winner
+      - stepId: readBoard
+        description: Read the board once the move is complete
+        operationId: $sourceDescriptions.ticTacToe.get-board
+        dependsOn:
+          - receiveResult
+        parameters:
+          - name: api-key
+            in: header
+            value: $inputs.apiKey
+        successCriteria:
+          - condition: $statusCode == 200
+        outputs:
+          board: $response.body#/board
+    outputs:
+      winner: $steps.receiveResult.outputs.winner
+      board: $steps.readBoard.outputs.board

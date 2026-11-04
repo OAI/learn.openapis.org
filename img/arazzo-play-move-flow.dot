@@ -1,0 +1,16 @@
+digraph arazzoPlayMoveFlow {
+  rankdir = LR;
+  bgcolor = white;
+  node [shape = box; style = filled; fontname = monospace; fillcolor = "#94d60a"];
+  edge [fontname = arial; fontsize = 11];
+
+  ended [label = "Workflow ends"; shape = oval; fillcolor = "#939598"];
+
+  checkSquare -> placeMark [label = "square is empty\n(next step)"];
+  checkSquare -> readBoard [label = "squareTaken\n(goto)"];
+  checkSquare -> ended [label = "any failure\n(default)"];
+  placeMark -> readBoard [label = "200 or 202\n(next step)"];
+  placeMark -> placeMark [label = "tryAgain: 5xx\n(retry, up to 3 times)"];
+  placeMark -> ended [label = "moveRejected: 400\n(end)"];
+  readBoard -> ended [label = "outputs winner and board"];
+}

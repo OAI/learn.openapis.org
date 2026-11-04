@@ -1,0 +1,13 @@
+digraph arazzoAsyncFlow {
+  rankdir = LR;
+  bgcolor = white;
+  node [shape = box; style = filled; fontname = monospace; fillcolor = "#94d60a"];
+  edge [fontname = arial; fontsize = 11];
+
+  broker [label = "Message broker"; shape = oval; fillcolor = "#939598"];
+
+  submitMove -> broker [label = "send: move\n(completes once sent)"];
+  broker -> receiveResult [label = "receive: result with\nmatching correlationId"];
+  submitMove -> receiveResult [label = "dependsOn"; style = dashed];
+  receiveResult -> readBoard [label = "dependsOn"; style = dashed];
+}

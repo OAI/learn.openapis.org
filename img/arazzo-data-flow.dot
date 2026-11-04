@@ -1,0 +1,15 @@
+digraph arazzoDataFlow {
+  rankdir = LR;
+  bgcolor = white;
+  node [shape = box; style = filled; fontname = monospace; fillcolor = "#6ca437"];
+  edge [fontname = arial; fontsize = 11];
+
+  inputs [label = "Workflow\ninputs"];
+  readBoard [label = "readBoard\nStep"; fillcolor = "#94d60a"];
+  stepOutputs [label = "Step\noutputs"];
+  workflowOutputs [label = "Workflow\noutputs"];
+
+  inputs -> readBoard [label = "$inputs.apiKey"];
+  readBoard -> stepOutputs [label = "$response.body\n#/winner"];
+  stepOutputs -> workflowOutputs [label = "$steps.readBoard\n.outputs.winner"];
+}

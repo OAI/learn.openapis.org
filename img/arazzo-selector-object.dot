@@ -1,0 +1,62 @@
+digraph arazzoSelectorObject {
+  node [shape = none; fontname = monospace; tooltip = "Click to jump to the specification of this object";];
+  rankdir = LR;
+  bgcolor = white;
+
+  stepObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#step-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>&#160;Step Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="outputs">outputs</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr>
+    </table>>;];
+
+  workflowObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#workflow-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>&#160;Workflow Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="outputs">outputs</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr>
+    </table>>;];
+
+  parameterObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#parameter-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>&#160;Parameter Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="value">value</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr>
+    </table>>;];
+
+  requestBodyObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#request-body-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>&#160;Request Body Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="payload">payload</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr>
+    </table>>;];
+
+  replacementObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#payload-replacement-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>&#160;Payload Replacement Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="value">value</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr>
+    </table>>;];
+
+  selectorObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#selector-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>&#160;Selector Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="context">context</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="selector">selector</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="type">type</td></tr>
+    </table>>;];
+
+  expressionTypeObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#expression-type-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>&#160;Expression Type Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="type">type</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="version">version</td></tr>
+    </table>>;];
+
+  criterionObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#criterion-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>&#160;Criterion Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="type">type</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr>
+    </table>>;];
+
+  stepObject:outputs -> selectorObject:header;
+  workflowObject:outputs -> selectorObject:header;
+  parameterObject:value -> selectorObject:header;
+  requestBodyObject:payload -> selectorObject:header;
+  replacementObject:value -> selectorObject:header;
+  selectorObject:type -> expressionTypeObject:header;
+  criterionObject:type -> expressionTypeObject:header;
+}

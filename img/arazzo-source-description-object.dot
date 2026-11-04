@@ -1,0 +1,38 @@
+digraph arazzoSourceDescriptionObject {
+  node [shape = none; fontname = monospace; tooltip = "Click to jump to the specification of this object";];
+  rankdir = LR;
+  bgcolor = white;
+
+  arazzoObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#arazzo-specification-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>&#160;Arazzo Specification Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="sourceDescriptions">sourceDescriptions</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr>
+    </table>>;];
+
+  sourceObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#source-description-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>&#160;Source Description Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="name">name</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="url">url</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="type">type</td></tr>
+    </table>>;];
+
+  openapiDescription [URL = "https://spec.openapis.org/oas/latest.html"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>&#160;OpenAPI Description&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr>
+    </table>>;];
+
+  asyncapiDescription [URL = "https://www.asyncapi.com/docs/reference/specification/latest"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>&#160;AsyncAPI Description&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr>
+    </table>>;];
+
+  arazzoDescription [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#arazzo-description"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>&#160;Arazzo Description&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr>
+    </table>>;];
+
+  arazzoObject:sourceDescriptions -> sourceObject:header;
+  sourceObject:url -> openapiDescription:header;
+  sourceObject:url -> asyncapiDescription:header;
+  sourceObject:url -> arazzoDescription:header;
+}

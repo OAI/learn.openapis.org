@@ -36,4 +36,12 @@ docker run -p 4000:4000 -v $(pwd):/site bretfisher/jekyll-serve
 
 ### Regenerating the images
 
-This can be done with the `dot` tool from the `graphviz` package.
+This can be done with the `dot` tool from the `graphviz` package. For example:
+
+```bash
+dot -Tsvg img/arazzo-object.dot -o img/arazzo-object.svg
+```
+
+## Writing pages
+
+Pages that explain a specification object by object should follow the [style guide](STYLE-GUIDE.md).

@@ -21,6 +21,8 @@ These acronyms are commonly used in OpenAPI discussions, and are defined in the 
 
 # Definitions
 
+- **Arazzo Description**: One or more documents written according to a specific version of the Arazzo Specification, that together describe API workflows ([explanation](arazzo/))
+- **Arazzo Specification**: A specification to describe sequences of API calls and the dependencies between them ([repository](https://github.com/OAI/Arazzo-Specification))
 - **Business Governance Board** (BGB): The group representing OAI members responsible for the initiatives budgets, trademarks, and possible future certification programs, as described in the [OAI Charter](https://www.openapis.org/participate/how-to-contribute/governance)
 - **document**: A local file, network resource, or other distinct entity in a particular format such as JSON or YAML
   - **entry document**: The document in an OAD where processing begins, starting with an OpenAPI Object ([3.0](https://spec.openapis.org/oas/v3.0.3#openapi-object), [3.1](https://spec.openapis.org/oas/v3.1.0#openapi-object))
@@ -35,7 +37,7 @@ These acronyms are commonly used in OpenAPI discussions, and are defined in the 
 - **Special Interest Group** (SIG): OpenAPI working groups focused on [specific topics](https://github.com/OAI/OpenAPI-Specification/blob/main/SPECIAL_INTEREST_GROUPS.md) related to the OAS or possible additional companion specifications
 - **Technical Developer Community** (TDC): The community of developers and specification-writers who work on and provide feedback to OpenAPI projects ([weekly Zoom calls](https://github.com/OAI/OpenAPI-Specification/issues?q=is%3Aissue+is%3Aopen+%22Open+Community+%28TDC%29+Meeting%22) are on Thursdays from 9-10 AM US-Pacific)
 - **Technical Steering Committee** (TSC): The [group of people](https://github.com/OAI/OpenAPI-Specification/blob/main/MAINTAINERS.md) charged with stewarding the OAI's specification work, as described in the [OAI Charter](https://www.openapis.org/participate/how-to-contribute/governance)
-- **Workflows Specification**: A proposed specification from the workflows SIG ([repository](https://github.com/OAI/sig-workflows))
+- **Workflows Specification**: The former name of the Arazzo Specification, from the workflows SIG ([repository](https://github.com/OAI/Arazzo-Specification))
 
 ## Documents and OpenAPI Descriptions
 

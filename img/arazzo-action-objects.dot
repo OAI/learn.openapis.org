@@ -1,0 +1,53 @@
+digraph arazzoActionObjects {
+  node [shape = none; fontname = monospace; tooltip = "Click to jump to the specification of this object";];
+  rankdir = LR;
+  bgcolor = white;
+
+  workflowObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#workflow-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>&#160;Workflow Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="successActions">successActions</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="failureActions">failureActions</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr>
+    </table>>;];
+
+  stepObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#step-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>&#160;Step Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="onSuccess">onSuccess</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="onFailure">onFailure</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr>
+    </table>>;];
+
+  successObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#success-action-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>&#160;Success Action Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="name">name</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="type">type</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="workflowId">workflowId</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="stepId">stepId</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="parameters">parameters</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="criteria">criteria</td></tr>
+    </table>>;];
+
+  failureObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#failure-action-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>&#160;Failure Action Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="name">name</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="type">type</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="workflowId">workflowId</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="stepId">stepId</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="parameters">parameters</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="retryAfter">retryAfter</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="retryLimit">retryLimit</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="criteria">criteria</td></tr>
+    </table>>;];
+
+  criterionObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#criterion-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>&#160;Criterion Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr>
+    </table>>;];
+
+  workflowObject:successActions -> successObject:header;
+  workflowObject:failureActions -> failureObject:header;
+  stepObject:onSuccess -> successObject:header;
+  stepObject:onFailure -> failureObject:header;
+  successObject:criteria -> criterionObject:header;
+  failureObject:criteria -> criterionObject:header;
+}
