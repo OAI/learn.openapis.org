@@ -1,0 +1,47 @@
+digraph arazzoAsyncStep {
+  node [shape = none; fontname = monospace; tooltip = "Click to jump to the specification of this object";];
+  rankdir = LR;
+  bgcolor = white;
+
+  sourceObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#source-description-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>&#160;Source Description Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="name">name</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71" port="type">type</td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr>
+    </table>>;];
+
+  stepObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#step-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#94d60a" port="header"><font face="arial"><b>&#160;Step Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="stepId">stepId</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="description">description</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="operationId">operationId</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="operationPath">operationPath</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="channelPath">channelPath</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="workflowId">workflowId</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="parameters">parameters</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="requestBody">requestBody</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="successCriteria">successCriteria</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="onSuccess">onSuccess</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="onFailure">onFailure</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="outputs">outputs</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="timeout">timeout</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="correlationId">correlationId</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="action">action</td></tr>
+    <tr><td border="1" bgcolor="#6ca437" port="dependsOn">dependsOn</td></tr>
+    </table>>;];
+
+  criterionObject [URL = "https://spec.openapis.org/arazzo/v1.1.0.html#criterion-object"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>&#160;Criterion Object&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr>
+    </table>>;];
+
+  asyncapiDescription [URL = "https://www.asyncapi.com/docs/reference/specification/latest"; target = "_blank"; label = <<table border="0" cellspacing="0">
+    <tr><td border="1" bgcolor="#939598" port="header"><font face="arial"><b>&#160;AsyncAPI Description&#160;</b></font></td></tr>
+    <tr><td border="1" bgcolor="#6d6e71">…</td></tr>
+    </table>>;];
+
+  stepObject:operationId -> sourceObject:header;
+  stepObject:channelPath -> sourceObject:header;
+  stepObject:successCriteria -> criterionObject:header;
+  sourceObject:type -> asyncapiDescription:header;
+}

@@ -1,0 +1,82 @@
+asyncapi: 3.0.0
+info:
+  title: Tic Tac Toe Events
+  description: Accepts moves and publishes the result of each move as messages.
+  version: 1.0.0
+servers:
+  production:
+    host: events.learn.openapis.org
+    protocol: mqtt
+channels:
+  moves:
+    address: moves
+    messages:
+      move:
+        $ref: "#/components/messages/move"
+  moveResults:
+    address: move-results
+    messages:
+      moveResult:
+        $ref: "#/components/messages/moveResult"
+operations:
+  submitMove:
+    action: receive
+    channel:
+      $ref: "#/channels/moves"
+    messages:
+      - $ref: "#/channels/moves/messages/move"
+  publishMoveResult:
+    action: send
+    channel:
+      $ref: "#/channels/moveResults"
+    messages:
+      - $ref: "#/channels/moveResults/messages/moveResult"
+components:
+  messages:
+    move:
+      contentType: application/json
+      correlationId:
+        description: Identifies the move across its request and result messages
+        location: $message.header#/moveId
+      headers:
+        type: object
+        required:
+          - moveId
+        properties:
+          moveId:
+            type: string
+      payload:
+        type: object
+        required:
+          - row
+          - column
+          - mark
+        properties:
+          row:
+            type: integer
+          column:
+            type: integer
+          mark:
+            type: string
+    moveResult:
+      contentType: application/json
+      correlationId:
+        description: Identifies the move across its request and result messages
+        location: $message.header#/moveId
+      headers:
+        type: object
+        required:
+          - moveId
+        properties:
+          moveId:
+            type: string
+      payload:
+        type: object
+        required:
+          - accepted
+          - winner
+        properties:
+          accepted:
+            type: boolean
+          winner:
+            type: string

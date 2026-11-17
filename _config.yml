@@ -18,3 +18,4 @@ plugins:
 exclude:
   - README.md
   - CONTRIBUTING.md
+  - STYLE-GUIDE.md
