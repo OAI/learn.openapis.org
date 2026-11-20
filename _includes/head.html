@@ -12,9 +12,9 @@
 		}
 	})();
 </script>
-<link rel="stylesheet" href="/assets/css/just-the-docs-dark.css" media="(prefers-color-scheme: dark)">
-<link rel="stylesheet" href="/assets/css/just-the-docs-default.css" media="(prefers-color-scheme: light)">
-<link rel="stylesheet" href="/assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet" disabled="">
+<link rel="stylesheet" href="{{ '/assets/css/just-the-docs-dark.css' | relative_url }}" media="(prefers-color-scheme: dark)">
+<link rel="stylesheet" href="{{ '/assets/css/just-the-docs-default.css' | relative_url }}" media="(prefers-color-scheme: light)">
+<link rel="stylesheet" href="{{ '/assets/css/just-the-docs-head-nav.css' | relative_url }}" id="jtd-head-nav-stylesheet" disabled="">
 <style id="jtd-nav-activation">
 	.site-nav>ul.nav-list:first-child>li:not(:nth-child(1))>a,
 	.site-nav>ul.nav-list:first-child>li>ul>li a {
@@ -39,10 +39,10 @@
 		display: block;
 	}
 </style>
-<script src="/assets/js/vendor/lunr.min.js"></script>
-<script src="/assets/js/just-the-docs.js"></script>
+<script src="{{ '/assets/js/vendor/lunr.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/just-the-docs.js' | relative_url }}"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="/favicon.ico" type="image/x-icon"> <!-- Begin Jekyll SEO tag v2.8.0 -->
+<link rel="icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon"> <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>{{ page.title | default: site.title | escape }}</title>
 <meta name="generator" content="Jekyll v{{ jekyll.version }}">
 <meta property="og:title" content="{{ page.title | default: site.title | escape }}" />

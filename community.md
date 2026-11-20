@@ -61,6 +61,7 @@ Arazzo Specification describes a sequence of API calls and how data flows betwee
 
 - **Published resources:** [Specification](https://spec.openapis.org/#arazzo-specification)
   | [JSON Schema](https://spec.openapis.org/#arazzo-schemas)
+  | [Learn about Arazzo](arazzo/)
 
 - **On GitHub:** [ReadMe](https://github.com/OAI/Arazzo-Specification/?tab=readme-ov-file#readme)
   | [Discuss OpenAPI (questions welcome)](https://github.com/OAI/Arazzo-Specification/discussions)

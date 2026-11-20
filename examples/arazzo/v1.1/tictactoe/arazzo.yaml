@@ -1,0 +1,232 @@
+arazzo: 1.1.0
+info:
+  title: Tic Tac Toe Workflows
+  summary: Common gameplay workflows for the Tic Tac Toe API
+  description: |
+    This Arazzo Description shows how the operations of the Tic Tac Toe API
+    work together to play a move and report the state of the game.
+  version: 1.0.0
+sourceDescriptions:
+  - name: ticTacToe
+    url: ../../../v3.1/tictactoe.yaml
+    type: openapi
+workflows:
+  - workflowId: playMove
+    summary: Play a move and report the state of the game
+    description: Places a mark if the requested square is empty, then reads the board.
+    inputs:
+      type: object
+      required:
+        - row
+        - column
+        - mark
+        - bearerToken
+        - apiKey
+      properties:
+        row:
+          type: integer
+          minimum: 1
+          maximum: 3
+        column:
+          type: integer
+          minimum: 1
+          maximum: 3
+        mark:
+          type: string
+          enum:
+            - X
+            - O
+        bearerToken:
+          type: string
+          description: JWT used by the single square operations
+        apiKey:
+          type: string
+          description: API key used by the whole board operation
+    steps:
+      - stepId: checkSquare
+        description: Find out whether the requested square is empty
+        operationId: get-square
+        parameters:
+          - name: row
+            in: path
+            value: $inputs.row
+          - name: column
+            in: path
+            value: $inputs.column
+          - name: Authorization
+            in: header
+            value: Bearer {$inputs.bearerToken}
+        successCriteria:
+          - condition: $statusCode == 200
+        onSuccess:
+          - name: squareTaken
+            type: goto
+            stepId: readBoard
+            criteria:
+              - condition: $response.body != '.'
+      - stepId: placeMark
+        description: Place the mark on the empty square
+        operationId: put-square
+        parameters:
+          - name: row
+            in: path
+            value: $inputs.row
+          - name: column
+            in: path
+            value: $inputs.column
+          - name: Authorization
+            in: header
+            value: Bearer {$inputs.bearerToken}
+        requestBody:
+          contentType: application/json
+          payload: $inputs.mark
+        successCriteria:
+          - condition: $statusCode == 200 || $statusCode == 202
+        onFailure:
+          - name: moveRejected
+            type: end
+            criteria:
+              - condition: $statusCode == 400
+          - name: tryAgain
+            type: retry
+            retryAfter: 1
+            retryLimit: 3
+            criteria:
+              - condition: $statusCode >= 500
+      - stepId: readBoard
+        description: Read the board and the winner, if there is one
+        operationId: get-board
+        parameters:
+          - name: api-key
+            in: header
+            value: $inputs.apiKey
+        successCriteria:
+          - condition: $statusCode == 200
+        outputs:
+          winner: $response.body#/winner
+          board: $response.body#/board
+    outputs:
+      winner: $steps.readBoard.outputs.winner
+      board: $steps.readBoard.outputs.board
+  - workflowId: playOpening
+    summary: Take the center square and confirm the move
+    description: Plays the center square using the playMove workflow, then confirms the square is no longer empty.
+    inputs:
+      $ref: "#/components/inputs/credentials"
+      required:
+        - mark
+      properties:
+        mark:
+          type: string
+          enum:
+            - X
+            - O
+    steps:
+      - stepId: takeCenter
+        description: Play the center square
+        workflowId: playMove
+        parameters:
+          - name: row
+            value: 2
+          - name: column
+            value: 2
+          - name: mark
+            value: $inputs.mark
+          - name: bearerToken
+            value: $inputs.bearerToken
+          - name: apiKey
+            value: $inputs.apiKey
+        outputs:
+          winner: $workflows.playMove.outputs.winner
+      - stepId: confirmCenter
+        description: Confirm the center square is no longer empty
+        operationId: get-square
+        parameters:
+          - reference: $components.parameters.row
+            value: 2
+          - reference: $components.parameters.column
+            value: 2
+          - reference: $components.parameters.bearerToken
+        successCriteria:
+          - condition: $statusCode == 200
+          - condition: $response.body != '.'
+        outputs:
+          centerMark: $response.body
+    outputs:
+      winner: $steps.takeCenter.outputs.winner
+      centerMark: $steps.confirmCenter.outputs.centerMark
+  - workflowId: reviewOpening
+    summary: Report the state of the game after the opening move
+    description: Reads the board once the playOpening workflow has completed.
+    dependsOn:
+      - playOpening
+    inputs:
+      $ref: "#/components/inputs/credentials"
+    parameters:
+      - reference: $components.parameters.apiKey
+    failureActions:
+      - reference: $components.failureActions.tryAgain
+    steps:
+      - stepId: readBoard
+        description: Read the board and select values from it
+        operationId: get-board
+        successCriteria:
+          - context: $statusCode
+            condition: '^2\d{2}$'
+            type: regex
+          - context: $response.body
+            condition: $.board[*]
+            type: jsonpath
+        outputs:
+          winner: $response.body#/winner
+          centerMark:
+            context: $response.body
+            selector: $.board[1][1]
+            type: jsonpath
+          topRow:
+            context: $response.body
+            selector: /board/0
+            type: jsonpointer
+    outputs:
+      winner: $steps.readBoard.outputs.winner
+      centerMark: $steps.readBoard.outputs.centerMark
+      topRow: $steps.readBoard.outputs.topRow
+components:
+  inputs:
+    credentials:
+      type: object
+      required:
+        - bearerToken
+        - apiKey
+      properties:
+        bearerToken:
+          type: string
+          description: JWT used by the single square operations
+        apiKey:
+          type: string
+          description: API key used by the whole board operation
+  parameters:
+    row:
+      name: row
+      in: path
+      value: $inputs.row
+    column:
+      name: column
+      in: path
+      value: $inputs.column
+    bearerToken:
+      name: Authorization
+      in: header
+      value: Bearer {$inputs.bearerToken}
+    apiKey:
+      name: api-key
+      in: header
+      value: $inputs.apiKey
+  failureActions:
+    tryAgain:
+      name: tryAgain
+      type: retry
+      retryAfter: 1
+      retryLimit: 3
+      criteria:
+        - condition: $statusCode >= 500
