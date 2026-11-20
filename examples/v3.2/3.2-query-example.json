@@ -8,7 +8,7 @@
     "/flights/search": {
       "query": {
         "summary": "Search flights with complex criteria",
-        "description": "Uses the HTTP QUERY method to perform a safe, idempotent flight search with filters that are too complex for a URL query string.",
+        "description": "Uses the HTTP QUERY method to perform a safe, idempotent flight search with filters that are too complex for a URL query string.\n",
         "operationId": "searchFlights",
         "requestBody": {
           "required": true,
@@ -42,12 +42,7 @@
                   },
                   "cabinClass": {
                     "type": "string",
-                    "enum": [
-                      "economy",
-                      "premium-economy",
-                      "business",
-                      "first"
-                    ],
+                    "enum": ["economy", "premium-economy", "business", "first"],
                     "example": "business"
                   },
                   "nonStopOnly": {
@@ -55,11 +50,7 @@
                     "example": true
                   }
                 },
-                "required": [
-                  "origin",
-                  "destination",
-                  "departureDate"
-                ]
+                "required": ["origin", "destination", "departureDate"]
               }
             }
           }
